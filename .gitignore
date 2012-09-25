@@ -1,0 +1,6 @@
+*.bak
+*.idea/
+*.log
+*.svn/
+.metadata/
+/target/
