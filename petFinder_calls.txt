@@ -1,0 +1,86 @@
+f14226e0353d1fceca8fcbd17ed06881key=15c639ff6d160dc55ff6d37677bb0880
+MD5:76ae407499e67b5a42c29e96874d86a6
+
+f14226e0353d1fceca8fcbd17ed06881key=15c639ff6d160dc55ff6d37677bb0880&id=21684601&token=b145c58f691c94081c6cdfe6f8014746
+MD5:3f633afefd23278e0a874d4cbdd2d26b
+http://api.petfinder.com/pet.get?key=15c639ff6d160dc55ff6d37677bb0880&id=21684601&token=b145c58f691c94081c6cdfe6f8014746&sig=3f633afefd23278e0a874d4cbdd2d26b
+
+
+http://api.petfinder.com/shelter.find
+
+f14226e0353d1fceca8fcbd17ed06881key=15c639ff6d160dc55ff6d37677bb0880&id=MI144&token=b145c58f691c94081c6cdfe6f8014746
+MD5:7ef47877b4e4ef29db03e95bd3277aef
+http://api.petfinder.com/shelter.get?key=15c639ff6d160dc55ff6d37677bb0880&id=MI144&token=b145c58f691c94081c6cdfe6f8014746&sig=7ef47877b4e4ef29db03e95bd3277aef
+<petfinder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://api.petfinder.com/schemas/0.9/petfinder.xsd">
+ <header>
+  <version>0.1</version>
+  <timestamp>2012-09-24T21:53:11Z</timestamp>
+  <status>
+   <code>100</code>
+   <message />
+  </status>
+ </header>
+ <shelter>
+  <id>MI144</id>
+  <name>Guardian Angel Animal Rescue</name>
+  <address1>P.O. Box 511309</address1>
+  <address2 />
+  <city>Livonia</city>
+  <state>MI</state>
+  <zip>48151</zip>
+  <country>US</country>
+  <latitude>42.368300</latitude>
+  <longitude>-83.352800</longitude>
+  <phone>734-516-2171</phone>
+  <fax />
+  <email>guardian_angel_rescue@hotmail.com</email>
+ </shelter>
+</petfinder>
+
+
+http://api.petfinder.com/breed.list?key=15c639ff6d160dc55ff6d37677bb0880&token=b145c58f691c94081c6cdfe6f8014746&animal=cat&format=json&sig=492e61237c90c25bfa14a9992333ef3c
+f14226e0353d1fceca8fcbd17ed06881key=15c639ff6d160dc55ff6d37677bb0880&token=b145c58f691c94081c6cdfe6f8014746&animal=cat&format=json
+MD5:492e61237c90c25bfa14a9992333ef3c
+
+http://api.petfinder.com/shelter.getPets?key=15c639ff6d160dc55ff6d37677bb0880&token=b145c58f691c94081c6cdfe6f8014746&id=MI144&sig=415c967f30b30a3cf5d80c08b748c5f6
+f14226e0353d1fceca8fcbd17ed06881key=15c639ff6d160dc55ff6d37677bb0880&token=b145c58f691c94081c6cdfe6f8014746&id=MI144
+MD5:415c967f30b30a3cf5d80c08b748c5f6
+
+
+
+http://api.petfinder.com/my.method?key=15c639ff6d160dc55ff6d37677bb0880&shelterid=MI144%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520&status=A&animal=Cat&preview=1
+http://api.petfinder.com/auth.getToken?key=15c639ff6d160dc55ff6d37677bb0880&sig=76ae407499e67b5a42c29e96874d86a6
+
+http://www.petfinder.com/pet-search?shelterid=MI144%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520&status=A&animal=Cat&preview=1
+
+<petfinder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://api.petfinder.com/schemas/0.9/petfinder.xsd">
+ <header>
+  <version>0.1</version>
+  <timestamp>2012-09-24T21:35:35Z</timestamp>
+  <status>
+   <code>100</code>
+   <message />
+  </status>
+ </header>
+ <auth>
+  <key>15c639ff6d160dc55ff6d37677bb0880</key>
+  <token>b145c58f691c94081c6cdfe6f8014746</token>
+  <expires>1348526135</expires>
+  <expiresString>2012-09-24T22:35:35Z</expiresString>
+ </auth>
+</petfinder>
+
+
+
+<petfinder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://api.petfinder.com/schemas/0.9/petfinder.xsd">
+ <header>
+  <version>0.1</version>
+  <timestamp>2012-09-25T15:31:26Z</timestamp>
+  <status>
+   <code>301</code>
+   <message>invalid token</message>
+  </status>
+ </header>
+</petfinder>
+
+0
