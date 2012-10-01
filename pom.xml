@@ -65,9 +65,17 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 	
 	<properties>
+		<jackson.version>1.9.9</jackson.version>
 		<jsp.api.version>2.2.1</jsp.api.version>
 		<jstl.api.version>1.2.1</jstl.api.version>
 		<junit.version>4.10</junit.version>
