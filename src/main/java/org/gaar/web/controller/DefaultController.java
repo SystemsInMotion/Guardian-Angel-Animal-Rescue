@@ -13,4 +13,14 @@ public class DefaultController {
 	public String doHome(Model model) {
 		return View.home.name();
 	}
+	
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	public String doAbout(Model model) {
+		return View.about.name();
+	}
+	
+	@RequestMapping(value = "/adoptions", method = RequestMethod.GET)
+	public String doAdoptions(Model model) {
+		return View.adoptions.name();
+	}
 }

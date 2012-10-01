@@ -10,11 +10,11 @@
 					<div>
 						<ul id="mainNav1" class="mainNav1">
 							<li id="cc-nav-view-257510719"><a
-								href="./home_files/home.htm" class="current level_1"><span>Home</span></a></li>
+								href="/GAAR/app/" class="current level_1"><span>Home</span></a></li>
 							<li id="cc-nav-view-257510819"><a
-								href="http://www.gaarmichigan.org/about-1/" class="level_1"><span>About</span></a></li>
+								href="/GAAR/app/about" class="level_1"><span>About</span></a></li>
 							<li id="cc-nav-view-257511019"><a
-								href="http://www.gaarmichigan.org/adoptions/" class="level_1"><span>Adoptions</span></a></li>
+								href="/GAAR/app/adoptions" class="level_1"><span>Adoptions</span></a></li>
 							<li id="cc-nav-view-364737319"><a
 								href="http://www.gaarmichigan.org/blog/" class="level_1"><span>Blog</span></a></li>
 							<li id="cc-nav-view-257511119"><a

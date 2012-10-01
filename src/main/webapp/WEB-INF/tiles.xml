@@ -17,20 +17,17 @@
 		<put-attribute name="title" type="string" value="Home" />
 		<put-attribute name="body" value="/WEB-INF/view/home.jsp" />
 	</definition>
-
-	<definition name="admin/default" extends="main">
-		<put-attribute name="title" type="string" value="Admin" />
-		<put-attribute name="page-heading"
-			value="/WEB-INF/fragments/heading-no-login.jsp" />
-		<put-attribute name="body" value="/WEB-INF/jsp/admin/default.jsp" />
+	
+	<definition name="about" extends="main">
+		<put-attribute name="title" type="string" value="About" />
+		<put-attribute name="body" value="/WEB-INF/view/about.jsp" />
 	</definition>
 	
-	<definition name="admin/login" extends="main">
-		<put-attribute name="title" type="string" value="Login" />
-		<put-attribute name="page-js" type="string" value="/scripts/login.js" />
-		<put-attribute name="page-heading"
-			value="/WEB-INF/fragments/heading-no-login.jsp" />
-		<put-attribute name="body" value="/WEB-INF/jsp/admin/login.jsp" />
+	<definition name="adoptions" extends="main">
+		<put-attribute name="title" type="string" value="Adoptions" />
+		<put-attribute name="body" value="/WEB-INF/view/adoptions.jsp" />
 	</definition>
+
+
 
 </tiles-definitions>
