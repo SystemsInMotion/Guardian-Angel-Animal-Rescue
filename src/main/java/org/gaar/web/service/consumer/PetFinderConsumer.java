@@ -18,6 +18,7 @@ import org.petfinder.web.service.Method;
 import org.petfinder.web.service.QueryParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriUtils;
@@ -29,6 +30,7 @@ import org.springframework.web.util.UriUtils;
  * @author kskronek
  * 
  */
+@Service("petFinderService")
 public class PetFinderConsumer {
 
 	private static final String API_KEY = "15c639ff6d160dc55ff6d37677bb0880";
