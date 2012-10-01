@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+
+
+body {}
+
+body, p, table, td
+{
+    font:normal 13px/130% Verdana, Arial, Helvetica, sans-serif;
+    color:#333333;
+}
+
+h1
+{
+    font:normal normal bold 17px/140% Verdana, Arial, Helvetica, sans-serif;
+    color:#3D00C9;
+    
+}
+
+h2
+{
+    font:normal normal normal 14px/140% Verdana, Arial, Helvetica, sans-serif;
+    color:#3300CD;
+    
+}
+
+h3
+{
+    font:normal normal bold 12px/140% Verdana, Arial, Helvetica, sans-serif;
+    color:#666666;
+    
+}
+
+a:link,
+a:visited
+{
+    text-decoration: underline; /* fix */
+    color:#282DFF;
+}
+
+a:active,
+a:hover
+{
+    text-decoration:none; /* fix */
+    color: #282DFF;
+}
+
+div.hr
+{
+    border-bottom-style:solid;
+    border-bottom-width:1px; /* fix */
+    border-color: #999999;
+    height: 1px;
+}

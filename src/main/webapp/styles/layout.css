@@ -1,0 +1,338 @@
+/*-----------------------------------------------
+Template 544
+designed by: N. Maacht
+css-Author: Y. Kollega
+Januar 2009
+----------------------------------------------- */
+
+
+.body 
+{ 
+	padding:0px 50px;
+	text-align:center;
+}
+
+div#abstand_unten
+{
+	width:100px;
+	height:0px;
+}
+
+
+div#container 
+{
+	width:900px;
+	margin:0 auto; 
+	padding:0;	
+	text-align:left;
+}
+
+div#top 
+{
+	position:relative;
+	width:900px;
+	height:30px;
+	background:url('http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/top.png') no-repeat 0 0;
+}
+
+* html div#top
+{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image', src='http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/top.png');
+}
+
+
+div#wrapper 
+{
+	width:890px;
+	padding:0 0px 0 10px;
+	background:url('http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/content.png') repeat-y 0 0;
+}	
+
+* html div#wrapper 
+{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/content.png');
+}
+
+
+div#btm 
+{
+	width:900px;
+	height:30px;
+	background:url('http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/btm.png') no-repeat 0 0;
+}
+
+* html div#btm 
+{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image', src='http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/btm.png');
+}
+	
+	
+div#header 
+{
+	width:850px;
+	position:relative;
+	border-top:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+}
+	
+	
+div#main_navigation
+{
+	position:relative;
+	z-index:10;
+	width:850px;
+	background:url(http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/nav_top_bg.png) repeat-x top left;
+}
+
+div#gradient 
+{
+	position:relative;
+	width:850px;
+	background:white url('http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/gradient.png') repeat-x 0 0;
+	padding:15px 0 15px 0;
+	border-bottom:4px solid #;
+}
+
+
+div#lines
+{
+	width:850px;
+	background:url(http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/lines.gif) repeat-y top left;
+}
+
+
+
+div#content 
+{
+	float:left;
+	width:472px;
+	margin:0;
+}
+
+
+div#navigation 
+{
+	float:left;
+	width:167px;
+	position:relative;
+	overflow:visible;
+	margin:0 1px;
+}
+
+
+
+div#sidebar 
+{
+	width:209px;
+	float:left;
+	overflow:visible;
+}
+
+
+
+div#sidebar div.sidebar_top 
+{
+	width:198px;
+	height:4px;
+	/* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image', src='http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/sidebar_top.png');*/
+	background:none;
+}
+
+/* html > body div#sidebar div.sidebar_top {background:url('http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/sidebar_top.png') no-repeat 0 0;} */
+
+
+div#sidebar div.sidebar_content
+{
+	width:198px;
+	/* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/sidebar_bg.png'); */
+	background:none;
+	background-repeat:repeat-y;
+}
+/* html > body div#sidebar div.sidebar_content {background:url('http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/sidebar_bg.png') repeat-y 0 0;}*/
+
+
+div#sidebar div.sidebar_btm 
+{
+	width:198px;
+	height:4px;
+	/* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image', src='http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/sidebar_btm.png'); */
+	background:none;
+}
+/* html > body div#sidebar div.sidebar_btm {background:url('http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/sidebar_btm.png') no-repeat 0 0;} */
+
+
+
+
+
+div#footer 
+{
+	width:850px; 
+	border-top:1px #CCC solid;
+	background:url(http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/footer.png) repeat-x bottom left;
+	color:#999;
+}
+
+
+div#footer div.gutter
+{
+	border-top:1px solid #ffffff;
+}
+
+
+
+
+div#footer a,
+div#footer a:visited
+{
+	color:#999; 
+	text-decoration:none;
+}
+
+div#footer a:hover
+{
+color:#000;
+}
+
+
+
+
+div#main_navigation div.gutter 	{padding:0 15px 5px 15px;}
+div#navigation div.gutter 		{padding:10px 10px 10px 10px;}
+div#sidebar div.gutter 			{padding:10px 10px 10px 10px;}
+div#content div.gutter 			{padding:10px 20px 10px 20px;}
+div#footer div.gutter 			{padding:12px 15px 0px 15px;}
+
+
+/*  Sub-Elements
+----------------------------------------------- */
+
+div.jimdofriends {
+	float:left;
+	width:0;
+	padding:0 !important;
+	margin:0 0 20px 0 !important;
+}
+
+div.jimdofriends .vcard {
+	border:none !important;
+	border-bottom:1px solid #D1CAC5 !important;
+	background:transparent !important;
+	padding:0 0 4px 0 !important;
+	margin:4px 0 4px 0 !important;
+	}
+	
+div#content div.jimdofriends {width:0; width:420px !important;}
+div#content div.jimdofriends .vcard {width:0; width:420px !important;}
+
+div#sidebar div.jimdofriends {width:0; width:180px !important;}
+div#sidebar div.jimdofriends .vcard {width:0; width:180px !important;}
+
+
+
+
+/* Clearen der Floats aus den A-Tags */
+ul.mainNav1,
+ul.mainNav2,
+ul.mainNav3 { overflow:hidden; } /* Firefox and all */
+
+
+* html ul.mainNav1,
+* html ul.mainNav2,
+* html ul.mainNav3 { height:1%; overflow:visible; } /* IE */
+
+
+
+
+ul.mainNav1,
+ul.mainNav2,
+ul.mainNav3 {
+	margin:0;
+	list-style:none;
+	padding:0;
+}
+
+
+ul.mainNav1 li,
+ul.mainNav2 li,
+ul.mainNav3 li {
+	display:inline;
+	margin:0;	
+	padding:0;
+	list-style:none;
+}
+
+
+ul.mainNav1 li a,
+ul.mainNav1 li a:visited
+{
+	display:block;
+	float:left;
+	padding:2px 10px 3px 10px;
+	font-size:11px;
+	color:#666;
+	text-decoration:none;
+}
+
+
+ul.mainNav1 li a:hover
+{
+	color:black;
+}
+
+
+ul.mainNav1 li a.current, ul.mainNav1 li a.current:visited,
+ul.mainNav1 li a.parent,  ul.mainNav1 li a.parent:visited 
+{
+	color:#333;
+	font-weight:bold;
+}
+
+
+ul.mainNav2 li a,
+ul.mainNav2 li a:visited 
+{
+	display:block;
+	text-decoration:none;
+	padding:4px 10px 2px 20px;
+	color:#666;
+	margin:0 0 4px 0;
+	border-bottom:1px #DDD solid;
+	background:url(http://u.jimdo.com/www17/o/layout/l08fcb511ef52fa4c/img/sub_nav_arrow.gif) no-repeat 5px center;
+
+}
+
+
+ul.mainNav2 li a:hover 
+{
+	text-decoration:underline;
+}
+
+
+ul.mainNav2 li a.current, ul.mainNav2 li a.current:visited,
+ul.mainNav2 li a.parent,  ul.mainNav2 li a.parent:visited
+{
+	font-weight:bold;
+	color:#333;
+}
+
+
+ul.mainNav3 li a,
+ul.mainNav3 li a:visited
+{
+	padding:1px 10px 1px 20px;
+	color:#999;
+	margin:0;
+	font-size:90%;
+	border:0;
+	background:none;
+}
+
+
+ul.mainNav3 li a.current,
+ul.mainNav3 li a:hover
+{
+	color:#333;
+}
