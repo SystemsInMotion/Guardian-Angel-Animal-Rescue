@@ -22,5 +22,30 @@
 		<put-attribute name="title" type="string" value="Adoptions" />
 		<put-attribute name="body" value="/WEB-INF/view/adoptions.jsp" />
 	</definition>
+	
+	<definition name="adoptions" extends="main">
+		<put-attribute name="title" type="string" value="Adoptions" />
+		<put-attribute name="body" value="/WEB-INF/view/adoptions.jsp" />
+	</definition>
+	
+	<definition name="contact" extends="main">
+		<put-attribute name="title" type="string" value="Contact" />
+		<put-attribute name="body" value="/WEB-INF/view/contact.jsp" />
+	</definition>
+	
+	<definition name="faq" extends="main">
+		<put-attribute name="title" type="string" value="Faq" />
+		<put-attribute name="body" value="/WEB-INF/view/faq.jsp" />
+	</definition>
+	
+	<definition name="like" extends="main">
+		<put-attribute name="title" type="string" value="Like" />
+		<put-attribute name="body" value="/WEB-INF/view/like.jsp" />
+	</definition>
+	
+	<definition name="volunteer" extends="main">
+		<put-attribute name="title" type="string" value="Volunteer" />
+		<put-attribute name="body" value="/WEB-INF/view/volunteer.jsp" />
+	</definition>
 
 </tiles-definitions>

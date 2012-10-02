@@ -21,16 +21,16 @@
 								href="http://www.gaarmichigan.org/broken-wings/" class="level_1"><span>Broken
 										Wings</span></a></li>
 							<li id="cc-nav-view-356968619"><a
-								href="http://www.gaarmichigan.org/faq/" class="level_1"><span>FAQ</span></a></li>
+								href="/GAAR/app/faq/" class="level_1"><span>FAQ</span></a></li>
 							<li id="cc-nav-view-400006919"><a
 								href="http://www.gaarmichigan.org/news/" class="level_1"><span>News</span></a></li>
 							<li id="cc-nav-view-257511219"><a
 								href="http://www.gaarmichigan.org/support-gaar/" class="level_1"><span>Support
 										GAAR</span></a></li>
 							<li id="cc-nav-view-350022319"><a
-								href="http://www.gaarmichigan.org/volunteer/" class="level_1"><span>Volunteer</span></a></li>
+								href="/GAAR/app/volunteer/" class="level_1"><span>Volunteer</span></a></li>
 							<li id="cc-nav-view-257511719"><a
-								href="http://www.gaarmichigan.org/contact/" class="level_1"><span>Contact</span></a></li>
+								href="/GAAR/app/contact/" class="level_1"><span>Contact</span></a></li>
 						</ul>
 					</div>
 					<div class="c"></div>
