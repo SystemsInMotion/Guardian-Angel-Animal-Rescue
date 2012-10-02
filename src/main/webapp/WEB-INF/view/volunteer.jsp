@@ -7,7 +7,7 @@
 
 		<div id="main_navigation">
 			<div class="gutter">		
-				<div><ul id="mainNav1" class="mainNav1"><li id="cc-nav-view-257510719"><a href="/GAAR/app/" class="level_1"><span>Home</span></a></li><li id="cc-nav-view-257510819"><a href="/GAAR/app/about" class="level_1"><span>About</span></a></li><li id="cc-nav-view-257511019"><a href="/GAAR/app/adoptions" class="current level_1"><span>Adoptions</span></a></li><li id="cc-nav-view-364737319"><a href="http://www.gaarmichigan.org/blog/" class="level_1"><span>Blog</span></a></li><li id="cc-nav-view-257511119"><a href="http://www.gaarmichigan.org/broken-wings/" class="level_1"><span>Broken Wings</span></a></li><li id="cc-nav-view-356968619"><a href="/GAAR/app/faq/" class="level_1"><span>FAQ</span></a></li><li id="cc-nav-view-400006919"><a href="http://www.gaarmichigan.org/news/" class="level_1"><span>News</span></a></li><li id="cc-nav-view-257511219"><a href="http://www.gaarmichigan.org/support-gaar/" class="level_1"><span>Support GAAR</span></a></li><li id="cc-nav-view-350022319"><a href="/GAAR/app/volunteer/" class="level_1"><span>Volunteer</span></a></li><li id="cc-nav-view-257511719"><a href="/GAAR/app/contact/" class="level_1"><span>Contact</span></a></li></ul></div>
+				<div><ul id="mainNav1" class="mainNav1"><li id="cc-nav-view-257510719"><a href="/GAAR/app/" class="level_1"><span>Home</span></a></li><li id="cc-nav-view-257510819"><a href="/GAAR/app/about" class="level_1"><span>About</span></a></li><li id="cc-nav-view-257511019"><a href="/GAAR/app/adoptions" class="level_1"><span>Adoptions</span></a></li><li id="cc-nav-view-364737319"><a href="http://www.gaarmichigan.org/blog/" class="level_1"><span>Blog</span></a></li><li id="cc-nav-view-257511119"><a href="http://www.gaarmichigan.org/broken-wings/" class="level_1"><span>Broken Wings</span></a></li><li id="cc-nav-view-356968619"><a href="/GAAR/app/faq/" class="level_1"><span>FAQ</span></a></li><li id="cc-nav-view-400006919"><a href="http://www.gaarmichigan.org/news/" class="level_1"><span>News</span></a></li><li id="cc-nav-view-257511219"><a href="http://www.gaarmichigan.org/support-gaar/" class="level_1"><span>Support GAAR</span></a></li><li id="cc-nav-view-350022319"><a href="/GAAR/app/volunteer/" class="current level_1"><span>Volunteer</span></a></li><li id="cc-nav-view-257511719"><a href="/GAAR/app/contact/" class="level_1"><span>Contact</span></a></li></ul></div>
 				<div class="c"></div>
 			</div>
 		</div>
@@ -24,8 +24,7 @@
 						class="cc-png-fix"> <strong id="emotion-header-title"
 						style="left: 10%; top: 10%; font: bold 24px/120% Verdana, Geneva, Arial, Helvetica, sans-serif; color: #FFD808;"></strong>
 					</a>
-			</div>
-
+				</div>
 
 		</div>
 		
@@ -37,109 +36,243 @@
 					<div class="gutter cc-content-parent">		
 						<div id="content_area"><div id="content_start"></div>
         
-        <div id="cc-matrix-433653919"><div class="n j-text"><p>
-    <strong>Please click here to see all of our&nbsp;<a href="http://www.petfinder.com/shelterSearch/shelterSearch.cgi?shelterid=MI144%20%20%20%20%20%20%20%20%20%20%20%20&status=A&animal=Cat&preview=1" target="_blank">adoptable
-    cats</a>.</strong>
-</p></div><div class="n j-text"><p><br></p></div><div class="n j-gallery"><div class="ccgalerie clearover" id="cc-m-gallery-1549332819">
-    <div class="thumb_sq3" id="gallery_thumb_1619984919" style="width:100px; height:100px;">
+        <div id="cc-matrix-532861319"><div class="n j-text"><div>
+    <p>
+        <span style="color: #0000ff;"><strong><em>Be a Guardian Angel Animal Rescue Volunteer</em></strong></span>
+    </p>
+</div></div><div class="n j-textWithImage">
+<div class="clearover">
+    <div id="cc-m-textwithimage-2386381619" class="imgright" style="width:120px;">
+            <img src="./volunteer_files/image(1).jpg" class="" id="cc-m-textwithimage-image-2386381619" alt="" title="" width="120" height="136">
+    </div>
+<div>
+    <p>
+        We need help in many different ways.&nbsp;
+    </p>
+
+    <p>
+        Foster Homes
+    </p>
+
+    <p>
+        At Petsmart
+    </p>
+
+    <p>
+        Fund Raising
+    </p>
+
+    <p>
+        Adoption Days
+    </p>
+
+    <p>
+        Events
+    </p>
+
+    <p>
+        Speakers
+    </p>
+
+    <p>
+        Transporting Animals &amp; Supplies
+    </p>
+
+    <p>
+        Photographer
+    </p>
+
+    <p>
+        …and much more
+    </p>
+</div>
+
+<p>
+    &nbsp;
+</p></div><script type="text/javascript">/* <![CDATA[ */
+    jimdoGen002.regModule("module_textWithImage", {"data":{"hyperlink":"","hyperlink_target":""}});
+/* ]]> */
+</script></div><div class="n j-hr"><div class="hr"></div></div><div class="n j-text"><p>
+    <span style="color: #0000ff;"><em><strong>Help at Petsmart!</strong></em></span>
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    Every Saturday we are at Petsmart on Haggerty/14 Mile between 1 and 4pm showing our adoptable animals.&nbsp;
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    Please contact us through this website, if you are interested in helping us on Saturdays, with our rescue animals.&nbsp;
+</p>
+
+<p>
+    On Saturdays we need people at Petsmart for:
+</p>
+
+<p>
+    12-1pm: Set up of cages and tables for the cats and dogs
+</p>
+
+<p>
+    1-4pm: Helping with general adoptions &nbsp;
+</p>
+
+<p>
+    4-5pm: Break down of cages and tables
+</p>
+
+<p>
+    &nbsp;
+</p></div><div class="n j-hr"><div class="hr"></div></div><div class="n j-text"><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana;">
+    <span style="color: #0000ff;"><strong><em>Be a foster dad or mom</em></strong></span>
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana; min-height: 16.0px;">
+    &nbsp;
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana;">
+    It's the most rewarding way of helping. All you need to do is open your heart and provide a ton of TLC and sometimes a bit of patience to our pets to help them get over the trauma of their
+    individual situation.
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana; min-height: 16.0px;">
+    &nbsp;
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana;">
+    It's also the hardest way of helping. It is hard giving up an animal that has been under your care for any amount of time. The love, time and care that goes into these animals makes it very
+    difficult to give them up when they get adopted.&nbsp; A foster must understand that the only way to save and keep saving animals lives is to let go when the time arrives.&nbsp;
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana; min-height: 16.0px;">
+    &nbsp;
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana;">
+    Foster homes are always needed. Vet care is provided by GAAR. If you are interested in fostering an animal, please call us.
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana; min-height: 16.0px;">
+    &nbsp;
+</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana;">
+    If you love animals as much as we do and you want to make a change and get involved, but you are worried about time or other constraints - don't hesitate to talk to us! We'll happily help figure
+    out how you could help and if this is the right time for you to get involved.
+</p>
+
+<div>
+    <span style="line-height: normal;"><br></span>
+</div></div><div class="n j-hr"><div class="hr"></div></div><div class="n j-header"><h1>The First Step to Fostering a Cat</h1></div><div class="n j-text"><p>
+    <strong>A commitment to fostering a cat/kitten is both fun and rewarding. &nbsp;Here are some items that new volunteers should consider before fostering. &nbsp;</strong>
+</p>
+
+<p>
+    <strong><em><br></em></strong>
+</p>
+
+<p>
+    <em>GAAR&nbsp;<span style="white-space: pre;">do</span>es not <span style="white-space: pre;">own a facility or shelter of our own.</span>&nbsp;The foster home is an important stepping stone from
+    the time the cat/kitten is rescued until he/she can be permanently adopted.</em>
+</p>
+
+<p>
+    <em><br></em>
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    Before you decide to become a foster provider, it's a good idea to take stock of your situation and decide if fostering a cat is right for you.&nbsp;It can be a rewarding and fulfilling
+    experience, and may be an ideal situation for families that are unable to make a long-term commitment to a pet cat. It helps if the whole family is dedicated to the process of fostering a cat,
+    because each cat might be with you for several months. If you have a cat of your own, its vaccinations must be up to date. &nbsp;It may also be wise to quarantine incoming foster pets until their
+    health can be adequately assessed and they can be tested for diseases like feline leukemia. &nbsp;Usually, we'd expect you to "donate" the food and kitty litter used by the foster cat. We will
+    reimburse you for the cost of any veterinary care that is needed.
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    Keep in mind that the cats coming to you may have been in a shelter or abandoned. &nbsp;These cats may be frightened, stressed, or poorly nourished and will need love and attention to help them
+    become socialized. Some may need to be re-trained in using a litter pan or be coaxed to eat. You may need to administer medicine, or care for an older, special needs cat with diminished eyesight
+    or hearing.&nbsp;
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    In some cases, you can volunteer your foster home to take care of a mother cat with a litter of kittens. For the first month of the kittens' life, the mom will do most of the work, nursing and
+    grooming her offspring. Kittens can generally be weaned at four to six weeks, and separated from their mother by the age of four weeks.
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    One of our challenges is taking in unweaned or orphaned kittens. Newborn kittens fragile and vulnerable and they'll be depending on you to take the place of their missing mother. For the first
+    two weeks of life, before kittens even open their eyes, they are completely helpless. These responsibilities include keeping the kittens very warm and feeding them every two to three hours with a
+    syringe and commercial kitten formula. Momma cats stimulate the bodily functions of elimination in their kittens by licking the anus and urinary tract opening: you'll have to replicate this
+    function with a warm, wet terrycloth washcloth.
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    Last but not least, fostering any cat comes with the risk that you'll become attached to your foster and will feel sadness or a sense of loss when it's time to let them go. As each one is adopted
+    out, it's key to remember that you provided a safe haven to a homeless cat that is now going on to a safe and permanent home.
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<p>
+    If you're interested in becoming a cat foster home, please contact us! We will gladly talk with you. &nbsp;Our process includes an application, an interview (in person or on the phone), and
+    lastly, a home visit required at the time of the drop off of your first foster kitty!&nbsp;
+</p></div><div class="n j-gallery"><div class="ccgalerie clearover" id="cc-m-gallery-2386382119">
+    <div class="thumb_sq1" id="gallery_thumb_1707912619" style="width:128px; height:128px;">
         <div>
-            <a rel="lightbox[1549332819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i377cc08ddb1a2065/1313178312/std/image.jpg">
-                <img src="<c:url value='/images/image(1).jpg'/>" id="image_1619984919" alt="" title="" width="90" height="90">
+            <a rel="lightbox[2386382119]" href="http://www.gaarmichigan.org/volunteer/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i323fea9a25f3b09a/1299971367/std/image.jpg">
+                <img src="./volunteer_files/image(2).jpg" id="image_1707912619" alt="" title="" width="120" height="120">
             </a>
         </div>
     </div>
-    <div class="thumb_sq3" id="gallery_thumb_1619985319" style="width:100px; height:100px;">
+    <div class="thumb_sq1" id="gallery_thumb_1707913019" style="width:128px; height:128px;">
         <div>
-            <a rel="lightbox[1549332819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/if03196eef81c0f32/1313178312/std/image.jpg">
-                <img src="<c:url value='/images/image(2).jpg'/>" id="image_1619985319" alt="" title="" width="90" height="90">
+            <a rel="lightbox[2386382119]" href="http://www.gaarmichigan.org/volunteer/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i7a2a0c2be008fdc1/1299971367/std/image.jpg">
+                <img src="./volunteer_files/image(3).jpg" id="image_1707913019" alt="" title="" width="120" height="120">
             </a>
         </div>
     </div>
-    <div class="thumb_sq3" id="gallery_thumb_1619985519" style="width:100px; height:100px;">
+    <div class="thumb_sq1" id="gallery_thumb_1707912919" style="width:128px; height:128px;">
         <div>
-            <a rel="lightbox[1549332819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i6b792cdc3a78eb9f/1313178312/std/image.jpg">
-                <img src="<c:url value='/images/image(3).jpg'/>" id="image_1619985519" alt="" title="" width="90" height="90">
-            </a>
-        </div>
-    </div>
-    <div class="thumb_sq3" id="gallery_thumb_1619985719" style="width:100px; height:100px;">
-        <div>
-            <a rel="lightbox[1549332819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/ie43ad8e28a9f8e42/1313178326/std/image.jpg">
-                <img src="<c:url value='/images/image(4).jpg'/>" id="image_1619985719" alt="" title="" width="90" height="90">
+            <a rel="lightbox[2386382119]" href="http://www.gaarmichigan.org/volunteer/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/ibfa407ae85fd45c1/1299971367/std/image.jpg">
+                <img src="./volunteer_files/image(4).jpg" id="image_1707912919" alt="" title="" width="120" height="120">
             </a>
         </div>
     </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
-    jimdoGen002.regModule("module_gallery", {"variant":"default","selector":"#cc-m-gallery-1549332819","imageCount":4,"multiUpload":true,"options":{"version":"9.0.28","swf":"http:\/\/u.jimdo.com\/www17\/o\/s\/gallery\/player\/ws-slideshow.swf","params":{"flashvars":{"XMLPath":"http:\/\/u.jimdo.com\/www17\/o\/s7bc4f4e17f220443\/gallery\/mcbc86e38b53b5b90\/1313178326\/config.xml","langID":"EN","cacheXML":true},"bgcolor":"#000"},"attr":{"height":"324","width":"100%"}}});
+    jimdoGen002.regModule("module_gallery", {"variant":"default","selector":"#cc-m-gallery-2386382119","imageCount":3,"multiUpload":true,"options":{"version":"9.0.28","swf":"http:\/\/u.jimdo.com\/www17\/o\/s\/gallery\/player\/ws-slideshow.swf","params":{"flashvars":{"XMLPath":"http:\/\/u.jimdo.com\/www17\/o\/s7bc4f4e17f220443\/gallery\/m8b9b20ae93241419\/1299971367\/config.xml","langID":"EN","cacheXML":true},"bgcolor":"#000"},"attr":{"height":"324","width":"100%"}}});
 /* ]]> */
-</script></div><div class="n j-text"><p>
-    &nbsp;
-</p>
-
-<p>
-    &nbsp;
-</p>
-
-<p>
-    <strong>Please click here to see all of our&nbsp;<span style="font-family: Times, Arial, Helvetica, sans-serif; font-size: medium; line-height: normal;"><a style="color: #3e84ff; text-decoration: underline;" href="http://www.petfinder.com/shelterSearch/shelterSearch.cgi?shelterid=MI144%20%20%20%20%20%20%20%20%20%20%20%20&status=A&animal=Dog&preview=1" target="_blank"><span class="cc-m-anchor-marker" title="Go to the link adoptable dogs">&nbsp;</span>adoptable dogs</a>.</span></strong>
-</p>
-
-<p>
-    &nbsp;
-</p>
-
-<p>
-    &nbsp;
-</p></div><div class="n j-gallery"><div class="ccgalerie clearover" id="cc-m-gallery-2072232819">
-    <div class="thumb_sq3" id="gallery_thumb_1620018519" style="width:100px; height:100px;">
-        <div>
-            <a rel="lightbox[2072232819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i4bc66842014d54ff/1313178378/std/image.png">
-                <img src="<c:url value='/images/image.png'/>" id="image_1620018519" alt="" title="" width="90" height="90">
-            </a>
-        </div>
-    </div>
-    <div class="thumb_sq3" id="gallery_thumb_1620029919" style="width:100px; height:100px;">
-        <div>
-            <a rel="lightbox[2072232819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i10fd7a8b137861e0/1313178378/std/image.png">
-                <img src="<c:url value='/images/image(5).png'/>" id="image_1620029919" alt="" title="" width="90" height="90">
-            </a>
-        </div>
-    </div>
-    <div class="thumb_sq3" id="gallery_thumb_1620030019" style="width:100px; height:100px;">
-        <div>
-            <a rel="lightbox[2072232819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i2ef1e3a3a3bddf7e/1313178378/std/image.png">
-                <img src="<c:url value='/images/image(6).png'/>" id="image_1620030019" alt="" title="" width="90" height="90">
-            </a>
-        </div>
-    </div>
-    <div class="thumb_sq3" id="gallery_thumb_1620030119" style="width:100px; height:100px;">
-        <div>
-            <a rel="lightbox[2072232819]" href="http://www.gaarmichigan.org/adoptions/#" data-href="http://u.jimdo.com/www17/o/s7bc4f4e17f220443/img/i258aad4a73fe5ac0/1313178378/std/image.png">
-                <img src="<c:url value='/images/image(7).png'/>" id="image_1620030119" alt="" title="" width="90" height="90">
-            </a>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">/* <![CDATA[ */
-    jimdoGen002.regModule("module_gallery", {"variant":"default","selector":"#cc-m-gallery-2072232819","imageCount":4,"multiUpload":true,"options":{"version":"9.0.28","swf":"http:\/\/u.jimdo.com\/www17\/o\/s\/gallery\/player\/ws-slideshow.swf","params":{"flashvars":{"XMLPath":"http:\/\/u.jimdo.com\/www17\/o\/s7bc4f4e17f220443\/gallery\/m0b8960e272717e9b\/1313178380\/config.xml","langID":"EN","cacheXML":true},"bgcolor":"#000"},"attr":{"height":"324","width":"100%"}}});
-/* ]]> */
-</script></div><div class="n j-header"><h1>Visit our Adoptable Animals</h1></div><div class="n j-text"><p>
-    The location of our weekly showings are posted on our <a href="http://www.gaarmichigan.org/">Home</a> page. &nbsp;
-</p></div><div class="n j-text"><p>
-    <strong>We do not have a shelter.</strong> All surrendered, abandoned, and/or abused animals are taken into their homes by volunteers. We care for them until a responsible, loving, and permanent
-    home can be found.
-</p>
-
-<p>
-    &nbsp;
-</p></div><div class="n j-text"><p>
-    <span style="font-style: italic; font-weight: bold; color: #0000ff;"><em>You can visit our adoptable cats 7 days a week at Petsmart in Commerce Township!</em></span>
-</p>
-
-<p>
-    <span style="font-style: italic; font-weight: bold;"><em><br></em></span>
-</p></div></div>
+</script></div></div>
         
         </div>
 					</div>
@@ -147,7 +280,7 @@
 					
 				<div id="navigation">
 					<div class="gutter">		
-						<div><ul id="mainNav2" class="mainNav2"><li id="cc-nav-view-365044219"><a href="http://www.gaarmichigan.org/adoptions/application/" class="level_2"><span>Application</span></a></li><li id="cc-nav-view-360079219"><a href="http://www.gaarmichigan.org/adoptions/adoption-tips/" class="level_2"><span>Adoption Tips</span></a></li></ul></div>
+						<div><ul id="mainNav2" class="mainNav2"><li id="cc-nav-view-401917119"><a href="http://www.gaarmichigan.org/volunteer/volunteer-application/" class="level_2"><span>Volunteer Application</span></a></li></ul></div>
 						<div class="c"></div>
 					</div>
 					<span>&nbsp;</span>
@@ -157,7 +290,7 @@
 					<!-- <div class="sidebar_top"></div> -->
 					<div class="sidebar_content">
 						<div class="gutter">			
-							<div id="cc-matrix-433654219"><div class="n j-facebook"><iframe src="./adoptions_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:170px; height:42px; background-color:transparent !important;" allowtransparency="true"></iframe></div><div class="n j-text"><div class="n j-header">
+							<div id="cc-matrix-433654219"><div class="n j-facebook"><iframe src="./volunteer_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:170px; height:42px; background-color:transparent !important;" allowtransparency="true"></iframe></div><div class="n j-text"><div class="n j-header">
     <h1>
         Quick Links
     </h1>
@@ -178,7 +311,7 @@
         </p>
 
         <p>
-            <a href="/adoptions">adoptions</a> and find out
+            <a href="http://www.gaarmichigan.org/adoptions/">adoptions</a> and find out
         </p>
 
         <p>
@@ -189,7 +322,7 @@
     Shop at USBones.com and support GAAR! Click the logo below!
 </h2></div><div class="n j-imageSubtitle"><div class="clearover">
     <div id="cc-m-imagesubtitle-5695978119" style="width: 178px; float: left;">
-<a href="http://www.usbones.com/Merchant2/merchant.mvc?Affil=1566" target="_blank"><img id="cc-m-imagesubtitle-image-5695978119" src="<c:url value='/images/image(8).jpg'/>" alt="" title="" class="" height="109" width="178"></a>    </div>
+<a href="http://www.usbones.com/Merchant2/merchant.mvc?Affil=1566" target="_blank"><img id="cc-m-imagesubtitle-image-5695978119" src="./volunteer_files/image(5).jpg" alt="" title="" class="" height="109" width="178"></a>    </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
     jimdoGen002.regModule("module_imageSubtitle", {"data":{"hyperlink":"http:\/\/www.usbones.com\/Merchant2\/merchant.mvc?Affil=1566","hyperlink_target":"_blank"}});
@@ -200,7 +333,7 @@
     Donate!
 </h2></div><div class="n j-imageSubtitle"><div class="clearover">
     <div id="cc-m-imagesubtitle-5695979219" style="width: 92px; margin: 0 auto;">
-<a href="https://www.paypal.com/cgi-bin/webscr" target="_blank"><img id="cc-m-imagesubtitle-image-5695979219" src="<c:url value='/images/image.gif'/>" alt="" title="" class="" height="26" width="92"></a>    </div>
+<a href="https://www.paypal.com/cgi-bin/webscr" target="_blank"><img id="cc-m-imagesubtitle-image-5695979219" src="./volunteer_files/image.gif" alt="" title="" class="" height="26" width="92"></a>    </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
     jimdoGen002.regModule("module_imageSubtitle", {"data":{"hyperlink":"https:\/\/www.paypal.com\/cgi-bin\/webscr","hyperlink_target":"_blank"}});
@@ -209,7 +342,7 @@
     To donate materials, the gift of time, or other ways to support our work today, please visit our <a href="http://www.gaarmichigan.org/support-gaar/">donate</a> section.
 </p></div><div class="n j-imageSubtitle"><div class="clearover">
     <div id="cc-m-imagesubtitle-5695979919" style="width: 149px; margin: 0 auto;">
-<img id="cc-m-imagesubtitle-image-5695979919" src="<c:url value='/images/image(9).jpg'/>" alt="" title="" class="" height="112" width="149">    </div>
+<img id="cc-m-imagesubtitle-image-5695979919" src="./volunteer_files/image(6).jpg" alt="" title="" class="" height="112" width="149">    </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
     jimdoGen002.regModule("module_imageSubtitle", {"data":{"hyperlink":"","hyperlink_target":""}});
@@ -226,7 +359,7 @@
     </p>
 </div></div><div class="n j-imageSubtitle"><div class="clearover">
     <div id="cc-m-imagesubtitle-5695980619" style="width: 178px; margin: 0 auto;">
-<img id="cc-m-imagesubtitle-image-5695980619" src="<c:url value='/images/image(10).jpg'/>" alt="" title="" class="" height="117" width="178">    </div>
+<img id="cc-m-imagesubtitle-image-5695980619" src="./volunteer_files/image(7).jpg" alt="" title="" class="" height="117" width="178">    </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
     jimdoGen002.regModule("module_imageSubtitle", {"data":{"hyperlink":"","hyperlink_target":""}});
@@ -239,11 +372,11 @@
 
 <div class="n j-text" style="width: 179px; height: 32.38%;">
     <p>
-        There are many easy ways to <a href="http://www.gaarmichigan.org/volunteer/">help</a>&nbsp;and we always need more people to help, check the Help Us section for more information!
+        There are many easy ways to <a href="./volunteer_files/volunteer.htm">help</a>&nbsp;and we always need more people to help, check the Help Us section for more information!
     </p>
 </div></div><div class="n j-imageSubtitle"><div class="clearover">
     <div id="cc-m-imagesubtitle-5695980919" style="width: 149px; float: left;">
-<img id="cc-m-imagesubtitle-image-5695980919" src="<c:url value='/images/image(11).png'/>" alt="" title="" class="" height="88" width="149">    </div>
+<img id="cc-m-imagesubtitle-image-5695980919" src="./volunteer_files/image.png" alt="" title="" class="" height="88" width="149">    </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
     jimdoGen002.regModule("module_imageSubtitle", {"data":{"hyperlink":"","hyperlink_target":""}});
@@ -305,14 +438,14 @@
     <strong>Or read our <a href="http://www.gaarmichigan.org/news/"><span style="color: #0066cc;">latest newsletter</span></a> here!</strong>
 </p></div><div class="n j-imageSubtitle"><div class="clearover">
     <div id="cc-m-imagesubtitle-5695983219" style="width: 148px; float: left;">
-<img id="cc-m-imagesubtitle-image-5695983219" src="<c:url value='/images/image(12).jpg'/>" alt="" title="" class="" height="99" width="148">    </div>
+<img id="cc-m-imagesubtitle-image-5695983219" src="./volunteer_files/image(8).jpg" alt="" title="" class="" height="99" width="148">    </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
     jimdoGen002.regModule("module_imageSubtitle", {"data":{"hyperlink":"","hyperlink_target":""}});
 /* ]]> */
 </script></div><div class="n j-hr"><div class="hr"></div></div><div class="n j-imageSubtitle"><div class="clearover">
     <div id="cc-m-imagesubtitle-5695983719" style="width: 168px; float: left;">
-<a href="http://kuranda.com/donate/5720/" target="_blank"><img id="cc-m-imagesubtitle-image-5695983719" src="<c:url value='/images/image(13).png'/>" alt="" title="" class="" height="111" width="168"></a>    </div>
+<a href="http://kuranda.com/donate/5720/" target="_blank"><img id="cc-m-imagesubtitle-image-5695983719" src="./volunteer_files/image(9).png" alt="" title="" class="" height="111" width="168"></a>    </div>
 </div>
 <script type="text/javascript">/* <![CDATA[ */
     jimdoGen002.regModule("module_imageSubtitle", {"data":{"hyperlink":"http:\/\/kuranda.com\/donate\/5720\/","hyperlink_target":"_blank"}});
@@ -333,16 +466,16 @@
 			<div class="gutter">
 				<div id="contentfooter">
     <div class="leftrow">
-        <a rel="nofollow" href="http://www.gaarmichigan.org/about/">About</a> | <a rel="nofollow" href="http://www.gaarmichigan.org/j/privacy">Privacy Policy</a> | <a rel="nofollow" href="javascript:window.print();"><img class="inline" height="14" width="18" src="<c:url value='/images/printer.gif'/>" alt="druckversion">Print Version</a> | <a href="http://www.gaarmichigan.org/sitemap/">Sitemap</a> | <a rel="nofollow" href="javascript:tellafriend(257511019);"><img class="inline" height="14" width="18" src="<c:url value='/images/mail.gif'/>" alt="">Recommend this site!</a><br>� Copyright Guardian Angel Animal Rescue (GAAR)    </div>
+        <a rel="nofollow" href="http://www.gaarmichigan.org/about/">About</a> | <a rel="nofollow" href="http://www.gaarmichigan.org/j/privacy">Privacy Policy</a> | <a rel="nofollow" href="javascript:window.print();"><img class="inline" height="14" width="18" src="./volunteer_files/printer.gif" alt="druckversion">Print Version</a> | <a href="http://www.gaarmichigan.org/sitemap/">Sitemap</a> | <a rel="nofollow" href="javascript:tellafriend(350022319);"><img class="inline" height="14" width="18" src="./volunteer_files/mail.gif" alt="">Recommend this site!</a><br>© Copyright Guardian Angel Animal Rescue (GAAR)    </div>
     <div class="rightrow">
             
             <span class="loggedout">
-            <a rel="nofollow" id="login" href="javascript:showLoginBox('http://www.gaarmichigan.org/', '257511019');">Login</a>
+            <a rel="nofollow" id="login" href="javascript:showLoginBox('http://www.gaarmichigan.org/', '350022319');">Login</a>
         </span>
         <span class="loggedin">
         <a rel="nofollow" id="logout" href="http://www17.jimdo.com/app/cms/logout.php">Jimdo logout</a>
         |
-        <a rel="nofollow" id="edit" href="http://www17.jimdo.com/app/s7bc4f4e17f220443/pb964f1ca049d55e0/">Edit</a>
+        <a rel="nofollow" id="edit" href="http://www17.jimdo.com/app/s7bc4f4e17f220443/pd1aae19d599663c3/">Edit</a>
     </span>
 </div></div>
 
@@ -391,7 +524,7 @@ _gaq.push(
     <div id="loginbox-header">
 
     <a href="http://www.jimdo.com/">
-        <img class="logo" src="./adoptions_files/login_jimdo.gif" alt="">
+        <img class="logo" src="./volunteer_files/login_jimdo.gif" alt="">
     </a>
 
     <a class="cc-close" title="Close this element" href="javascript:CC_close();">Close</a>

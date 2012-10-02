@@ -23,4 +23,24 @@ public class DefaultController {
 	public String doAdoptions(Model model) {
 		return View.adoptions.name();
 	}
+	
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String doContact(Model model) {
+		return View.contact.name();
+	}
+	
+	@RequestMapping(value = "/faq", method = RequestMethod.GET)
+	public String doFaq(Model model) {
+		return View.faq.name();
+	}
+	
+	@RequestMapping(value = "/like", method = RequestMethod.GET)
+	public String doLike(Model model) {
+		return View.like.name();
+	}
+	
+	@RequestMapping(value = "/volunteer", method = RequestMethod.GET)
+	public String doVolunteer(Model model) {
+		return View.volunteer.name();
+	}
 }
