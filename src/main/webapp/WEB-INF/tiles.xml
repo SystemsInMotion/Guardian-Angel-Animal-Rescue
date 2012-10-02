@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
 <tiles-definitions>
 
 	<definition name="main" template="/WEB-INF/layouts/gaar_layout.jsp">
@@ -7,27 +8,19 @@
 		<put-attribute name="body" />
 	</definition>
 
-	<definition name="departments" extends="main">
-		<put-attribute name="title" type="string" value="Departments" />
-		<put-attribute name="page-js" type="string" value="/scripts/departments.js" />
-		<put-attribute name="body" value="/WEB-INF/jsp/departments.jsp" />
-	</definition>
-
 	<definition name="home" extends="main">
 		<put-attribute name="title" type="string" value="Home" />
 		<put-attribute name="body" value="/WEB-INF/view/home.jsp" />
 	</definition>
-	
+
 	<definition name="about" extends="main">
 		<put-attribute name="title" type="string" value="About" />
 		<put-attribute name="body" value="/WEB-INF/view/about.jsp" />
 	</definition>
-	
+
 	<definition name="adoptions" extends="main">
 		<put-attribute name="title" type="string" value="Adoptions" />
 		<put-attribute name="body" value="/WEB-INF/view/adoptions.jsp" />
 	</definition>
-
-
 
 </tiles-definitions>
