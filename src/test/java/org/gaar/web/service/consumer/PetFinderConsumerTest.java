@@ -27,12 +27,12 @@ public class PetFinderConsumerTest {
 	private static final String AGE_ADULT = "Adult";
 	private static final String ANIMAL_CAT = "cat";
 	private static final String BREED_NULL = null;
-	private static final String COUNT_NULL = null;
+	private static final Integer COUNT_NULL = null;
 	private static final String FORMAT_NULL = null;
-	private static final char GENDER_MALE = 'M';
+	private static final Character GENDER_MALE = 'M';
 	private static final String LOCATION_ZIP = "48108";
 	private static final String NAME_NULL = null;
-	private static final String OFFSET_NULL = null;
+	private static final Integer OFFSET_NULL = null;
 	private static final String OUTPUT_FULL = "full";
 	private static final String SHELTER_NULL = null;
 	private static final String SIZE_NULL = null;
@@ -71,6 +71,7 @@ public class PetFinderConsumerTest {
 		assertNotNull(petRecordList);
 		final List<PetfinderPetRecord> pets = petRecordList.getPet();
 		assertNotNull(pets);
+		assertTrue(pets.size() > 0);
 		final PetfinderPetRecord pet = pets.get(0);
 		assertNotNull(pet);
 		assertEquals(AnimalType.CAT, pet.getAnimal());

@@ -109,12 +109,12 @@ public class PetFinderConsumer {
 		final String query = buildQuery(token, params, false);
 		final String sig = signatureParam(buildQuery(token, params, true));
 		final String url = StringUtils.concat(PETFINDER_HOST, method.value, query, sig);
-		logger.debug("executeQuery(): url: " + url);
+		logger.info("executeQuery(): url: {}", url);
 		return restTemplate.getForObject(url, Petfinder.class);
 	}
 
 	public PetfinderPetRecordList findPet(String animal, String breed, String size, Character sex, String location,
-			String age, String offset, String count, String output, String format) {
+			String age, Integer offset, Integer count, String output, String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.animal, animal);
 		params.put(QueryParam.breed, breed);
@@ -131,7 +131,7 @@ public class PetFinderConsumer {
 		return petfinder.getPets();
 	}
 
-	public PetfinderShelterRecordList findShelter(String location, String name, String offset, String count,
+	public PetfinderShelterRecordList findShelter(String location, String name, Integer offset, Integer count,
 			String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.location, location);
@@ -197,7 +197,7 @@ public class PetFinderConsumer {
 		return petfinder.getPet();
 	}
 
-	public PetfinderPetRecordList shelterPets(String shelterId, Character status, String offset, String count,
+	public PetfinderPetRecordList shelterPets(String shelterId, Character status, Integer offset, Integer count,
 			String output, String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.id, shelterId);
@@ -205,13 +205,17 @@ public class PetFinderConsumer {
 		params.put(QueryParam.offset, offset);
 		params.put(QueryParam.count, count);
 		params.put(QueryParam.output, output);
-		params.put(QueryParam.format, format);
+		// params.put(QueryParam.format, format);
 
 		final Petfinder petfinder = executeQuery(Method.SHELTER_PETS, params);
+
+		if (petfinder != null && "json".equals(format)) {
+			// ObjectMapper mapper = new ObjectMapper(jf)
+		}
 		return petfinder.getPets();
 	}
 
-	public PetfinderShelterRecordList shelterPetsByBreed(String animal, String breed, String offset, Integer count,
+	public PetfinderShelterRecordList shelterPetsByBreed(String animal, String breed, Integer offset, Integer count,
 			String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.animal, animal);
