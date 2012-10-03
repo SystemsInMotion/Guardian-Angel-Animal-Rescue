@@ -20,7 +20,7 @@
 <link rel="canonical" href="./home_files/home.htm">
 </head>
 
-<body class="body cc-page cc-page-index cc-indexpage cc-pagemode-default cc-content-parent" id="page-257510719" 
+<body class="body cc-page cc-page-index cc-indexpage cc-pagemode-default cc-content-parent" id="page-257510719" >
 	<tiles:insertAttribute name="body" />
 </body>
 </html>
