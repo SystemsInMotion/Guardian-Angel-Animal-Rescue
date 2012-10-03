@@ -15,7 +15,14 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		
 		<!-- SERVLET / JSTL / JSP -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -52,9 +59,23 @@
 
 		<!-- TESTING -->
 		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${restassured.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
@@ -65,16 +86,11 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
+
 	</dependencies>
 	
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jackson.version>1.9.9</jackson.version>
 		<jsp.api.version>2.2.1</jsp.api.version>
 		<jstl.api.version>1.2.1</jstl.api.version>
@@ -84,5 +100,6 @@
 		<spring.version>3.1.2.RELEASE</spring.version>
 		<taglib.version>1.1.2</taglib.version>
 		<tiles.version>2.2.2</tiles.version>
+		<restassured.version>1.6.2</restassured.version>
 	</properties>
 </project>
