@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,9 +40,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "petfinderShelterRecordList", propOrder = {
     "shelter"
 })
-public class PetfinderShelterRecordList {
+public class PetfinderShelterRecordList implements Serializable {
 
-    protected List<PetfinderShelterRecord> shelter;
+	private static final long serialVersionUID = -3424894083203738059L;
+
+	protected List<PetfinderShelterRecord> shelter;
 
     /**
      * Gets the value of the shelter property.

@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -56,9 +57,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "timestamp",
     "status"
 })
-public class PetfinderHeaderType {
+public class PetfinderHeaderType implements Serializable {
 
-    @XmlElement(required = true)
+	private static final long serialVersionUID = 7326564553537240451L;
+
+	@XmlElement(required = true)
     protected String version;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")

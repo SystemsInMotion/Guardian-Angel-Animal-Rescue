@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -110,9 +111,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "media",
     "contact"
 })
-public class PetfinderPetRecord {
+public class PetfinderPetRecord implements Serializable {
 
-    @XmlElement(required = true)
+	private static final long serialVersionUID = 3801331285142302568L;
+
+	@XmlElement(required = true)
     protected BigInteger id;
     @XmlElement(required = true)
     protected String shelterId;

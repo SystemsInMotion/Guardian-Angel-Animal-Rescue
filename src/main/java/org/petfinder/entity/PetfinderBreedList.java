@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,9 +43,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "petfinderBreedList", propOrder = {
     "breed"
 })
-public class PetfinderBreedList {
+public class PetfinderBreedList implements Serializable {
 
-    @XmlElement(required = true)
+	private static final long serialVersionUID = 362037035936956127L;
+
+	@XmlElement(required = true)
     protected List<String> breed;
     @XmlAttribute(name = "animal")
     protected String animal;

@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "petfinderPetIdList", propOrder = {
     "id"
 })
-public class PetfinderPetIdList {
+public class PetfinderPetIdList implements Serializable {
 
-    protected List<BigInteger> id;
+	private static final long serialVersionUID = 6272900481086108578L;
+
+	protected List<BigInteger> id;
 
     /**
      * Gets the value of the id property.
