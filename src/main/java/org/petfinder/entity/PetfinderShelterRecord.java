@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -63,9 +64,11 @@ import javax.xml.bind.annotation.XmlType;
     "fax",
     "email"
 })
-public class PetfinderShelterRecord {
+public class PetfinderShelterRecord implements Serializable {
 
-    @XmlElement(required = true)
+	private static final long serialVersionUID = -8185635812995890302L;
+
+	@XmlElement(required = true)
     protected String id;
     @XmlElement(required = true)
     protected String name;

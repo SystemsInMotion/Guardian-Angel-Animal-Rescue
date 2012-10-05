@@ -17,8 +17,15 @@
 
 <title><tiles:getAsString name="title" /> - GAAR Michigan</title>
 </head>
+<body id="home" class="home responsive">
+<jsp:include page="/WEB-INF/fragments/globalheader.jsp"/>
 
-<body class="body cc-page cc-page-index cc-indexpage cc-pagemode-default cc-content-parent" id="page-257510719" >
-	<tiles:insertAttribute name="body" />
+
+	<div id="main">
+		<div id="content">
+<tiles:insertAttribute name="body" />
+		</div><!--/content-->
+	</div><!--/main-->
+
 </body>
 </html>

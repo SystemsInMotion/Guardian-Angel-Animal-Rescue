@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -47,9 +48,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "expires",
     "expiresString"
 })
-public class PetfinderAuthData {
+public class PetfinderAuthData implements Serializable {
 
-    @XmlElement(required = true)
+	private static final long serialVersionUID = -2661418313302630309L;
+
+	@XmlElement(required = true)
     protected String key;
     @XmlElement(required = true)
     protected String token;

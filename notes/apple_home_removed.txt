@@ -1,68 +1,37 @@
-<!DOCTYPE html>
-<!-- saved from url=(0021)http://www.apple.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-	<meta name="Author" content="Apple Inc.">
-	<meta name="viewport" content="width=1024">
-	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9">
-	<link id="globalheader-stylesheet" rel="stylesheet" href="./Apple_files/navigation.css" type="text/css">
+<meta name="Author" content="Apple Inc.">
+<meta name="viewport" content="width=1024">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9">
+<link id="globalheader-stylesheet" rel="stylesheet" href="./Apple_files/navigation.css" type="text/css">
 
-	<title>Apple</title>
-	<meta name="omni_page" content="Apple - Index/Tab">
-	<meta name="Keywords" content="Apple">
-	<meta name="Description" content="Apple designs and creates iPod and iTunes, Mac laptop and desktop computers, the OS X operating system, and the revolutionary iPhone and iPad.">
-	<link rel="home" href="./Apple_files/Apple.htm">
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://images.apple.com/main/rss/hotnews/hotnews.rss">
-	<link rel="index" href="http://www.apple.com/sitemap/">
-	<link rel="stylesheet" href="./Apple_files/base.css" type="text/css">
-	<link rel="stylesheet" href="./Apple_files/home.css" type="text/css">
-	<link rel="stylesheet" href="./Apple_files/home(1).css" type="text/css">
-	<link rel="stylesheet" href="./Apple_files/billboard.css" type="text/css">
-	<link rel="stylesheet" href="./Apple_files/billboard(1).css" type="text/css">
-	<script src="./Apple_files/prototype.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./Apple_files/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./Apple_files/sizzle.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./Apple_files/browserdetect.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./Apple_files/apple_core.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./Apple_files/search_decorator.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./Apple_files/ac_base.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./Apple_files/ac_retina.js" type="text/javascript" charset="utf-8"></script>
-
-	<script src="./Apple_files/hero_resize.js" type="text/javascript" charset="utf-8"></script>
-
-<link id="globalheader-enhanced-stylesheet" rel="stylesheet" href="./Apple_files/enhanced.css" type="text/css"><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head><link rel="stylesheet" type="text/css" href="data:text/css,">
-<body id="home" class="home responsive" screen_capture_injected="true">
-	<script type="text/javascript">
-	var searchSection = 'global';
-	var searchCountry = 'us';
-</script>
+<title>Apple</title>
+<meta name="omni_page" content="Apple - Index/Tab">
+<meta name="Keywords" content="Apple">
+<meta name="Description" content="Apple designs and creates iPod and iTunes, Mac laptop and desktop computers, the OS X operating system, and the revolutionary iPhone and iPad.">
+<link rel="home" href="./Apple_files/Apple.htm">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://images.apple.com/main/rss/hotnews/hotnews.rss">
+<link rel="index" href="http://www.apple.com/sitemap/">
+<link rel="stylesheet" href="./Apple_files/base.css" type="text/css">
+<link rel="stylesheet" href="./Apple_files/home.css" type="text/css">
+<link rel="stylesheet" href="./Apple_files/home(1).css" type="text/css">
+<link rel="stylesheet" href="./Apple_files/billboard.css" type="text/css">
+<link rel="stylesheet" href="./Apple_files/billboard(1).css" type="text/css">
+<script src="./Apple_files/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/sizzle.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/search_decorator.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/ac_base.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/ac_retina.js" type="text/javascript" charset="utf-8"></script>
+<script src="./Apple_files/hero_resize.js" type="text/javascript" charset="utf-8"></script>
+<link id="globalheader-enhanced-stylesheet" rel="stylesheet" href="./Apple_files/enhanced.css" type="text/css">
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
+<script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script>
+</head>
+<link rel="stylesheet" type="text/css" href="data:text/css,">
 <script src="./Apple_files/globalnav.js" type="text/javascript" charset="utf-8"></script>
-<nav id="globalheader" class="apple globalheader-js noinset svg globalheader-loaded globalheader-loaded">
-	<!--googleoff: all-->
-	<ul id="globalnav" role="navigation">
-		<li id="gn-apple"><a href="./Apple_files/Apple.htm" onclick="s_objectID=&quot;http://www.apple.com/_1&quot;;return this.s_oc?this.s_oc(e):true"><span>Apple</span></a></li>
-		<li id="gn-store"><a href="http://store.apple.com/" onclick="s_objectID=&quot;http://store.apple.com/_1&quot;;return this.s_oc?this.s_oc(e):true"><span>Store</span></a></li>
-		<li id="gn-mac"><a href="http://www.apple.com/mac/" onclick="s_objectID=&quot;http://www.apple.com/mac/_1&quot;;return this.s_oc?this.s_oc(e):true" class=""><span>Mac</span></a></li>
-		<li id="gn-ipod"><a href="http://www.apple.com/ipod/" onclick="s_objectID=&quot;http://www.apple.com/ipod/_1&quot;;return this.s_oc?this.s_oc(e):true"><span>iPod</span></a></li>
-		<li id="gn-iphone"><a href="http://www.apple.com/iphone/" onclick="s_objectID=&quot;http://www.apple.com/iphone/_1&quot;;return this.s_oc?this.s_oc(e):true"><span>iPhone</span></a></li>
-		<li id="gn-ipad"><a href="http://www.apple.com/ipad/" onclick="s_objectID=&quot;http://www.apple.com/ipad/_1&quot;;return this.s_oc?this.s_oc(e):true"><span>iPad</span></a></li>
-		<li id="gn-itunes"><a href="http://www.apple.com/itunes/" onclick="s_objectID=&quot;http://www.apple.com/itunes/_1&quot;;return this.s_oc?this.s_oc(e):true"><span>iTunes</span></a></li>
-		<li id="gn-support" class="gn-last"><a href="http://www.apple.com/support/" onclick="s_objectID=&quot;http://www.apple.com/support/_1&quot;;return this.s_oc?this.s_oc(e):true"><span>Support</span></a></li>
-	</ul>
-	<!--googleon: all-->
-	<div id="globalsearch">
-		<form action="http://www.apple.com/search/" method="get" class="search empty" id="g-search"><div class="sp-label">
-			<label for="sp-searchtext">Search</label>
-			<input type="text" name="q" id="sp-searchtext" accesskey="s" autocomplete="off"><div class="reset"></div>
-		<div class="spinner hide"></div></div><input id="search-section" type="hidden" name="sec" value="global"></form>
-		<div id="sp-magnify"><div class="magnify-searchmode"></div><div class="magnify"></div></div>
-		<div id="sp-results"></div>
-	</div>
-</nav>
-<script type="text/javascript">
-	AC.GlobalNav.Instance = new AC.GlobalNav();
-</script><div id="globalheader-loaded-test"></div>
+
 
 	<div id="top">
 <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
@@ -148,8 +117,7 @@ Event.onDOMReady(function() {
 var s_code=s.t();if(s_code)document.write(s_code)</script>
 <!-- End SiteCatalyst code version: H.8. -->
 </div>
-	<div id="main">
-		<div id="content">
+
 
 			<article id="hero" class="with-promos">
 				<div id="hero-wrapper" style="height: 408px; ">
@@ -211,7 +179,7 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 				</div><!--/links-->
 
 				<div class="sosumi">
-					<p class="copyright">Copyright Â© 2012 Apple Inc. All rights reserved.</p>
+					<p class="copyright">Copyright © 2012 Apple Inc. All rights reserved.</p>
 					<ul class="piped">
 						<li><a href="http://www.apple.com/legal/" class="first" onclick="s_objectID=&quot;http://www.apple.com/legal/_1&quot;;return this.s_oc?this.s_oc(e):true">Terms of Use</a></li>
 						<li><a href="http://www.apple.com/legal/privacy/" onclick="s_objectID=&quot;http://www.apple.com/legal/privacy/_1&quot;;return this.s_oc?this.s_oc(e):true">Privacy Policy</a></li>
@@ -224,9 +192,4 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 					</div>
 				</div><!--/sosumi-->
 			</footer><!--/homefooter-->
-		</div><!--/content-->
-	</div><!--/main-->
 
-	
-
-<div class="windowsize-size" style="display: block; ">1920 X 500</div><div style="display: none; " id="hiddenlpsubmitdiv"></div><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>

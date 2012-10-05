@@ -8,6 +8,8 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,9 +59,11 @@ import javax.xml.bind.annotation.XmlType;
     "shelters"
 })
 @XmlRootElement(name = "petfinder")
-public class Petfinder {
+public class Petfinder implements Serializable {
 
-    @XmlElement(required = true)
+	private static final long serialVersionUID = -1728220819262680339L;
+	
+	@XmlElement(required = true)
     protected PetfinderHeaderType header;
     protected String lastOffset;
     protected PetfinderAuthData auth;

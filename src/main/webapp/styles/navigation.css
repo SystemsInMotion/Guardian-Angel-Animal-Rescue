@@ -1,7 +1,11 @@
 /* GLOBALHEADER */
-#globalheader { position:relative; display:block; width:980px; height:36px; margin:18px auto; text-align:left; z-index:9998; background:url(/global/nav/images/globalheader.png) repeat-x;
+#globalheader { 
+	position:relative; display:block; width:980px; height:36px; margin:18px auto; text-align:left; z-index:9998; 
+/*
+	background:url(/global/nav/images/globalheader.png) repeat-x;
 	-khtml-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
 	-khtml-box-shadow:rgba(0,0,0,0.3) 0 1px 2px; -ms-box-shadow:rgba(0,0,0,0.3) 0 1px 2px; -o-box-shadow:rgba(0,0,0,0.3) 0 1px 2px; -moz-box-shadow:rgba(0,0,0,0.3) 0 1px 2px; -webkit-box-shadow:rgba(0,0,0,0.3) 0 1px 2px; box-shadow:rgba(0,0,0,0.3) 0 1px 2px;
+*/
 	font:12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 }
 @media only screen and (max-device-width:768px) {
