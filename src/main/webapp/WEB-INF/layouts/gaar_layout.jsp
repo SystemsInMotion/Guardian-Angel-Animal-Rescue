@@ -16,8 +16,6 @@
 <%@ include file="/WEB-INF/fragments/styles.jsp"%>
 
 <title><tiles:getAsString name="title" /> - GAAR Michigan</title>
-<link rel="alternate" type="application/rss+xml" title="Blog" href="http://www.gaarmichigan.org/rss/blog">
-<link rel="canonical" href="./home_files/home.htm">
 </head>
 
 <body class="body cc-page cc-page-index cc-indexpage cc-pagemode-default cc-content-parent" id="page-257510719" >
