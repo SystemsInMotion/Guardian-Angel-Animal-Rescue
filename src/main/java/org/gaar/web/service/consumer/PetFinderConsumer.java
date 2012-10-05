@@ -3,9 +3,11 @@ package org.gaar.web.service.consumer;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.gaar.cache.CacheWrapper;
 import org.gaar.util.StringUtils;
 import org.petfinder.entity.Petfinder;
 import org.petfinder.entity.PetfinderAuthData;
@@ -18,6 +20,7 @@ import org.petfinder.web.service.Method;
 import org.petfinder.web.service.QueryParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.client.RestTemplate;
@@ -32,6 +35,8 @@ import org.springframework.web.util.UriUtils;
  */
 @Service("petFinderService")
 public class PetFinderConsumer {
+	@Autowired
+	CacheWrapper<String, List<PetfinderPetRecord>> cacheWrapper;
 
 	private static final String API_KEY = "15c639ff6d160dc55ff6d37677bb0880";
 	private static final String API_SECRET = "f14226e0353d1fceca8fcbd17ed06881";
@@ -197,22 +202,24 @@ public class PetFinderConsumer {
 		return petfinder.getPet();
 	}
 
-	public PetfinderPetRecordList shelterPets(String shelterId, Character status, Integer offset, Integer count,
+	public List<PetfinderPetRecord> shelterPets(String shelterId, Character status, Integer offset, Integer count,
 			String output, String format) {
-		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
-		params.put(QueryParam.id, shelterId);
-		params.put(QueryParam.status, status);
-		params.put(QueryParam.offset, offset);
-		params.put(QueryParam.count, count);
-		params.put(QueryParam.output, output);
-		// params.put(QueryParam.format, format);
 
-		final Petfinder petfinder = executeQuery(Method.SHELTER_PETS, params);
+		List<PetfinderPetRecord> pets = cacheWrapper.get("pets");
+		if (pets == null) {
+			Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
+			params.put(QueryParam.id, shelterId);
+			params.put(QueryParam.status, status);
+			params.put(QueryParam.offset, offset);
+			params.put(QueryParam.count, count);
+			params.put(QueryParam.output, output);
 
-		if (petfinder != null && "json".equals(format)) {
-			// ObjectMapper mapper = new ObjectMapper(jf)
+			final Petfinder petfinder = executeQuery(Method.SHELTER_PETS, params);
+			PetfinderPetRecordList petRecordList = petfinder.getPets();
+			pets = petRecordList.getPet();
+			cacheWrapper.put("pets", pets);
 		}
-		return petfinder.getPets();
+		return pets;
 	}
 
 	public PetfinderShelterRecordList shelterPetsByBreed(String animal, String breed, Integer offset, Integer count,

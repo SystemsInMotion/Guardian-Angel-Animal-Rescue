@@ -40,12 +40,8 @@ public class RemoteController {
 	@RequestMapping(value = "pets", method = GET)
 	public @ResponseBody
 	List<PetfinderPetRecord> doGetPets() {
-		// TODO - check is cache is expired, if so refresh cache and return list
-		// from cache
-		PetfinderPetRecordList shelterPets = petFinderService.shelterPets(SHELTER_ID_GAAR, ADOPTION_STATUS_NULL,
+		return petFinderService.shelterPets(SHELTER_ID_GAAR, ADOPTION_STATUS_NULL,
 				RECORD_OFFSET_NULL, RETURN_COUNT_ALL, OUTPUT_NULL, FORMAT_NULL);
-		final List<PetfinderPetRecord> pets = shelterPets.getPet();
-		return pets;
 	}
 
 	@RequestMapping(value = "cats", method = GET)
