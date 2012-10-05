@@ -3,7 +3,7 @@
 
 <tiles-definitions>
 
-	<definition name="main" template="/WEB-INF/layouts/gaar_layout.jsp">
+	<definition name="main" template="/WEB-INF/layouts/default_layout.jsp">
 		<put-attribute name="title" type="string" />
 		<put-attribute name="body" />
 	</definition>
