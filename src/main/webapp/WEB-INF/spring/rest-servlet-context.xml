@@ -14,7 +14,7 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-	<context:component-scan base-package="org.gaar.web.controller.rest,org.gaar.web.service.consumer" />
+	<context:component-scan base-package="org.gaar.cache, org.gaar.web.controller.rest, org.gaar.web.service.consumer" />
 	
 	<mvc:annotation-driven />
 
