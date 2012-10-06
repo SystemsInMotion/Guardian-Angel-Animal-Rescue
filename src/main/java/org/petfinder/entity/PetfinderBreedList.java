@@ -49,6 +49,7 @@ public class PetfinderBreedList implements Serializable {
 
 	@XmlElement(required = true)
     protected List<String> breed;
+
     @XmlAttribute(name = "animal")
     protected String animal;
 

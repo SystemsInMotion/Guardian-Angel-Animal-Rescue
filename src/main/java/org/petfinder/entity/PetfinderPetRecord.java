@@ -20,7 +20,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
  * <p>Java class for petfinderPetRecord complex type.
  * 
@@ -90,7 +89,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * &lt;/complexType>
  * </pre>
  * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "petfinderPetRecord", propOrder = {
@@ -117,34 +115,49 @@ public class PetfinderPetRecord implements Serializable {
 
 	@XmlElement(required = true)
     protected BigInteger id;
+	
     @XmlElement(required = true)
     protected String shelterId;
+    
     protected String shelterPetId;
+    
     @XmlElement(required = true)
     protected String name;
+    
     @XmlElement(required = true)
     protected AnimalType animal;
+    
     @XmlElement(required = true)
     protected PetfinderBreedList breeds;
+    
     @XmlElement(required = true)
     protected String mix;
+    
     @XmlElement(required = true)
     protected PetAgeType age;
+    
     @XmlElement(required = true)
     protected PetGenderType sex;
+    
     @XmlElement(required = true)
     protected PetSizeType size;
+    
     @XmlElement(required = true)
     protected PetfinderPetRecord.Options options;
+    
     @XmlElement(required = true)
     protected String description;
+    
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar lastUpdate;
+    
     @XmlElement(required = true)
     protected PetStatusType status;
+    
     @XmlElement(required = true)
     protected PetfinderPetRecord.Media media;
+    
     protected PetContactType contact;
 
     /**

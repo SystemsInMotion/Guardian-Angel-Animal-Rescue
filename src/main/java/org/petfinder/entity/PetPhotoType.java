@@ -57,9 +57,11 @@ public class PetPhotoType implements Serializable {
 	
 	@XmlValue
     protected String value;
+	
     @XmlAttribute(name = "id")
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger id;
+    
     @XmlAttribute(name = "size")
     protected String size;
 
