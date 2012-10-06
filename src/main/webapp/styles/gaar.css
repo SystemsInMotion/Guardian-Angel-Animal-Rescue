@@ -6,27 +6,25 @@ html,body {
 
 #content {
 	background-color: #FFF;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border: 1px solid #999;
 }
 
 #gaar-logo {
 	margin: 10px auto 10px 20px;
 }
 
-#globalheader { 
-	background:#FFF;
-	height:100px;
-	
-	-khtml-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	
+#globalheader {
+	background: #FFF;
 	-moz-border-radius-topleft: 4px;
 	-moz-border-radius-topright: 4px;
-	
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
-	border: 1px solid #888;
+	border: 1px solid #999;
+	border-bottom: none;
+	height: 100px;
+	margin-bottom: 0;
 }
