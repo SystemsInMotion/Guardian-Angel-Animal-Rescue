@@ -35,8 +35,6 @@ import org.springframework.web.util.UriUtils;
  */
 @Service("petFinderService")
 public class PetFinderConsumer {
-	@Autowired
-	CacheWrapper<String, List<PetfinderPetRecord>> cacheWrapper;
 
 	@Autowired
 	private CacheWrapper<String, List<PetfinderPetRecord>> cacheWrapper;
