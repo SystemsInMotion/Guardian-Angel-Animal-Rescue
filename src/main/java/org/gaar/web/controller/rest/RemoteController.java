@@ -9,7 +9,6 @@ import java.util.List;
 import org.gaar.web.service.consumer.PetFinderConsumer;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetfinderPetRecord;
-import org.petfinder.entity.PetfinderPetRecordList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,7 +38,7 @@ public class RemoteController {
 	@RequestMapping(value = "pets", method = GET)
 	public @ResponseBody
 	List<PetfinderPetRecord> doGetPets() {
-		return petFinderService.shelterPets(SHELTER_ID_GAAR, ADOPTION_STATUS_NULL,
+		return petFinderService.shelterPets(PetFinderConsumer.SHELTER_ID_GAAR, ADOPTION_STATUS_NULL,
 				RECORD_OFFSET_NULL, RETURN_COUNT_ALL, OUTPUT_NULL, FORMAT_NULL);
 	}
 
