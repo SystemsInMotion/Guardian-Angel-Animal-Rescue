@@ -6,17 +6,12 @@ import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
 
 @Component("cacheWrapper")
 @Scope("singleton")
 public class EhcacheWrapper<K, V> implements CacheWrapper<K, V> {
-
-	//private static final Logger LOG = LoggerFactory.getLogger(SessionListener.class);
 
 	private static final String CACHE_NAME = "petFinderCache";
 	private static final String EHCACHE_XML = "/ehcache.xml";
@@ -47,9 +42,4 @@ public class EhcacheWrapper<K, V> implements CacheWrapper<K, V> {
 		getCache().put(new Element(key, value));
 	}
 
-	/*public void removeAll(String userName) {
-		LOG.info("Removing all cached search results for user:" + userName);
-		getCache().remove(userName + FULL_RESULT_KEY_SUFFIX);
-		getCache().remove(userName + PAGE_RESULT_KEY_SUFFIX);
-	}*/
 }
