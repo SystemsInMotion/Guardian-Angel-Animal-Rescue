@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -47,12 +46,6 @@ public class PetFinderConsumerTest {
 	@Autowired
 	PetFinderConsumer petFinderService;
 
-//	@Before
-//	public void before() {
-//		this.petFinderService = new PetFinderConsumer();
-//	}
-
-	@Ignore
 	@Test
 	public void breedList() {
 		final PetfinderBreedList breedList = this.petFinderService.breedList(ANIMAL_CAT, null);
@@ -60,11 +53,9 @@ public class PetFinderConsumerTest {
 		assertTrue(breedList.getAnimal().equals(ANIMAL_CAT));
 	}
 
-	@Ignore
 	@Test
 	public void buildQuery() {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
-		// params.put("animal", AnimalType.CAT.name());
 		params.put(QueryParam.animal, ANIMAL_CAT);
 		params.put(QueryParam.breed, BREED_DOMESTIC_SHORT_HAIR);
 		final String token = this.petFinderService.getAuthData().getToken();
@@ -73,7 +64,6 @@ public class PetFinderConsumerTest {
 		assertTrue(query.contains("&breed=Domestic%20Short%20Hair"));
 	}
 
-	@Ignore
 	@Test
 	public void findPet() {
 		final PetfinderPetRecordList petRecordList = this.petFinderService.findPet(ANIMAL_CAT, BREED_NULL, SIZE_NULL,
@@ -88,7 +78,6 @@ public class PetFinderConsumerTest {
 		assertEquals(PetGenderType.M, pet.getSex());
 	}
 
-	@Ignore
 	@Test
 	public void findShelter() {
 		final PetfinderShelterRecordList shelterRecordList = this.petFinderService.findShelter(LOCATION_ZIP, NAME_NULL,
@@ -97,11 +86,10 @@ public class PetFinderConsumerTest {
 
 	}
 
-	@Ignore
 	@Test
 	public void getPet() {
-		final PetfinderPetRecord randomPet = this.petFinderService.randomPet(ANIMAL_CAT, BREED_NULL, SIZE_NULL, GENDER_MALE,
-				LOCATION_ZIP, SHELTER_NULL, OUTPUT_FULL, FORMAT_NULL);
+		final PetfinderPetRecord randomPet = this.petFinderService.randomPet(ANIMAL_CAT, BREED_NULL, SIZE_NULL,
+				GENDER_MALE, LOCATION_ZIP, SHELTER_NULL, OUTPUT_FULL, FORMAT_NULL);
 		assertNotNull(randomPet);
 		assertEquals(AnimalType.CAT, randomPet.getAnimal());
 		assertEquals(PetGenderType.M, randomPet.getSex());
@@ -111,7 +99,6 @@ public class PetFinderConsumerTest {
 		assertEquals(randomPet.getId(), pet.getId());
 	}
 
-	@Ignore
 	@Test
 	public void getShelter() {
 		final PetfinderShelterRecord shelter = this.petFinderService.getShelter(SHELTER_ID_GAAR, FORMAT_NULL);
@@ -119,11 +106,10 @@ public class PetFinderConsumerTest {
 		assertEquals(SHELTER_ID_GAAR, shelter.getId());
 	}
 
-	@Ignore
 	@Test
 	public void randomPet() {
-		final PetfinderPetRecord randomPet = this.petFinderService.randomPet(ANIMAL_CAT, null, null, GENDER_MALE, LOCATION_ZIP,
-				null, OUTPUT_FULL, null);
+		final PetfinderPetRecord randomPet = this.petFinderService.randomPet(ANIMAL_CAT, null, null, GENDER_MALE,
+				LOCATION_ZIP, null, OUTPUT_FULL, null);
 		assertNotNull(randomPet);
 		assertEquals(AnimalType.CAT, randomPet.getAnimal());
 	}
@@ -135,19 +121,19 @@ public class PetFinderConsumerTest {
 		assertNotNull(pets);
 		PetfinderPetRecord pet = pets.get(0);
 		assertNotNull(pet);
-		
-		pets = this.petFinderService.shelterPets(SHELTER_ID_GAAR, STATUS_NULL, OFFSET_NULL,
-				COUNT_NULL, OUTPUT_FULL, FORMAT_NULL);
+
+		pets = this.petFinderService.shelterPets(SHELTER_ID_GAAR, STATUS_NULL, OFFSET_NULL, COUNT_NULL, OUTPUT_FULL,
+				FORMAT_NULL);
 		assertNotNull(pets);
 		pet = pets.get(0);
 		assertNotNull(pet);
 	}
 
-	@Ignore
+	@Ignore // takes over a minute to return results from PetFinder
 	@Test
 	public void shelterPetsByBreed() {
 		final PetfinderShelterRecordList recordList = this.petFinderService.shelterPetsByBreed(ANIMAL_CAT,
-				BREED_DOMESTIC_SHORT_HAIR, OFFSET_NULL, 5, FORMAT_NULL);
+				BREED_DOMESTIC_SHORT_HAIR, 0, 1, FORMAT_NULL);
 		assertNotNull(recordList);
 	}
 }
