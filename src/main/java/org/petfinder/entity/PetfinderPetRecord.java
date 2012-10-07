@@ -578,9 +578,11 @@ public class PetfinderPetRecord implements Serializable {
     @XmlType(name = "", propOrder = {
         "photos"
     })
-    public static class Media {
+    public static class Media implements Serializable {
 
-        protected PetfinderPetRecord.Media.Photos photos;
+		private static final long serialVersionUID = 2777660425331382176L;
+		
+		protected PetfinderPetRecord.Media.Photos photos;
 
         /**
          * Gets the value of the photos property.
@@ -630,9 +632,11 @@ public class PetfinderPetRecord implements Serializable {
         @XmlType(name = "", propOrder = {
             "photo"
         })
-        public static class Photos {
+        public static class Photos implements Serializable {
 
-            protected List<PetPhotoType> photo;
+			private static final long serialVersionUID = 1522572605715586724L;
+
+			protected List<PetPhotoType> photo;
 
             /**
              * Gets the value of the photo property.
@@ -691,9 +695,11 @@ public class PetfinderPetRecord implements Serializable {
     @XmlType(name = "", propOrder = {
         "option"
     })
-    public static class Options {
+    public static class Options implements Serializable {
 
-        protected List<PetOptionType> option;
+		private static final long serialVersionUID = 7241561942287148696L;
+
+		protected List<PetOptionType> option;
 
         /**
          * Gets the value of the option property.
