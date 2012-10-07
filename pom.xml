@@ -7,6 +7,48 @@
 	<packaging>war</packaging>
 	<name>Guardian Angel Animal Rescue</name>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>2.0.5</version>
+				<executions>
+					<execution>
+						<phase>process-resources</phase>
+						<configuration>
+							<changeLogFile>src/db/db.changelog-master.xml</changeLogFile>
+							<driver>${jdbc.driver}</driver>
+							<url>${jdbc.url}</url>
+							<username>${jdbc.username}</username>
+							<password>${jdbc.password}</password>
+						</configuration>
+						<goals>
+							<goal>update</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0-alpha-2</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>src/main/resources/dbconnection.properties</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -94,6 +136,13 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 	<properties>
@@ -103,11 +152,12 @@
 		<jsp.api.version>2.2.1</jsp.api.version>
 		<jstl.api.version>1.2.1</jstl.api.version>
 		<junit.version>4.10</junit.version>
+		<mysql.connector.version>5.1.21</mysql.connector.version>
+		<restassured.version>1.6.2</restassured.version>
 		<servlet.api.version>3.0.1</servlet.api.version>
 		<slf4j.version>1.6.6</slf4j.version>
 		<spring.version>3.1.2.RELEASE</spring.version>
 		<taglib.version>1.1.2</taglib.version>
 		<tiles.version>2.2.2</tiles.version>
-		<restassured.version>1.6.2</restassured.version>
 	</properties>
 </project>
