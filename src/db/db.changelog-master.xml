@@ -3,6 +3,9 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-	<include file="src/db/create_organization.xml" />
+	<include file="src/db/create_animal_type.xml" />
+	<!-- 
+	 <include file="src/db/create_organization.xml" />
+	 -->
 
 </databaseChangeLog>
