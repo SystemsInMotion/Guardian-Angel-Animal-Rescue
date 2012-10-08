@@ -1,0 +1,33 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="create breed v3">
+		<createTable tableName="breed">
+			<column name="id" type="integer" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="BREED_PK" />
+			</column>
+			<column name="animal_id" type="integer">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<addForeignKeyConstraint constraintName="fk_breed_animal_type_id"
+			referencedTableName="animal_type" baseColumnNames="animal_id"
+			baseTableName="breed" referencedColumnNames="id" />
+	</changeSet>
+
+	<include file="src/db/data/insert_breed_barnyard.xml" />
+	<include file="src/db/data/insert_breed_bird.xml" />
+	<include file="src/db/data/insert_breed_cat.xml" />
+	<include file="src/db/data/insert_breed_dog.xml" />
+	<include file="src/db/data/insert_breed_horse.xml" />
+	<include file="src/db/data/insert_breed_pig.xml" />
+	<include file="src/db/data/insert_breed_reptile.xml" />
+	<include file="src/db/data/insert_breed_smallfurry.xml" />
+
+</databaseChangeLog>
