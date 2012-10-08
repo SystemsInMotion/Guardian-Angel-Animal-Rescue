@@ -1,0 +1,20 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed pig">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="6" />
+			<column name="name" value="Pig (Farm)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="6" />
+			<column name="name" value="Pot Bellied" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="6" />
+			<column name="name" value="Vietnamese Pot Bellied" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

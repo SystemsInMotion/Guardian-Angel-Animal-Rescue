@@ -1,0 +1,164 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed bird">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="African Grey" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Amazon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Brotogeris" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Budgie/Budgerigar" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Button Quail" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Caique" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Canary" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Chicken" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Cockatiel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Cockatoo" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Conure" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Dove" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Duck" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Eclectus" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Emu" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Finch" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Goose" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Guinea Fowl" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Kakariki" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Lory/Lorikeet" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Lovebird" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Macaw" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Ostrich" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Parakeet (Other)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Parrot (Other)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Parrotlet" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Peacock/Pea fowl" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Pheasant" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Pigeon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Pionus" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Poicephalus/Senegal" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Quail" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Quaker Parakeet" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Rhea" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Ringneck/Psittacula" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Rosella" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Swan" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Toucan" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="2" />
+			<column name="name" value="Turkey" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>
