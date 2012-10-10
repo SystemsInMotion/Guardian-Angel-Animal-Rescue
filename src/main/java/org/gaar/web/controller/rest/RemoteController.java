@@ -32,7 +32,7 @@ public class RemoteController {
 	@RequestMapping(value = "pet/{petId}", method = GET)
 	public @ResponseBody
 	PetfinderPetRecord doGetPet(@PathVariable(value = "petId") Integer id) {
-		return petFinderService.getPet(BigInteger.valueOf(id), FORMAT_NULL);
+		return petFinderService.readPet(BigInteger.valueOf(id), FORMAT_NULL);
 	}
 
 	@RequestMapping(value = "pets", method = GET)

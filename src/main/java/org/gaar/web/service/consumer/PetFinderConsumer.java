@@ -2,6 +2,7 @@ package org.gaar.web.service.consumer;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
@@ -9,6 +10,7 @@ import java.util.TreeMap;
 
 import org.gaar.cache.CacheWrapper;
 import org.gaar.util.StringUtils;
+import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.Petfinder;
 import org.petfinder.entity.PetfinderAuthData;
 import org.petfinder.entity.PetfinderBreedList;
@@ -113,7 +115,7 @@ public class PetFinderConsumer {
 	}
 
 	private Petfinder executeQuery(Method method, Map<QueryParam, Object> params) {
-		final String token = this.getAuthData().getToken();
+		final String token = this.authData().getToken();
 		final String query = buildQuery(token, params, false);
 		final String sig = signatureParam(buildQuery(token, params, true));
 		final String url = StringUtils.concat(PETFINDER_HOST, method.value, query, sig);
@@ -159,7 +161,7 @@ public class PetFinderConsumer {
 	 * 
 	 * @return PetfinderAuthData
 	 */
-	PetfinderAuthData getAuthData() {
+	PetfinderAuthData authData() {
 		/*
 		 * subtracting some time to ensure token is still good by the time it is
 		 * used
@@ -171,7 +173,7 @@ public class PetFinderConsumer {
 		return authData;
 	}
 
-	public PetfinderPetRecord getPet(BigInteger animalId, String format) {
+	public PetfinderPetRecord readPet(BigInteger animalId, String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.id, animalId);
 		params.put(QueryParam.format, format);
@@ -180,7 +182,7 @@ public class PetFinderConsumer {
 		return petfinder.getPet();
 	}
 
-	public PetfinderShelterRecord getShelter(String shelterId, String format) {
+	public PetfinderShelterRecord readShelter(String shelterId, String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.id, shelterId);
 		params.put(QueryParam.format, format);
@@ -225,6 +227,30 @@ public class PetFinderConsumer {
 		return pets;
 	}
 
+	public List<PetfinderPetRecord> shelterCats(String shelterId, Character status, Integer offset, Integer count,
+			String output, String format) {
+		final List<PetfinderPetRecord> pets = this.shelterPets(shelterId, status, offset, count, output, format);
+		List<PetfinderPetRecord> cats = new ArrayList<PetfinderPetRecord>();
+		for (PetfinderPetRecord pet : pets) {
+			if (pet.getAnimal().equals(AnimalType.CAT)) {
+				cats.add(pet);
+			}
+		}
+		return cats;
+	}
+
+	public List<PetfinderPetRecord> shelterDogs(String shelterId, Character status, Integer offset, Integer count,
+			String output, String format) {
+		final List<PetfinderPetRecord> pets = this.shelterPets(shelterId, status, offset, count, output, format);
+		List<PetfinderPetRecord> dogs = new ArrayList<PetfinderPetRecord>();
+		for (PetfinderPetRecord pet : pets) {
+			if (pet.getAnimal().equals(AnimalType.DOG)) {
+				dogs.add(pet);
+			}
+		}
+		return dogs;
+	}
+	
 	public PetfinderShelterRecordList shelterPetsByBreed(String animal, String breed, Integer offset, Integer count,
 			String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
@@ -262,5 +288,5 @@ public class PetFinderConsumer {
 
 		return "&sig=" + md5DigestAsHex;
 	}
-	
+
 }
