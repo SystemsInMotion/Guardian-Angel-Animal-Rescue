@@ -2,12 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.gaar</groupId>
-	<artifactId>GAAR</artifactId>
+	<artifactId>gaar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Guardian Angel Animal Rescue</name>
 
 	<build>
+		<finalName>gaar</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.liquibase</groupId>
@@ -46,6 +47,15 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<server>skronek.org</server>
+					<url>http://www.skronek.org/manager/html</url>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
