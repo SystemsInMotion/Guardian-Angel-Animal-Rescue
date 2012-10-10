@@ -13,6 +13,11 @@
 		<put-attribute name="body" value="/WEB-INF/view/home.jsp" />
 	</definition>
 
+	<definition name="pet" extends="main">
+		<put-attribute name="title" type="string" value="Pet" />
+		<put-attribute name="body" value="/WEB-INF/view/pet.jsp" />
+	</definition>
+	
 	<definition name="about" extends="main">
 		<put-attribute name="title" type="string" value="About" />
 		<put-attribute name="body" value="/WEB-INF/view/about.jsp" />
