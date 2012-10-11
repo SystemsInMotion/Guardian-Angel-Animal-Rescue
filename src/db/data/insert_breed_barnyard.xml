@@ -1,0 +1,68 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed barnyard">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Alpaca" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Alpine" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Angus" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Barbados" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Cow" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Goat" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Holstein" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Jersey" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Llama" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Merino" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Mouflan" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Nigerian Dwarf" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Pygmy" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Sheep" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="1" />
+			<column name="name" value="Shetland" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

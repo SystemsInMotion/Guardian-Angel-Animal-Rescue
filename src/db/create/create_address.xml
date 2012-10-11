@@ -1,0 +1,42 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="create address">
+		<createTable tableName="contact_info">
+			<column name="id" type="integer">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="address_pk" />
+			</column>
+			<column name="address1" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="address2" type="varchar(50)" />
+			<column name="city" type="varchar(20)">
+				<constraints nullable="false" />
+			</column>
+			<column name="state_or_province" type="varchar(20)">
+				<constraints nullable="false" />
+			</column>
+			<column name="zip_code" type="varchar(20)">
+				<constraints nullable="false" />
+			</column>
+			<column name="country" type="varchar(20)">
+				<constraints nullable="false" />
+			</column>
+			<column name="latitude" type="varchar(10)" />
+			<column name="longitude" type="varchar(10)" />
+			<column name="phone" type="varchar(15)" />
+			<column name="fax" type="varchar(15)" />
+			<column name="email" type="varchar(100)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<addUniqueConstraint constraintName="org_name_unq"
+			columnNames="name" tableName="organization" />
+		<addUniqueConstraint constraintName="org_email_unq"
+			columnNames="email" tableName="organization" />
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,120 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed horse">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Appaloosa" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Arabian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Belgian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Clydesdale" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Curly Horse" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Donkey" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Draft" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Gaited" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Grade" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Lipizzan" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Miniature Horse" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Missouri Foxtrotter" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Morgan" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Mule" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Mustang" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Paint/Pinto" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Palomino" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Paso Fino" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Percheron" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Peruvian Paso" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Pony" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Quarterhorse" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Saddlebred" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Shetland Pony" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Standardbred" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Tennessee Walker" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Thoroughbred" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="5" />
+			<column name="name" value="Warmblood" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,56 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert animal_types">
+
+		<insert tableName="animal_type">
+			<column name="name" value="barnyard" />
+			<column name="description" value="BarnYard" />
+		</insert>
+
+
+		<insert tableName="animal_type">
+			<column name="name" value="bird" />
+			<column name="description" value="Bird" />
+		</insert>
+
+
+		<insert tableName="animal_type">
+			<column name="name" value="cat" />
+			<column name="description" value="Cat" />
+		</insert>
+
+
+		<insert tableName="animal_type">
+			<column name="name" value="dog" />
+			<column name="description" value="Dog" />
+		</insert>
+
+
+		<insert tableName="animal_type">
+			<column name="name" value="horse" />
+			<column name="description" value="Horse" />
+		</insert>
+
+
+		<insert tableName="animal_type">
+			<column name="name" value="pig" />
+			<column name="description" value="Pig" />
+		</insert>
+
+
+		<insert tableName="animal_type">
+			<column name="name" value="reptile" />
+			<column name="description" value="Reptile" />
+		</insert>
+
+
+		<insert tableName="animal_type">
+			<column name="name" value="smallfurry" />
+			<column name="description" value="Small&amp;Furry" />
+		</insert>
+
+	</changeSet>
+</databaseChangeLog>

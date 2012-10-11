@@ -1,0 +1,424 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed cat">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Abyssinian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="American Curl" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="American Shorthair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="American Wirehair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Applehead Siamese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Balinese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Bengal" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Birman" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Bobtail" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Bombay" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="British Shorthair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Burmese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Burmilla" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Calico" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Canadian Hairless" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Chartreux" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Chausie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Chinchilla" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Cornish Rex" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Cymric" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Devon Rex" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Dilute Calico" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Dilute Tortoiseshell" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair - brown" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair - buff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair - buff and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair - gray and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair - orange" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair - orange and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair-black" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair-black and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair-gray" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Long Hair-white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair - brown" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair - buff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair - buff and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair - gray and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair - orange and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair-black" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair-black and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair-gray" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair-orange" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Medium Hair-white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair - brown" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair - buff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair - buff and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair - gray and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair - orange and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair-black" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair-black and white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair-gray" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair-mitted" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair-orange" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Domestic Short Hair-white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Egyptian Mau" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Exotic Shorthair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Extra-Toes Cat (Hemingway Polydactyl)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Havana" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Himalayan" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Icelandic Sheepdog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Japanese Bobtail" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Javanese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Korat" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="LaPerm" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Maine Coon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Manx" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Munchkin" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Nebelung" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Norwegian Forest Cat" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Ocicat" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Oriental Long Hair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Oriental Short Hair" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Oriental Tabby" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Persian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Pixie-Bob" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Ragamuffin" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Ragdoll" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Russian Blue" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Scottish Fold" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Selkirk Rex" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Siamese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Siberian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Silver" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Singapura" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Snowshoe" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Somali" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Sphynx (hairless cat)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tabby" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tabby - black" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tabby - Brown" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tabby - buff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tabby - Grey" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tabby - Orange" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tabby - white" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tiger" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tonkinese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Torbie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tortoiseshell" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Turkish Angora" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Turkish Van" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="3" />
+			<column name="name" value="Tuxedo" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

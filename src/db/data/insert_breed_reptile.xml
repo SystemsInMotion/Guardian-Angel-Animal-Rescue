@@ -1,0 +1,228 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed reptile">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Asian Box" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Ball Python" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Bearded Dragon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Boa" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Boa Constrictor" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Box" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Bull" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Bull Frog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Burmese Python" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Chameleon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Corn/Rat" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Eastern Box" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Fire Salamander" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Fire-bellied" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Fire-bellied Newt" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Florida Box" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Freshwater Fish" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Frog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Garter/Ribbon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Gecko" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Goldfish" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Hermit Crab" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Horned Frog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Iguana" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="King/Milk" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Leopard" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Leopard Frog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Lizard" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Monitor" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Mud" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Musk" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Oregon Newt" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Ornamental Box" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Paddle Tailed Newt" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Painted" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Python" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Red Foot" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Red-eared Slider" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Russian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Saltwater Fish" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Scorpion" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Snake" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Snapping" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Soft Shell" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Southern" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Sulcata" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Tarantula" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Three Toed Box" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Tiger Salamander" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Toad" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Tortoise" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Tree Frog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Turtle" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Uromastyx" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="7" />
+			<column name="name" value="Yellow-bellied Slider" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetGenderType;
 import org.petfinder.entity.PetfinderBreedList;
@@ -19,7 +19,12 @@ import org.petfinder.entity.PetfinderPetRecordList;
 import org.petfinder.entity.PetfinderShelterRecord;
 import org.petfinder.entity.PetfinderShelterRecordList;
 import org.petfinder.web.service.QueryParam;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "classpath:/rest-context.xml" })
 public class PetFinderConsumerTest {
 
 	private static final String BREED_DOMESTIC_SHORT_HAIR = "Domestic Short Hair";
@@ -27,27 +32,23 @@ public class PetFinderConsumerTest {
 	private static final String AGE_ADULT = "Adult";
 	private static final String ANIMAL_CAT = "cat";
 	private static final String BREED_NULL = null;
-	private static final String COUNT_NULL = null;
+	private static final Integer COUNT_NULL = null;
 	private static final String FORMAT_NULL = null;
-	private static final char GENDER_MALE = 'M';
+	private static final Character GENDER_MALE = 'M';
 	private static final String LOCATION_ZIP = "48108";
 	private static final String NAME_NULL = null;
-	private static final String OFFSET_NULL = null;
+	private static final Integer OFFSET_NULL = null;
 	private static final String OUTPUT_FULL = "full";
 	private static final String SHELTER_NULL = null;
 	private static final String SIZE_NULL = null;
 	private static final Character STATUS_NULL = null;
 
-	PetFinderConsumer consumer;
-
-	@Before
-	public void before() {
-		this.consumer = new PetFinderConsumer();
-	}
+	@Autowired
+	PetFinderConsumer petFinderService;
 
 	@Test
 	public void breedList() {
-		final PetfinderBreedList breedList = this.consumer.breedList(ANIMAL_CAT, null);
+		final PetfinderBreedList breedList = this.petFinderService.breedList(ANIMAL_CAT, null);
 		assertNotNull(breedList);
 		assertTrue(breedList.getAnimal().equals(ANIMAL_CAT));
 	}
@@ -55,22 +56,22 @@ public class PetFinderConsumerTest {
 	@Test
 	public void buildQuery() {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
-		// params.put("animal", AnimalType.CAT.name());
 		params.put(QueryParam.animal, ANIMAL_CAT);
 		params.put(QueryParam.breed, BREED_DOMESTIC_SHORT_HAIR);
-		final String token = this.consumer.getAuthData().getToken();
-		final String query = this.consumer.buildQuery(token, params, true);
+		final String token = this.petFinderService.authData().getToken();
+		final String query = this.petFinderService.buildQuery(token, params, true);
 		assertTrue(query.contains("&animal=cat"));
 		assertTrue(query.contains("&breed=Domestic%20Short%20Hair"));
 	}
 
 	@Test
 	public void findPet() {
-		final PetfinderPetRecordList petRecordList = this.consumer.findPet(ANIMAL_CAT, BREED_NULL, SIZE_NULL,
+		final PetfinderPetRecordList petRecordList = this.petFinderService.findPet(ANIMAL_CAT, BREED_NULL, SIZE_NULL,
 				GENDER_MALE, LOCATION_ZIP, AGE_ADULT, OFFSET_NULL, COUNT_NULL, OUTPUT_FULL, FORMAT_NULL);
 		assertNotNull(petRecordList);
 		final List<PetfinderPetRecord> pets = petRecordList.getPet();
 		assertNotNull(pets);
+		assertTrue(pets.size() > 0);
 		final PetfinderPetRecord pet = pets.get(0);
 		assertNotNull(pet);
 		assertEquals(AnimalType.CAT, pet.getAnimal());
@@ -79,7 +80,7 @@ public class PetFinderConsumerTest {
 
 	@Test
 	public void findShelter() {
-		final PetfinderShelterRecordList shelterRecordList = this.consumer.findShelter(LOCATION_ZIP, NAME_NULL,
+		final PetfinderShelterRecordList shelterRecordList = this.petFinderService.findShelter(LOCATION_ZIP, NAME_NULL,
 				OFFSET_NULL, COUNT_NULL, FORMAT_NULL);
 		assertNotNull(shelterRecordList);
 
@@ -87,48 +88,69 @@ public class PetFinderConsumerTest {
 
 	@Test
 	public void getPet() {
-		final PetfinderPetRecord randomPet = this.consumer.randomPet(ANIMAL_CAT, BREED_NULL, SIZE_NULL, GENDER_MALE,
-				LOCATION_ZIP, SHELTER_NULL, OUTPUT_FULL, FORMAT_NULL);
+		final PetfinderPetRecord randomPet = this.petFinderService.randomPet(ANIMAL_CAT, BREED_NULL, SIZE_NULL,
+				GENDER_MALE, LOCATION_ZIP, SHELTER_NULL, OUTPUT_FULL, FORMAT_NULL);
 		assertNotNull(randomPet);
 		assertEquals(AnimalType.CAT, randomPet.getAnimal());
 		assertEquals(PetGenderType.M, randomPet.getSex());
 
-		final PetfinderPetRecord pet = this.consumer.getPet(randomPet.getId(), null);
+		final PetfinderPetRecord pet = this.petFinderService.readPet(randomPet.getId(), null);
 		assertNotNull(pet);
 		assertEquals(randomPet.getId(), pet.getId());
 	}
 
 	@Test
 	public void getShelter() {
-		final PetfinderShelterRecord shelter = this.consumer.getShelter(SHELTER_ID_GAAR, FORMAT_NULL);
+		final PetfinderShelterRecord shelter = this.petFinderService.readShelter(SHELTER_ID_GAAR, FORMAT_NULL);
 		assertNotNull(shelter);
 		assertEquals(SHELTER_ID_GAAR, shelter.getId());
 	}
 
 	@Test
 	public void randomPet() {
-		final PetfinderPetRecord randomPet = this.consumer.randomPet(ANIMAL_CAT, null, null, GENDER_MALE, LOCATION_ZIP,
-				null, OUTPUT_FULL, null);
+		final PetfinderPetRecord randomPet = this.petFinderService.randomPet(ANIMAL_CAT, null, null, GENDER_MALE,
+				LOCATION_ZIP, null, OUTPUT_FULL, null);
 		assertNotNull(randomPet);
 		assertEquals(AnimalType.CAT, randomPet.getAnimal());
 	}
 
 	@Test
 	public void shelterPets() {
-		final PetfinderPetRecordList shelterPets = this.consumer.shelterPets(SHELTER_ID_GAAR, STATUS_NULL, OFFSET_NULL,
+		List<PetfinderPetRecord> pets = this.petFinderService.shelterPets(SHELTER_ID_GAAR, STATUS_NULL, OFFSET_NULL,
 				COUNT_NULL, OUTPUT_FULL, FORMAT_NULL);
-		assertNotNull(shelterPets);
-		final List<PetfinderPetRecord> pets = shelterPets.getPet();
 		assertNotNull(pets);
-		final PetfinderPetRecord pet = pets.get(0);
+		PetfinderPetRecord pet = pets.get(0);
 		assertNotNull(pet);
 	}
 
+	@Test
+	public void shelterCats() {
+		final List<PetfinderPetRecord> cats = this.petFinderService.shelterCats(SHELTER_ID_GAAR, STATUS_NULL,
+				OFFSET_NULL, COUNT_NULL, OUTPUT_FULL, FORMAT_NULL);
+		assertNotNull(cats);
+		for (PetfinderPetRecord cat : cats) {
+			assertNotNull(cat);
+			assertTrue(cat.getAnimal().equals(AnimalType.CAT));
+		}
+	}
+
+	@Test
+	public void shelterDogs() {
+		final List<PetfinderPetRecord> dogs = this.petFinderService.shelterDogs(SHELTER_ID_GAAR, STATUS_NULL,
+				OFFSET_NULL, COUNT_NULL, OUTPUT_FULL, FORMAT_NULL);
+		assertNotNull(dogs);
+		for (PetfinderPetRecord dog : dogs) {
+			assertNotNull(dog);
+			assertTrue(dog.getAnimal().equals(AnimalType.DOG));
+		}
+	}
+	
 	@Ignore
+	// takes over a minute to return results from PetFinder
 	@Test
 	public void shelterPetsByBreed() {
-		final PetfinderShelterRecordList recordList = this.consumer.shelterPetsByBreed(ANIMAL_CAT,
-				BREED_DOMESTIC_SHORT_HAIR, OFFSET_NULL, 5, FORMAT_NULL);
+		final PetfinderShelterRecordList recordList = this.petFinderService.shelterPetsByBreed(ANIMAL_CAT,
+				BREED_DOMESTIC_SHORT_HAIR, 0, 1, FORMAT_NULL);
 		assertNotNull(recordList);
 	}
 }

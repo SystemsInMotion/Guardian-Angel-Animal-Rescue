@@ -8,6 +8,8 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,9 +53,11 @@ import javax.xml.bind.annotation.XmlType;
     "fax",
     "email"
 })
-public class PetContactType {
+public class PetContactType implements Serializable {
 
-    @XmlElement(required = true)
+	private static final long serialVersionUID = -3131495181471315257L;
+	
+	@XmlElement(required = true)
     protected String name;
     @XmlElement(required = true)
     protected String address1;

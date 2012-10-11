@@ -1,0 +1,968 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed dog">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Affenpinscher" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Afghan Hound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Airedale Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Akbash" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Akita" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Alaskan Malamute" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="American Bulldog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="American Eskimo Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="American Hairless Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="American Staffordshire Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="American Water Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Anatolian Shepherd" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Appenzell Mountain Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Australian Cattle Dog (Blue Heeler)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Australian Kelpie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Australian Shepherd" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Australian Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Basenji" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Basset Hound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Beagle" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bearded Collie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Beauceron" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bedlington Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Belgian Shepherd Dog Sheepdog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Belgian Shepherd Laekenois" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Belgian Shepherd Malinois" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Belgian Shepherd Tervuren" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bernese Mountain Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bichon Frise" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Black and Tan Coonhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Black Labrador Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Black Mouth Cur" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Black Russian Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bloodhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Blue Lacy" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bluetick Coonhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Boerboel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bolognese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Border Collie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Border Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Borzoi" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Boston Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bouvier des Flanders" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Boxer" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Boykin Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Briard" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Brittany Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Brussels Griffon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bull Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Bullmastiff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Cairn Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Canaan Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Cane Corso Mastiff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Carolina Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Catahoula Leopard Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Cattle Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Caucasian Sheepdog (Caucasian Ovtcharka)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Cavalier King Charles Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Chesapeake Bay Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Chihuahua" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Chinese Crested Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Chinese Foo Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Chinook" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Chocolate Labrador Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Chow Chow" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Cirneco dell'Etna" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Clumber Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Cockapoo" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Cocker Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Collie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Coonhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Corgi" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Coton de Tulear" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Curly-Coated Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Dachshund" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Dalmatian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Dandi Dinmont Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Doberman Pinscher" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Dogo Argentino" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Dogue de Bordeaux" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Dutch Shepherd" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Bulldog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Cocker Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Coonhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Pointer" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Setter" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Shepherd" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Springer Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="English Toy Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Entlebucher" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Eskimo Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Feist" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Field Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Fila Brasileiro" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Finnish Lapphund" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Finnish Spitz" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Flat-coated Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Fox Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Foxhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="French Bulldog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Galgo Spanish Greyhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="German Pinscher" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="German Shepherd Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="German Shorthaired Pointer" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="German Spitz" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="German Wirehaired Pointer" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Giant Schnauzer" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Glen of Imaal Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Golden Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Gordon Setter" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Great Dane" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Great Pyrenees" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Greater Swiss Mountain Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Greyhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Harrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Havanese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Hound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Hovawart" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Husky" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Ibizan Hound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Illyrian Sheepdog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Irish Setter" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Irish Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Irish Water Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Irish Wolfhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Italian Greyhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Italian Spinone" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Jack Russell Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Jack Russell Terrier (Parson Russell Terrier)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Japanese Chin" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Jindo" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Kai Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Karelian Bear Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Keeshond" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Kerry Blue Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Kishu" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Klee Kai" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Komondor" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Kuvasz" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Kyi Leo" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Labrador Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Lakeland Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Lancashire Heeler" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Leonberger" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Lhasa Apso" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Lowchen" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Maltese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Manchester Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Maremma Sheepdog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Mastiff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="McNab" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Miniature Pinscher" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Mountain Cur" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Mountain Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Munsterlander" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Neapolitan Mastiff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="New Guinea Singing Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Newfoundland Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Norfolk Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Norwegian Buhund" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Norwegian Elkhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Norwegian Lundehund" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Norwich Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Nova Scotia Duck-Tolling Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Old English Sheepdog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Otterhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Papillon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Patterdale Terrier (Fell Terrier)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Pekingese" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Peruvian Inca Orchid" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Petit Basset Griffon Vendeen" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Pharaoh Hound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Pit Bull Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Plott Hound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Podengo Portugueso" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Pointer" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Polish Lowland Sheepdog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Pomeranian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Poodle" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Portuguese Water Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Presa Canario" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Pug" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Puli" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Pumi" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Rat Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Redbone Coonhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Rhodesian Ridgeback" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Rottweiler" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Saint Bernard St. Bernard" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Saluki" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Samoyed" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Sarplaninac" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Schipperke" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Schnauzer" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Scottish Deerhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Scottish Terrier Scottie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Sealyham Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Setter" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Shar Pei" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Sheep Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Shepherd" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Shetland Sheepdog Sheltie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Shiba Inu" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Shih Tzu" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Siberian Husky" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Silky Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Skye Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Sloughi" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Smooth Fox Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="South Russian Ovtcharka" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Spitz" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Staffordshire Bull Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Standard Poodle" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Sussex Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Swedish Vallhund" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Thai Ridgeback" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Tibetan Mastiff" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Tibetan Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Tibetan Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Tosa Inu" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Toy Fox Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Treeing Walker Coonhound" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Vizsla" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Weimaraner" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Welsh Corgi" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Welsh Springer Spaniel" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Welsh Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="West Highland White Terrier Westie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Wheaten Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Whippet" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="White German Shepherd" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Wire Fox Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Wire-haired Pointing Griffon" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Wirehaired Terrier" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Xoloitzcuintle (Mexican Hairless)" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Yellow Labrador Retriever" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="4" />
+			<column name="name" value="Yorkshire Terrier Yorkie" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,70 @@
+/* desktop - fallback
+---------------------------*/
+#hero .hero-title { text-indent:-9999px; width:438px; height:187px; margin-bottom:120px; background:url(http://images.apple.com/home/images/title.png) no-repeat 0 0; behavior:url(/global/scripts/lib/ie7pngfix.htc); }
+#hero .hero-image { background-image:url(http://images.apple.com/home/images/hero_fallback.jpg); }
+
+
+/* desktop - responsive
+---------------------------*/
+body.responsive #hero .hero-title { width:438px; height:187px; margin-bottom:120px; background:url(http://images.apple.com/home/images/title.png) no-repeat 0 0; }
+body.responsive #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero.jpg); }
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5) {
+	body.responsive #hero .hero-title { background-image:url(http://images.apple.com/home/images/title_2x.png); background-size:438px 187px; }
+	body.responsive #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero_2x.jpg); }
+}
+
+@media only screen and (min-height:1060px) {
+	body.responsive #hero .hero-title { width:722px; height:137px; margin-bottom:32px; background:url(http://images.apple.com/home/images/title_wide.png) no-repeat 0 0; }
+	body.responsive #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero.jpg); }
+}
+
+@media only screen and (min-height:1060px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-height:1060px) and (min-device-pixel-ratio:1.5) {
+	body.responsive #hero .hero-title { background-image:url(http://images.apple.com/home/images/title_wide_2x.png); background-size:722px 137px; }
+	body.responsive #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero_2x.jpg); }
+}
+
+
+/* iPad portrait
+---------------------------*/
+@media only screen and (min-device-width:481px) and (max-device-width:768px) and (orientation:portrait) {
+	body.device #hero .hero-title { width:722px; height:137px; margin-bottom:32px; background:url(http://images.apple.com/home/images/title_wide.png) no-repeat 0 0; }
+	body.device #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero.jpg); }
+}
+
+
+/* iPad portrait retina
+---------------------------*/
+@media only screen and (min-device-width:481px) and (max-device-width:768px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.5) {
+	body.device #hero .hero-title { background-image:url(http://images.apple.com/home/images/title_wide_2x.png); background-size:722px 137px; }
+	body.device #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero_2x.jpg); }
+}
+
+
+/* iPad landscape
+---------------------------*/
+@media only screen and (min-device-width:481px) and (max-device-width:768px) and (orientation:landscape) {
+	body.device #hero .hero-title { width:438px; height:187px; margin-bottom:120px; background:url(http://images.apple.com/home/images/title.png) no-repeat 0 0; }
+	body.device #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero.jpg); }
+}
+
+
+/* iPad landscape retina
+---------------------------*/
+@media only screen and (min-device-width:481px) and (max-device-width:768px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1.5) {
+	body.device #hero .hero-title { background-image:url(http://images.apple.com/home/images/title_2x.png); background-size:438px 187px; }
+	body.device #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero_2x.jpg); }
+}
+
+
+/* iPhone / touch
+---------------------------*/
+@media only screen and (min-device-width:320px) and (max-device-width:480px) and (orientation:portrait) {
+	body.device #hero .hero-title { width:722px; height:137px; margin-bottom:40px; background:url(http://images.apple.com/home/images/title_wide.png) no-repeat 0 0; }
+	body.device #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero.jpg); }
+}
+
+@media only screen and (min-device-width:320px) and (max-device-width:480px) and (orientation:landscape) {
+	body.device #hero .hero-title { width:438px; height:187px; margin-bottom:120px; background:url(http://images.apple.com/home/images/title.png) no-repeat 0 0; }
+	body.device #hero .hero-image { background-image:url(http://images.apple.com/home/images/hero.jpg); }
+}

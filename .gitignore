@@ -4,3 +4,6 @@
 *.svn/
 .metadata/
 /target/
+.classpath
+.codepro/
+.settings/

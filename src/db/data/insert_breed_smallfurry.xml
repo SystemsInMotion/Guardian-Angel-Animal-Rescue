@@ -1,0 +1,80 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="insert breed smallfurry">
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Abyssinian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Chinchilla" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Degu" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Ferret" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Gerbil" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Guinea Pig" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Hamster" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Hedgehog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Mouse" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Peruvian" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Prairie Dog" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Rat" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Rex" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Short-haired" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Silkie/Sheltie" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Skunk" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Sugar Glider" />
+		</insert>
+		<insert tableName="breed">
+			<column name="animal_id" valueNumeric="8" />
+			<column name="name" value="Teddy" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

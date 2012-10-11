@@ -8,6 +8,7 @@
 
 package org.petfinder.entity;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -50,13 +51,17 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "petPhotoType", propOrder = {
     "value"
 })
-public class PetPhotoType {
+public class PetPhotoType implements Serializable {
 
-    @XmlValue
+	private static final long serialVersionUID = -2056448273471666704L;
+	
+	@XmlValue
     protected String value;
+	
     @XmlAttribute(name = "id")
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger id;
+    
     @XmlAttribute(name = "size")
     protected String size;
 

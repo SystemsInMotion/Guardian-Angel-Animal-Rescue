@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+html,body {
+	background: #73C0E6;
+}
+
+h3 {
+	color: #02469F;
+}
+
+#content {
+	background-color: #FFF;
+	-moz-border-radius-bottomleft: 7px;
+	-moz-border-radius-bottomright: 7px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border: 1px solid #CCC;
+	margin: 0 auto;
+	padding: 20px;
+	width: 940px;
+}
+
+#gaar-logo {
+	margin: 10px auto 10px 20px;
+}
+
+#globalheader {
+	background: #FFF;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border: 1px solid #CCC;
+	border-bottom: none;
+	height: 100px;
+	margin-bottom: 0;
+}
+
+.pet-desc {
+	clear:both;
+	float: none;
+	font-size: 1.167em;
+	margin: 1em auto;
+}
+
+.pet-details {
+	float: left;
+	margin-left: 2em;
+}
+
+.pet-name {
+	color: #02469F;
+	font: normal bold 1.5em "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+}

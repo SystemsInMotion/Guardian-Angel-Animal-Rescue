@@ -1,0 +1,5 @@
+Needed tables:
+	options or attributes
+	PetBreed which list breeds for a give Pet
+	Breed lists all the breeds supported for each animal type
+	

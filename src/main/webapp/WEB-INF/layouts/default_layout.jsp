@@ -5,20 +5,25 @@
 <html>
 <head>
 <%@ include file="/WEB-INF/fragments/meta-tags.jsp"%>
+<%@ include file="/WEB-INF/fragments/styles.jsp"%>
 <%@ include file="/WEB-INF/fragments/scripts.jsp"%>
 
-<tiles:useAttribute id="pageJS" name="page-js"
-	classname="java.lang.String" ignore="true" />
+<tiles:useAttribute id="pageJS" name="page-js" classname="java.lang.String" ignore="true" />
+
 <c:if test="${not empty pageJS}">
 	<script type="text/javascript" src="${pageJS}"></script>
 </c:if>
 
-<%@ include file="/WEB-INF/fragments/styles.jsp"%>
-<title>Systems In Motion - <tiles:getAsString name="title" /></title>
+<title><tiles:getAsString name="title" /> - GAAR Michigan</title>
 </head>
-<body>
-	<tiles:insertAttribute name="page-heading" />
-	<tiles:insertAttribute name="body" />
+<body id="home" class="home responsive">
+<jsp:include page="/WEB-INF/fragments/globalheader.jsp"/>
+
+	<div id="main">
+		<div id="content">
+<tiles:insertAttribute name="body" />
+		</div><!--/content-->
+	</div><!--/main-->
+
 </body>
 </html>
-

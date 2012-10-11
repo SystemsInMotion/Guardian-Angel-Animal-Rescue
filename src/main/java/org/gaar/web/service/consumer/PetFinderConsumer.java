@@ -2,11 +2,15 @@ package org.gaar.web.service.consumer;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.gaar.cache.CacheWrapper;
 import org.gaar.util.StringUtils;
+import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.Petfinder;
 import org.petfinder.entity.PetfinderAuthData;
 import org.petfinder.entity.PetfinderBreedList;
@@ -18,6 +22,8 @@ import org.petfinder.web.service.Method;
 import org.petfinder.web.service.QueryParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriUtils;
@@ -29,7 +35,13 @@ import org.springframework.web.util.UriUtils;
  * @author kskronek
  * 
  */
+@Service("petFinderService")
 public class PetFinderConsumer {
+
+	@Autowired
+	private CacheWrapper<String, List<PetfinderPetRecord>> cacheWrapper;
+
+	public static final String SHELTER_ID_GAAR = "MI144";
 
 	private static final String API_KEY = "15c639ff6d160dc55ff6d37677bb0880";
 	private static final String API_SECRET = "f14226e0353d1fceca8fcbd17ed06881";
@@ -103,16 +115,16 @@ public class PetFinderConsumer {
 	}
 
 	private Petfinder executeQuery(Method method, Map<QueryParam, Object> params) {
-		final String token = this.getAuthData().getToken();
+		final String token = this.authData().getToken();
 		final String query = buildQuery(token, params, false);
 		final String sig = signatureParam(buildQuery(token, params, true));
 		final String url = StringUtils.concat(PETFINDER_HOST, method.value, query, sig);
-		logger.debug("executeQuery(): url: " + url);
+		logger.info("executeQuery(): url: {}", url);
 		return restTemplate.getForObject(url, Petfinder.class);
 	}
 
 	public PetfinderPetRecordList findPet(String animal, String breed, String size, Character sex, String location,
-			String age, String offset, String count, String output, String format) {
+			String age, Integer offset, Integer count, String output, String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.animal, animal);
 		params.put(QueryParam.breed, breed);
@@ -129,7 +141,7 @@ public class PetFinderConsumer {
 		return petfinder.getPets();
 	}
 
-	public PetfinderShelterRecordList findShelter(String location, String name, String offset, String count,
+	public PetfinderShelterRecordList findShelter(String location, String name, Integer offset, Integer count,
 			String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.location, location);
@@ -149,7 +161,7 @@ public class PetFinderConsumer {
 	 * 
 	 * @return PetfinderAuthData
 	 */
-	PetfinderAuthData getAuthData() {
+	PetfinderAuthData authData() {
 		/*
 		 * subtracting some time to ensure token is still good by the time it is
 		 * used
@@ -161,7 +173,7 @@ public class PetFinderConsumer {
 		return authData;
 	}
 
-	public PetfinderPetRecord getPet(BigInteger animalId, String format) {
+	public PetfinderPetRecord readPet(BigInteger animalId, String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.id, animalId);
 		params.put(QueryParam.format, format);
@@ -170,7 +182,7 @@ public class PetFinderConsumer {
 		return petfinder.getPet();
 	}
 
-	public PetfinderShelterRecord getShelter(String shelterId, String format) {
+	public PetfinderShelterRecord readShelter(String shelterId, String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.id, shelterId);
 		params.put(QueryParam.format, format);
@@ -195,21 +207,51 @@ public class PetFinderConsumer {
 		return petfinder.getPet();
 	}
 
-	public PetfinderPetRecordList shelterPets(String shelterId, Character status, String offset, String count,
+	public List<PetfinderPetRecord> shelterPets(String shelterId, Character status, Integer offset, Integer count,
 			String output, String format) {
-		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
-		params.put(QueryParam.id, shelterId);
-		params.put(QueryParam.status, status);
-		params.put(QueryParam.offset, offset);
-		params.put(QueryParam.count, count);
-		params.put(QueryParam.output, output);
-		params.put(QueryParam.format, format);
 
-		final Petfinder petfinder = executeQuery(Method.SHELTER_PETS, params);
-		return petfinder.getPets();
+		List<PetfinderPetRecord> pets = cacheWrapper.get("pets");
+		if (pets == null) {
+			Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
+			params.put(QueryParam.id, shelterId);
+			params.put(QueryParam.status, status);
+			params.put(QueryParam.offset, offset);
+			params.put(QueryParam.count, count);
+			params.put(QueryParam.output, output);
+
+			final Petfinder petfinder = executeQuery(Method.SHELTER_PETS, params);
+			PetfinderPetRecordList petRecordList = petfinder.getPets();
+			pets = petRecordList.getPet();
+			cacheWrapper.put("pets", pets);
+		}
+		return pets;
 	}
 
-	public PetfinderShelterRecordList shelterPetsByBreed(String animal, String breed, String offset, Integer count,
+	public List<PetfinderPetRecord> shelterCats(String shelterId, Character status, Integer offset, Integer count,
+			String output, String format) {
+		final List<PetfinderPetRecord> pets = this.shelterPets(shelterId, status, offset, count, output, format);
+		List<PetfinderPetRecord> cats = new ArrayList<PetfinderPetRecord>();
+		for (PetfinderPetRecord pet : pets) {
+			if (pet.getAnimal().equals(AnimalType.CAT)) {
+				cats.add(pet);
+			}
+		}
+		return cats;
+	}
+
+	public List<PetfinderPetRecord> shelterDogs(String shelterId, Character status, Integer offset, Integer count,
+			String output, String format) {
+		final List<PetfinderPetRecord> pets = this.shelterPets(shelterId, status, offset, count, output, format);
+		List<PetfinderPetRecord> dogs = new ArrayList<PetfinderPetRecord>();
+		for (PetfinderPetRecord pet : pets) {
+			if (pet.getAnimal().equals(AnimalType.DOG)) {
+				dogs.add(pet);
+			}
+		}
+		return dogs;
+	}
+	
+	public PetfinderShelterRecordList shelterPetsByBreed(String animal, String breed, Integer offset, Integer count,
 			String format) {
 		Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 		params.put(QueryParam.animal, animal);

@@ -1,5 +1,5 @@
 package org.gaar.web;
 
 public enum View {
-	home;
+	about, adoptions, contact, faq, home, like, pet, volunteer;
 }

@@ -1,0 +1,50 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="kskronek" id="create pet">
+		<createTable tableName="pet">
+			<column name="id" type="integer">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="PET_PK" />
+			</column>
+			<column name="animal_id" type="integer">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(20)">
+				<constraints nullable="false" />
+			</column>
+			<column name="age_category" type="varchar(20)">
+				<constraints nullable="false" />
+			</column>
+			<column name="age_in_years" type="integer(2)" />
+			<column name="description" type="varchar(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="is_mix" type="char(1)">
+				<constraints nullable="false" />
+			</column>
+			<column name="gender" type="char(1)">
+				<constraints nullable="false" />
+			</column>
+			<column name="pet_finder_shelter_id" type="varchar(10)">
+				<constraints nullable="false" />
+			</column>
+			<column name="shelter_pet_id" type="varchar(10)"
+				remarks="Shelter's internal identifier for the pet" />
+			<column name="size" type="varchar(10)">
+				<constraints nullable="false" />
+			</column>
+			<column name="adoption_status" type="char(1)">
+				<constraints nullable="false" />
+			</column>
+			<column name="data_source" type="varchar(10)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<addForeignKeyConstraint constraintName="fk_pet_animal_type_id"
+			baseTableName="pet" baseColumnNames="animal_id" referencedTableName="animal_type"
+			referencedColumnNames="id" />
+	</changeSet>
+</databaseChangeLog>
