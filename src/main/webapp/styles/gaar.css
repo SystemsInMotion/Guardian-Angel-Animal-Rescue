@@ -55,16 +55,15 @@ h3 {
 }
 
 .pet-row-wrapper {
-	height: 200px;
-	overflow-x: scroll;
-	overflow-y: visible;
+	height: 110px;
 	position: relative;
+	overflow-x: hidden;
+	overflow-y: visible;
 	white-space: nowrap;
 }
 
 .pet-row {
 	backround-color: yellow; 
-	bottom : 0;
 	position: absolute;
 	bottom: 0;
 }
