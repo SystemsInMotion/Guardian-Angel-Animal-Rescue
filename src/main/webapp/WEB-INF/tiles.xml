@@ -10,6 +10,7 @@
 
 	<definition name="home" extends="main">
 		<put-attribute name="title" type="string" value="Home" />
+		<put-attribute name="page-js" value="/js/home.js" />
 		<put-attribute name="body" value="/WEB-INF/view/home.jsp" />
 	</definition>
 
