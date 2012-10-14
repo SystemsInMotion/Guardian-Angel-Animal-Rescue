@@ -42,6 +42,7 @@ public enum PetAgeType {
     ADULT("Adult"),
     @XmlEnumValue("Senior")
     SENIOR("Senior");
+    
     private final String value;
 
     PetAgeType(String v) {
@@ -52,6 +53,10 @@ public enum PetAgeType {
         return value;
     }
 
+    public String getValue() {
+        return value;
+    }
+    
     public static PetAgeType fromValue(String v) {
         for (PetAgeType c: PetAgeType.values()) {
             if (c.value.equals(v)) {
