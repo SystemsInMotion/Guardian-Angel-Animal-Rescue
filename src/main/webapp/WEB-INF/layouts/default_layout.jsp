@@ -11,7 +11,7 @@
 <tiles:useAttribute id="pageJS" name="page-js" classname="java.lang.String" ignore="true" />
 
 <c:if test="${not empty pageJS}">
-	<script type="text/javascript" src="${pageJS}"></script>
+	<script type="text/javascript" src="<c:url value='${pageJS}'/>"></script>
 </c:if>
 
 <title><tiles:getAsString name="title" /> - GAAR Michigan</title>
