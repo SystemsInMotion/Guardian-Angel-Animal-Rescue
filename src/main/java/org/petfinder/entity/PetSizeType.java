@@ -5,18 +5,20 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petSizeType.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
+ * Java class for petSizeType.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
+ * <p>
+ * 
  * <pre>
  * &lt;simpleType name="petSizeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -33,17 +35,24 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PetSizeType {
 
-    S,
-    M,
-    L,
-    XL;
+	S("Small"), M("Medium"), L("Large"), XL("XLarge");
 
-    public String value() {
-        return name();
-    }
+	private final String description;
 
-    public static PetSizeType fromValue(String v) {
-        return valueOf(v);
-    }
+	private PetSizeType(String desc) {
+		this.description = desc;
+	}
+
+	public String getDescription(){
+		return this.description;
+	}
+	
+	public String value() {
+		return name();
+	}
+
+	public static PetSizeType fromValue(String v) {
+		return valueOf(v);
+	}
 
 }

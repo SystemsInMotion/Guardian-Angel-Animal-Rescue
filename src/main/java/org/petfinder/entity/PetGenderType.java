@@ -31,8 +31,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PetGenderType {
 
-    M,
-    F;
+    M("Male"),
+    F("Female");
+
+	private final String description;
+
+	private PetGenderType(String desc) {
+		this.description = desc;
+	}
+
+	public String getDescription(){
+		return this.description;
+	}
 
     public String value() {
         return name();
