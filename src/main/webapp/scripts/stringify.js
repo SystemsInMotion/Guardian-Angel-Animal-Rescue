@@ -1,6 +1,0 @@
-(function(global,toString,undefined){var escapable=/[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,meta={'\b':'\\b','\t':'\\t','\n':'\\n','\f':'\\f','\r':'\\r','"':'\\"','\\':'\\\\'};function stringify(data){if(data===null)return'null';switch(typeof data){case'undefined':return;case'string':return'"'+quote(data)+'"';case'number':return data;case'boolean':return data.toString();case'function':return data.toString();};var results=[],val,i,key;if(toString.call(data)==='[object Array]'){for(i=0;i<data.length;i++){val=stringify(data[i]);val!==undefined&&results.push(val);}
-return'['+results.join(', ')+']';}else if(data.nodeType!=1){for(key in data){val=stringify(data[key]);val!==undefined&&results.push(stringify(key)+': '+val);}
-return'{'+results.join(', ')+'}';}
-return data;}
-function quote(str){return str.replace(escapable,function(a){return meta[a];});}
-global.stringify=stringify;}(this,Object.prototype.toString));
