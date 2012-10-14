@@ -39,32 +39,50 @@ import javax.xml.bind.annotation.XmlType;
 public enum PetOptionType {
 
     @XmlEnumValue("specialNeeds")
-    SPECIAL_NEEDS("specialNeeds"),
+    SPECIAL_NEEDS("specialNeeds", "Has special needs"),
+    
     @XmlEnumValue("noDogs")
-    NO_DOGS("noDogs"),
+    NO_DOGS("noDogs", "Needs a home with no dogs"),
+    
     @XmlEnumValue("noCats")
-    NO_CATS("noCats"),
+    NO_CATS("noCats", "Needs a home with no cats"),
+    
     @XmlEnumValue("noKids")
-    NO_KIDS("noKids"),
+    NO_KIDS("noKids", "Needs a home with no young children"),
+    
     @XmlEnumValue("noClaws")
-    NO_CLAWS("noClaws"),
+    NO_CLAWS("noClaws", "Has been declawed"),
+    
     @XmlEnumValue("hasShots")
-    HAS_SHOTS("hasShots"),
+    HAS_SHOTS("hasShots", "Up-to-date with routine shots"),
+    
     @XmlEnumValue("housebroken")
-    HOUSEBROKEN("housebroken"),
+    HOUSEBROKEN("housebroken", "House trained"),
+    
     @XmlEnumValue("altered")
-    ALTERED("altered");
+    ALTERED("altered", "Spayed/Neutered");
+    
     private final String value;
+    private final String description;
 
-    PetOptionType(String v) {
-        value = v;
+    PetOptionType(String val, String desc) {
+        this.value = val;
+        this.description = desc;
     }
 
     public String value() {
         return value;
     }
 
-    public static PetOptionType fromValue(String v) {
+    public String getValue() {
+		return value;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public static PetOptionType fromValue(String v) {
         for (PetOptionType c: PetOptionType.values()) {
             if (c.value.equals(v)) {
                 return c;
