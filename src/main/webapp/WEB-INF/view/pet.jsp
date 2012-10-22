@@ -1,4 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<script type="text/javascript">
+<!--
+	var petId = '${pet.id}';
+	$(function() {
+		$("#btnAdopt").button().click(function(){
+			window.location = '<c:url value="/app/adopt"/>/${pet.id}';
+		});
+	});
+//-->
+</script>
 <div class="selfclear">
 	<c:forEach items="${pet.media.photos.photo}" var="photo">
 		<c:if test="${photo.id eq 1 and photo.size eq 'pn' }">
@@ -36,6 +46,9 @@
 				<li>${option.description}</li>
 			</c:forEach>
 		</ul>
+	</div>
+	<div style="float:left">
+		<button type="button" id="btnAdopt">Adopt ${pet.name}</button>
 	</div>
 </div>
 <div class="pet-desc">${pet.description}</div>
