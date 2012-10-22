@@ -11,24 +11,13 @@
 		<finalName>gaar</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.liquibase</groupId>
-				<artifactId>liquibase-maven-plugin</artifactId>
-				<version>2.0.5</version>
-				<executions>
-					<execution>
-						<phase>process-resources</phase>
-						<configuration>
-							<changeLogFile>src/db/db.changelog-master.xml</changeLogFile>
-							<driver>${jdbc.driver}</driver>
-							<url>${jdbc.url}</url>
-							<username>${jdbc.username}</username>
-							<password>${jdbc.password}</password>
-						</configuration>
-						<goals>
-							<goal>update</goal>
-						</goals>
-					</execution>
-				</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<warName>gaar</warName>
+					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -56,6 +45,26 @@
 					<server>skronek.org</server>
 					<url>http://www.skronek.org/manager/html</url>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>2.0.5</version>
+				<executions>
+					<execution>
+						<phase>process-resources</phase>
+						<configuration>
+							<changeLogFile>src/db/db.changelog-master.xml</changeLogFile>
+							<driver>${jdbc.driver}</driver>
+							<url>${jdbc.url}</url>
+							<username>${jdbc.username}</username>
+							<password>${jdbc.password}</password>
+						</configuration>
+						<goals>
+							<goal>update</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
