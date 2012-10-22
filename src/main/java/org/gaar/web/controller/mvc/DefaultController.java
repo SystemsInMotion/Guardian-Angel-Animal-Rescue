@@ -24,6 +24,13 @@ public class DefaultController {
 		return doHome(model);
 	}
 
+	@RequestMapping(value = "adopt/{petId}", method = RequestMethod.GET)
+	public String doAdopt(@PathVariable("petId") Integer petId, Model model) {
+		final PetfinderPetRecord pet = petFinderService.readPet(BigInteger.valueOf(petId), null);
+		model.addAttribute("pet", pet);
+		return View.adopt.name();
+	}
+
 	@RequestMapping(value = "home", method = RequestMethod.GET)
 	public String doHome(Model model) {
 		final List<PetfinderPetRecord> cats = petFinderService.shelterCats(PetFinderConsumer.SHELTER_ID_GAAR, null,
