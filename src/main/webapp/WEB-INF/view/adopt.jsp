@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<h2 style="text-align:center">Adoption Form</h2>
+<h2 style="text-align:center">~ Adoption Form ~</h2>
 <form>
+<!-- 
 	<div class="module">
 		<h3>Important!</h3>
 		<p>
@@ -8,6 +9,7 @@
 			false information with result in <strong>automatic denial</strong>.
 		</p>
 	</div>
+ -->
 
 	<h3>Pet Information</h3>
 	<div class="module">
@@ -43,6 +45,22 @@
 			</div>
 			<div class="col2of2" style="float: left; width: 50%">
 				<label>City</label> <input type="text" name="city">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col1of2" style="float: left; width: 50%">
+				<label>Home phone</label> <input type="text" name="homePhone">
+			</div>
+			<div class="col2of2" style="float: left; width: 50%">
+				<label>Mobile phone</label> <input type="text" name="mobilePhone">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col1of2" style="float: left; width: 50%">
+				<label>Email address</label> <input type="text" name="email1">
+			</div>
+			<div class="col2of2" style="float: left; width: 50%">
+				<label>Confirm email</label> <input type="text" name="email2">
 			</div>
 		</div>
 	</div>
