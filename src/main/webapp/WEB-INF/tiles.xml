@@ -7,7 +7,12 @@
 		<put-attribute name="title" type="string" />
 		<put-attribute name="body" />
 	</definition>
-
+	
+	<definition name="adopt" extends="main">
+		<put-attribute name="title" type="string" value="Adoption Application" />
+		<put-attribute name="body" value="/WEB-INF/view/adopt.jsp" />
+	</definition>
+	
 	<definition name="home" extends="main">
 		<put-attribute name="title" type="string" value="Home" />
 		<put-attribute name="page-js" value="/scripts/home.js" />
@@ -25,11 +30,6 @@
 		<put-attribute name="body" value="/WEB-INF/view/about.jsp" />
 	</definition>
 
-	<definition name="adoptions" extends="main">
-		<put-attribute name="title" type="string" value="Adoptions" />
-		<put-attribute name="body" value="/WEB-INF/view/adoptions.jsp" />
-	</definition>
-	
 	<definition name="adoptions" extends="main">
 		<put-attribute name="title" type="string" value="Adoptions" />
 		<put-attribute name="body" value="/WEB-INF/view/adoptions.jsp" />
