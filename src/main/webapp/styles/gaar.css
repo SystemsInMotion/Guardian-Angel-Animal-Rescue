@@ -1,7 +1,11 @@
 @CHARSET "UTF-8";
 
+input[type="text"] {
+	width: 20em;
+}
+
 h1,h2,h3,h4,h5,h6 {
-	color: #0075AF;
+	color: darkBlue;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial,
 		Verdana, sans-serif;
 	margin-bottom: 0.2em;
@@ -9,6 +13,10 @@ h1,h2,h3,h4,h5,h6 {
 
 html,body {
 	background: #73C0E6;
+}
+
+label {
+	display: block;
 }
 
 .carousel {
@@ -24,17 +32,46 @@ html,body {
 	width: 620px;
 }
 
+.module {
+	background-color: #EEE;
+	border: 1px solid #DFDFDF;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	padding: 1em;
+	zoom: 1;
+}
+
+.module:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.module .row {
+	margin-bottom: 10px;
+	zoom: 1;
+}
+
+.module .row:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 .pet-desc {
 	clear: both;
 	float: none;
-	font-size: 1.167em;
 	margin: 1em auto;
 }
 
 .pet-details {
 	float: left;
-	font-size: 1.167em;
-	margin-left: 2em;
+	margin: 0 2em;
 }
 
 .pet-name {
