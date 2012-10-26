@@ -5,7 +5,6 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import java.io.Serializable;
@@ -18,11 +17,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
-
 /**
- * <p>Java class for petPhotoType complex type.
+ * <p>
+ * Java class for petPhotoType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="petPhotoType">
@@ -47,94 +48,84 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  * 
  */
+
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "petPhotoType", propOrder = {
-    "value"
-})
+@XmlType(name = "petPhotoType", propOrder = { "value" })
 public class PetPhotoType implements Serializable {
 
 	private static final long serialVersionUID = -2056448273471666704L;
-	
+
 	@XmlValue
-    protected String value;
-	
-    @XmlAttribute(name = "id")
-    @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger id;
-    
-    @XmlAttribute(name = "size")
-    protected String size;
+	protected String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getValue() {
-        return value;
-    }
+	@XmlAttribute(name = "id")
+	@XmlSchemaType(name = "positiveInteger")
+	protected BigInteger id;
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setValue(String value) {
-        this.value = value;
-    }
+	@XmlAttribute(name = "size")
+	protected String size;
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the value property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getValue() {
+		return value;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setId(BigInteger value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the value property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setValue(String value) {
+		this.value = value;
+	}
 
-    /**
-     * Gets the value of the size property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSize() {
-        return size;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link BigInteger }
+	 * 
+	 */
+	public BigInteger getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the size property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSize(String value) {
-        this.size = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigInteger }
+	 * 
+	 */
+	public void setId(BigInteger value) {
+		this.id = value;
+	}
+
+	/**
+	 * Gets the value of the size property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getSize() {
+		return size;
+	}
+
+	/**
+	 * Sets the value of the size property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setSize(String value) {
+		this.size = value;
+	}
 
 }

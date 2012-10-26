@@ -5,19 +5,21 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petOptionType.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
+ * Java class for petOptionType.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
+ * <p>
+ * 
  * <pre>
  * &lt;simpleType name="petOptionType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -34,47 +36,48 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
+
 @XmlType(name = "petOptionType")
 @XmlEnum
 public enum PetOptionType {
 
-    @XmlEnumValue("specialNeeds")
-    SPECIAL_NEEDS("specialNeeds", "Has special needs"),
-    
-    @XmlEnumValue("noDogs")
-    NO_DOGS("noDogs", "Needs a home with no dogs"),
-    
-    @XmlEnumValue("noCats")
-    NO_CATS("noCats", "Needs a home with no cats"),
-    
-    @XmlEnumValue("noKids")
-    NO_KIDS("noKids", "Needs a home with no young children"),
-    
-    @XmlEnumValue("noClaws")
-    NO_CLAWS("noClaws", "Has been declawed"),
-    
-    @XmlEnumValue("hasShots")
-    HAS_SHOTS("hasShots", "Up-to-date with routine shots"),
-    
-    @XmlEnumValue("housebroken")
-    HOUSEBROKEN("housebroken", "House trained"),
-    
-    @XmlEnumValue("altered")
-    ALTERED("altered", "Spayed/Neutered");
-    
-    private final String value;
-    private final String description;
+	@XmlEnumValue("specialNeeds")
+	SPECIAL_NEEDS("specialNeeds", "Has special needs"),
 
-    PetOptionType(String val, String desc) {
-        this.value = val;
-        this.description = desc;
-    }
+	@XmlEnumValue("noDogs")
+	NO_DOGS("noDogs", "Needs a home with no dogs"),
 
-    public String value() {
-        return value;
-    }
+	@XmlEnumValue("noCats")
+	NO_CATS("noCats", "Needs a home with no cats"),
 
-    public String getValue() {
+	@XmlEnumValue("noKids")
+	NO_KIDS("noKids", "Needs a home with no young children"),
+
+	@XmlEnumValue("noClaws")
+	NO_CLAWS("noClaws", "Has been declawed"),
+
+	@XmlEnumValue("hasShots")
+	HAS_SHOTS("hasShots", "Up-to-date with routine shots"),
+
+	@XmlEnumValue("housebroken")
+	HOUSEBROKEN("housebroken", "House trained"),
+
+	@XmlEnumValue("altered")
+	ALTERED("altered", "Spayed/Neutered");
+
+	private final String value;
+	private final String description;
+
+	PetOptionType(String val, String desc) {
+		this.value = val;
+		this.description = desc;
+	}
+
+	public String value() {
+		return value;
+	}
+
+	public String getValue() {
 		return value;
 	}
 
@@ -83,12 +86,12 @@ public enum PetOptionType {
 	}
 
 	public static PetOptionType fromValue(String v) {
-        for (PetOptionType c: PetOptionType.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+		for (PetOptionType c : PetOptionType.values()) {
+			if (c.value.equals(v)) {
+				return c;
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
 }

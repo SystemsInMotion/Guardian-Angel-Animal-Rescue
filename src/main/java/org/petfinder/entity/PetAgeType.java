@@ -5,19 +5,21 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petAgeType.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
+ * Java class for petAgeType.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
+ * <p>
+ * 
  * <pre>
  * &lt;simpleType name="petAgeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -30,40 +32,38 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
+
 @XmlType(name = "petAgeType")
 @XmlEnum
 public enum PetAgeType {
 
-    @XmlEnumValue("Baby")
-    BABY("Baby"),
-    @XmlEnumValue("Young")
-    YOUNG("Young"),
-    @XmlEnumValue("Adult")
-    ADULT("Adult"),
-    @XmlEnumValue("Senior")
-    SENIOR("Senior");
-    
-    private final String value;
+	@XmlEnumValue("Baby")
+	BABY("Baby"), @XmlEnumValue("Young")
+	YOUNG("Young"), @XmlEnumValue("Adult")
+	ADULT("Adult"), @XmlEnumValue("Senior")
+	SENIOR("Senior");
 
-    PetAgeType(String v) {
-        value = v;
-    }
+	private final String value;
 
-    public String value() {
-        return value;
-    }
+	PetAgeType(String v) {
+		value = v;
+	}
 
-    public String getValue() {
-        return value;
-    }
-    
-    public static PetAgeType fromValue(String v) {
-        for (PetAgeType c: PetAgeType.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	public String value() {
+		return value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public static PetAgeType fromValue(String v) {
+		for (PetAgeType c : PetAgeType.values()) {
+			if (c.value.equals(v)) {
+				return c;
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
 }

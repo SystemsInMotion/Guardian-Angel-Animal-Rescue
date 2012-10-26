@@ -5,7 +5,6 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import java.io.Serializable;
@@ -16,11 +15,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petfinderPetRecordList complex type.
+ * <p>
+ * Java class for petfinderPetRecordList complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="petfinderPetRecordList">
@@ -37,42 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "petfinderPetRecordList", propOrder = {
-    "pet"
-})
+@XmlType(name = "petfinderPetRecordList", propOrder = { "pet" })
 public class PetfinderPetRecordList implements Serializable {
 
 	private static final long serialVersionUID = 428940073929806422L;
 
 	protected List<PetfinderPetRecord> pet;
 
-    /**
-     * Gets the value of the pet property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the pet property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPet().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PetfinderPetRecord }
-     * 
-     * 
-     */
-    public List<PetfinderPetRecord> getPet() {
-        if (pet == null) {
-            pet = new ArrayList<PetfinderPetRecord>();
-        }
-        return this.pet;
-    }
+	/**
+	 * Gets the value of the pet property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the pet property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getPet().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link PetfinderPetRecord }
+	 * 
+	 * 
+	 */
+	public List<PetfinderPetRecord> getPet() {
+		if (pet == null) {
+			pet = new ArrayList<PetfinderPetRecord>();
+		}
+		return this.pet;
+	}
 
 }

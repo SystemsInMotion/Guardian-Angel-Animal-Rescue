@@ -5,7 +5,6 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import java.io.Serializable;
@@ -18,11 +17,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petfinderBreedList complex type.
+ * <p>
+ * Java class for petfinderBreedList complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="petfinderBreedList">
@@ -39,71 +40,67 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "petfinderBreedList", propOrder = {
-    "breed"
-})
+@XmlType(name = "petfinderBreedList", propOrder = { "breed" })
 public class PetfinderBreedList implements Serializable {
 
 	private static final long serialVersionUID = 362037035936956127L;
 
 	@XmlElement(required = true)
-    protected List<String> breed;
+	protected List<String> breed;
 
-    @XmlAttribute(name = "animal")
-    protected String animal;
+	@XmlAttribute(name = "animal")
+	protected String animal;
 
-    /**
-     * Gets the value of the breed property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the breed property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getBreed().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getBreed() {
-        if (breed == null) {
-            breed = new ArrayList<String>();
-        }
-        return this.breed;
-    }
+	/**
+	 * Gets the value of the breed property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the breed property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getBreed().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getBreed() {
+		if (breed == null) {
+			breed = new ArrayList<String>();
+		}
+		return this.breed;
+	}
 
-    /**
-     * Gets the value of the animal property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAnimal() {
-        return animal;
-    }
+	/**
+	 * Gets the value of the animal property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getAnimal() {
+		return animal;
+	}
 
-    /**
-     * Sets the value of the animal property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAnimal(String value) {
-        this.animal = value;
-    }
+	/**
+	 * Sets the value of the animal property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setAnimal(String value) {
+		this.animal = value;
+	}
 
 }

@@ -5,18 +5,20 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petGenderType.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
+ * Java class for petGenderType.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
+ * <p>
+ * 
  * <pre>
  * &lt;simpleType name="petGenderType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -27,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
+
 @XmlType(name = "petGenderType")
 @XmlEnum
 public enum PetGenderType {
 
-    M("Male"),
-    F("Female");
+	M("Male"), F("Female");
 
 	private final String description;
 
@@ -40,16 +42,16 @@ public enum PetGenderType {
 		this.description = desc;
 	}
 
-	public String getDescription(){
+	public String getDescription() {
 		return this.description;
 	}
 
-    public String value() {
-        return name();
-    }
+	public String value() {
+		return name();
+	}
 
-    public static PetGenderType fromValue(String v) {
-        return valueOf(v);
-    }
+	public static PetGenderType fromValue(String v) {
+		return valueOf(v);
+	}
 
 }

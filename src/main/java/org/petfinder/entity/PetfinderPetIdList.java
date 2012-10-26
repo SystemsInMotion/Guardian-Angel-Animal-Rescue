@@ -5,7 +5,6 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import java.io.Serializable;
@@ -17,11 +16,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petfinderPetIdList complex type.
+ * <p>
+ * Java class for petfinderPetIdList complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="petfinderPetIdList">
@@ -37,43 +38,43 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "petfinderPetIdList", propOrder = {
-    "id"
-})
+@XmlType(name = "petfinderPetIdList", propOrder = { "id" })
 public class PetfinderPetIdList implements Serializable {
 
 	private static final long serialVersionUID = 6272900481086108578L;
 
 	protected List<BigInteger> id;
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the id property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getId().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link BigInteger }
-     * 
-     * 
-     */
-    public List<BigInteger> getId() {
-        if (id == null) {
-            id = new ArrayList<BigInteger>();
-        }
-        return this.id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the id property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getId().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link BigInteger }
+	 * 
+	 * 
+	 */
+	public List<BigInteger> getId() {
+		if (id == null) {
+			id = new ArrayList<BigInteger>();
+		}
+		return this.id;
+	}
 
 }

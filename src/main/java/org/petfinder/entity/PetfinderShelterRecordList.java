@@ -5,7 +5,6 @@
 // Generated on: 2012.09.25 at 02:17:58 PM EDT 
 //
 
-
 package org.petfinder.entity;
 
 import java.io.Serializable;
@@ -16,11 +15,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for petfinderShelterRecordList complex type.
+ * <p>
+ * Java class for petfinderShelterRecordList complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="petfinderShelterRecordList">
@@ -37,42 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "petfinderShelterRecordList", propOrder = {
-    "shelter"
-})
+@XmlType(name = "petfinderShelterRecordList", propOrder = { "shelter" })
 public class PetfinderShelterRecordList implements Serializable {
 
 	private static final long serialVersionUID = -3424894083203738059L;
 
 	protected List<PetfinderShelterRecord> shelter;
 
-    /**
-     * Gets the value of the shelter property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the shelter property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getShelter().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PetfinderShelterRecord }
-     * 
-     * 
-     */
-    public List<PetfinderShelterRecord> getShelter() {
-        if (shelter == null) {
-            shelter = new ArrayList<PetfinderShelterRecord>();
-        }
-        return this.shelter;
-    }
+	/**
+	 * Gets the value of the shelter property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the shelter property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getShelter().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link PetfinderShelterRecord }
+	 * 
+	 * 
+	 */
+	public List<PetfinderShelterRecord> getShelter() {
+		if (shelter == null) {
+			shelter = new ArrayList<PetfinderShelterRecord>();
+		}
+		return this.shelter;
+	}
 
 }

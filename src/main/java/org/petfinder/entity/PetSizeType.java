@@ -31,6 +31,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
+
 @XmlType(name = "petSizeType")
 @XmlEnum
 public enum PetSizeType {
@@ -43,10 +44,10 @@ public enum PetSizeType {
 		this.description = desc;
 	}
 
-	public String getDescription(){
+	public String getDescription() {
 		return this.description;
 	}
-	
+
 	public String value() {
 		return name();
 	}
