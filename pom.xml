@@ -6,9 +6,27 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Guardian Angel Animal Rescue</name>
-
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<bonecp-version>0.7.1.RELEASE</bonecp-version>
+		<ehcache.version>2.6.0</ehcache.version>
+		<hibernate.version>4.1.7.Final</hibernate.version>
+		<jackson.version>1.9.9</jackson.version>
+		<jsp.api.version>2.2.1</jsp.api.version>
+		<jstl.api.version>1.2.1</jstl.api.version>
+		<junit.version>4.10</junit.version>
+		<mysql.connector.version>5.1.21</mysql.connector.version>
+		<restassured.version>1.6.2</restassured.version>
+		<servlet.api.version>3.0.1</servlet.api.version>
+		<slf4j.version>1.6.6</slf4j.version>
+		<spring.version>3.1.2.RELEASE</spring.version>
+		<spring.data.version>1.2.0.RELEASE</spring.data.version>
+		<taglib.version>1.1.2</taglib.version>
+		<tiles.version>2.2.2</tiles.version>
+	</properties>
+	
 	<build>
-		<finalName>gaar</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -46,43 +64,69 @@
 					<url>http://www.skronek.org/manager/html</url>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.liquibase</groupId>
-				<artifactId>liquibase-maven-plugin</artifactId>
-				<version>2.0.5</version>
-				<executions>
-					<execution>
-						<phase>process-resources</phase>
-						<configuration>
-							<changeLogFile>src/db/db.changelog-master.xml</changeLogFile>
-							<driver>${jdbc.driver}</driver>
-							<url>${jdbc.url}</url>
-							<username>${jdbc.username}</username>
-							<password>${jdbc.password}</password>
-						</configuration>
-						<goals>
-							<goal>update</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!-- <plugin> <groupId>org.liquibase</groupId> <artifactId>liquibase-maven-plugin</artifactId> 
+				<version>2.0.5</version> <executions> <execution> <phase>process-resources</phase> 
+				<configuration> <changeLogFile>src/db/db.changelog-master.xml</changeLogFile> 
+				<driver>${jdbc.driver}</driver> <url>${jdbc.url}</url> <username>${jdbc.username}</username> 
+				<password>${jdbc.password}</password> </configuration> <goals> <goal>update</goal> 
+				</goals> </execution> </executions> </plugin> -->
 		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											properties-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.0-alpha-2,)
+										</versionRange>
+										<goals>
+											<goal>
+												read-project-properties
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
+
 	<dependencies>
+		<!-- SPRING -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
+
+		<!-- JSON -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>${jackson.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
+
+		<!-- CACHE -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache</artifactId>
@@ -114,38 +158,38 @@
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
 			<version>${taglib.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
 			<version>${tiles.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
 
-		<!-- TESTING -->
+		<!-- ORM / DATABASE / CONNECTION POOLING -->
 		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>${restassured.version}</version>
-			<type>jar</type>
-			<scope>test</scope>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<type>jar</type>
-			<scope>test</scope>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version>
-			<type>jar</type>
-			<scope>test</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jolbox</groupId>
+			<artifactId>bonecp</artifactId>
+			<version>${bonecp-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jolbox</groupId>
+			<artifactId>bonecp-spring</artifactId>
+			<version>${bonecp-version}</version>
 		</dependency>
 
 		<!-- LOGGING -->
@@ -155,28 +199,25 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 
+		<!-- TESTING -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.connector.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${restassured.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<ehcache.version>2.6.0</ehcache.version>
-		<jackson.version>1.9.9</jackson.version>
-		<jsp.api.version>2.2.1</jsp.api.version>
-		<jstl.api.version>1.2.1</jstl.api.version>
-		<junit.version>4.10</junit.version>
-		<mysql.connector.version>5.1.21</mysql.connector.version>
-		<restassured.version>1.6.2</restassured.version>
-		<servlet.api.version>3.0.1</servlet.api.version>
-		<slf4j.version>1.6.6</slf4j.version>
-		<spring.version>3.1.2.RELEASE</spring.version>
-		<taglib.version>1.1.2</taglib.version>
-		<tiles.version>2.2.2</tiles.version>
-	</properties>
 </project>
