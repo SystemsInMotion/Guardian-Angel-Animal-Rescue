@@ -10,6 +10,7 @@
 	
 	<definition name="adopt" extends="main">
 		<put-attribute name="title" type="string" value="Adoption Application" />
+		<put-attribute name="page-js" value="/scripts/adopt.js" />
 		<put-attribute name="body" value="/WEB-INF/view/adopt.jsp" />
 	</definition>
 	
