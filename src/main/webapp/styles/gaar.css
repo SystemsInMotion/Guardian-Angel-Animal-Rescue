@@ -1,7 +1,8 @@
 @CHARSET "UTF-8";
 
-input[type="text"] {
-	width: 20em;
+form div.multi-option {
+	float: left;
+	margin-right: 2em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -15,8 +16,18 @@ html,body {
 	background: #73C0E6;
 }
 
+input[type="text"] {
+	width: 20em;
+}
+
+input[type="text"].input2char {
+	width: 2em;
+}
+
 label {
 	display: block;
+	font-weight: bold;
+	font-size: 0.95em;
 }
 
 .carousel {
@@ -30,6 +41,21 @@ label {
 	padding: 2px 3px;
 	white-space: nowrap;
 	width: 620px;
+}
+
+.col1of2,.col2of2 {
+	float: left;
+	width: 49.9%;
+}
+
+.col1of3,.col2of3,.col3of3 {
+	float: left;
+	width: 33.3%;
+}
+
+.col1of4,.col2of4,.col3of4,.col4of4 {
+	float: left;
+	width: 24.9%;
 }
 
 .module {
@@ -148,6 +174,10 @@ label {
 	position: relative;
 }
 
+.smaller {
+	font-size: 0.85em;
+}
+
 #content {
 	background-color: #FFF;
 	-moz-border-radius-bottomleft: 7px;
@@ -208,4 +238,9 @@ label {
 	height: 200px;
 	margin-top: 10px;
 	margin-left: 80px;
+}
+
+#yearsLived {
+	float: left;
+	margin-right: 2em;
 }
