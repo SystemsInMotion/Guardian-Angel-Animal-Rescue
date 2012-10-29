@@ -24,6 +24,10 @@ input[type="text"].input2char {
 	width: 2em;
 }
 
+input[type="text"].explanation {
+	width: 50em;
+}
+
 label {
 	display: block;
 	font-weight: bold;
