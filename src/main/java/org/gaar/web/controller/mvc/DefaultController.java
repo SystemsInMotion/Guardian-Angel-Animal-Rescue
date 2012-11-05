@@ -9,9 +9,12 @@ import org.petfinder.entity.PetfinderPetRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
 @Controller
 public class DefaultController {
@@ -59,6 +62,11 @@ public class DefaultController {
 	@RequestMapping(value = "adoptions", method = RequestMethod.GET)
 	public String doAdoptions(Model model) {
 		return View.adoptions.name();
+	}
+	
+	@RequestMapping(value = "adopt", method = RequestMethod.POST)
+	public String doAdoptions_POST(@Validated AdoptionApplication application, Model model){
+		return  "redirect:/";
 	}
 
 	@RequestMapping(value = "contact", method = RequestMethod.GET)

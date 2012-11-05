@@ -27,6 +27,8 @@ img.across { margin: 2px 0 16px 0; }
 img.flushleft { margin-left: -20px; }
 img.flushright { margin-right: -20px; }
 
+ul.circle {list-style-type:circle}
+
 .replaced { display: block; width: 1px; height: 1px; outline: none; overflow: hidden; text-indent: -9999px; }
 #omniture, #top { position: absolute; top: 0; }
 #container { width: 980px; margin: 0 auto; position: relative; }
