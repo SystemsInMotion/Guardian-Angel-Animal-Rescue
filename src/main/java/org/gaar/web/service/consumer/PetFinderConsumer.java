@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.gaar.cache.CacheWrapper;
+//import org.gaar.cache.CacheWrapper;
 import org.gaar.util.StringUtils;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.Petfinder;
@@ -38,8 +38,8 @@ import org.springframework.web.util.UriUtils;
 @Service("petFinderService")
 public class PetFinderConsumer {
 
-	@Autowired
-	private CacheWrapper<String, List<PetfinderPetRecord>> cacheWrapper;
+//	@Autowired
+//	private CacheWrapper<String, List<PetfinderPetRecord>> cacheWrapper;
 
 	public static final String SHELTER_ID_GAAR = "MI144";
 
@@ -210,7 +210,7 @@ public class PetFinderConsumer {
 	public List<PetfinderPetRecord> shelterPets(String shelterId, Character status, Integer offset, Integer count,
 			String output, String format) {
 
-		List<PetfinderPetRecord> pets = cacheWrapper.get("pets");
+		List<PetfinderPetRecord> pets = null;//cacheWrapper.get("pets");
 		if (pets == null) {
 			Map<QueryParam, Object> params = new TreeMap<QueryParam, Object>();
 			params.put(QueryParam.id, shelterId);
@@ -222,7 +222,7 @@ public class PetFinderConsumer {
 			final Petfinder petfinder = executeQuery(Method.SHELTER_PETS, params);
 			PetfinderPetRecordList petRecordList = petfinder.getPets();
 			pets = petRecordList.getPet();
-			cacheWrapper.put("pets", pets);
+			//cacheWrapper.put("pets", pets);
 		}
 		return pets;
 	}
