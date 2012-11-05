@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Guardian Angel Animal Rescue</name>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<bonecp-version>0.7.1.RELEASE</bonecp-version>
@@ -25,7 +25,10 @@
 		<taglib.version>1.1.2</taglib.version>
 		<tiles.version>2.2.2</tiles.version>
 	</properties>
-	
+
+
+
+
 	<build>
 		<plugins>
 			<plugin>
@@ -60,6 +63,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<version>1.1</version>
 				<configuration>
+					<charset>UTF-8</charset>
 					<server>skronek.org</server>
 					<url>http://www.skronek.org/manager/html</url>
 				</configuration>
@@ -127,13 +131,9 @@
 		</dependency>
 
 		<!-- CACHE -->
-		<dependency>
-			<groupId>net.sf.ehcache</groupId>
-			<artifactId>ehcache</artifactId>
-			<version>${ehcache.version}</version>
-			<type>pom</type>
-			<scope>compile</scope>
-		</dependency>
+		<!-- <dependency> <groupId>net.sf.ehcache</groupId> <artifactId>ehcache</artifactId> 
+			<version>${ehcache.version}</version> <type>pom</type> <scope>compile</scope> 
+			</dependency> -->
 
 		<!-- SERVLET / JSTL / JSP -->
 		<dependency>
@@ -200,12 +200,8 @@
 		</dependency>
 
 		<!-- TESTING -->
-		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>${restassured.version}</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- <dependency> <groupId>com.jayway.restassured</groupId> <artifactId>rest-assured</artifactId> 
+			<version>${restassured.version}</version> <scope>test</scope> </dependency> -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -217,6 +213,13 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.3</version>
 		</dependency>
 	</dependencies>
 
