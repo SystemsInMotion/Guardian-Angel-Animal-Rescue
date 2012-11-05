@@ -3,7 +3,7 @@ package com.systemsinmotion.petrescue.web.bean;
 import java.io.Serializable;
 import java.util.List;
 
-import com.sun.istack.internal.NotNull;
+import javax.validation.constraints.NotNull;
 
 public class AdoptionApplication implements Serializable {
 
@@ -11,12 +11,21 @@ public class AdoptionApplication implements Serializable {
 
 	@NotNull
 	private String firstName;
+
 	@NotNull
 	private String lastName;
+
+	@NotNull
 	private String address1;
+
 	private String address2;
+
+	@NotNull
 	private String zipCode;
+
+	@NotNull
 	private String city;
+
 	private String homePhone;
 	private String mobilePhone;
 	private String email1;
@@ -178,7 +187,6 @@ public class AdoptionApplication implements Serializable {
 	public void setPreviousPetCount(Integer previousPetCount) {
 		this.previousPetCount = previousPetCount;
 	}
-
 
 	public Integer getAdultCount() {
 		return adultCount;
