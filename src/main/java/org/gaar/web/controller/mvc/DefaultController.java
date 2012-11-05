@@ -25,8 +25,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
-import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
-
 @Controller
 public class DefaultController {
 
@@ -74,10 +72,10 @@ public class DefaultController {
 	public String doAdoptions(Model model) {
 		return View.adoptions.name();
 	}
-	
+
 	@RequestMapping(value = "adopt", method = RequestMethod.POST)
-	public String doAdoptions_POST(@Validated AdoptionApplication application, Model model){
-		return  "redirect:/";
+	public String doAdoptions_POST(@Validated AdoptionApplication application, Model model) {
+		return "redirect:/";
 	}
 
 	@RequestMapping(value = "contact", method = RequestMethod.GET)
