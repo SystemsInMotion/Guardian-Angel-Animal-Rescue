@@ -12,8 +12,7 @@
 			</div>
 		</div>
 			
-		<div id="header">
-			
+		<div id="header">			
 			<div id="emotion-header" data-action="emoHeader"
 					style="background: transparent; width: 850px; height: 118px;">
 					<a href="./home_files/home.htm"
@@ -25,8 +24,6 @@
 						style="left: 10%; top: 10%; font: bold 24px/120% Verdana, Geneva, Arial, Helvetica, sans-serif; color: #FFD808;"></strong>
 					</a>
 				</div>
-
-
 		</div>
 		
 		<div id="gradient" class="cc-content-parent">				

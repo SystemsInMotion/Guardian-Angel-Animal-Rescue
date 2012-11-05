@@ -25,6 +25,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
+import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
+
 @Controller
 public class DefaultController {
 
