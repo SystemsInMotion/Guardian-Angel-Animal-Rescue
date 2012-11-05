@@ -141,10 +141,48 @@
 		</div>
 		<div id="petHistory" class="row"></div>
 	</div>
+	<h3>Vet History</h3>
+	<div class="module">
+	<label>Name(s)/phone number(s) of Veterinarian(s) that you have used <i>(If we cannot verify the vet history of animals currently in the home with the information you are providing on this application, your application will be automatically denied).</i></label>
+		<hr>
+		<div class="row grid2col">
+			<div class="column">
+				<label>Vet Name:</label>
+			</div>		
+			<div class="column">
+				<label>Vet Phone Number:</label>
+			</div>		
+		</div>
+		<div class="row grid2col">
+			<div class="column">
+				<input type="text" id="vetsUsedName" name="previousPetCount" class="text" />
+			</div>		
+			<div class="column">
+				<input type="text" id="vetsUsedPhone" name="previousPetCount" class="text" />
+			</div>		
+		</div>
+		<div class="row grid2col">
+			<div class="column">
+				<input type="text" id="vetsUsedName" name="previousPetCount" class="text" />
+			</div>		
+			<div class="column">
+				<input type="text" id="vetsUsedPhone" name="previousPetCount" class="text" />
+			</div>		
+		</div>
+		<div class="row grid2col">
+			<div class="column">
+				<input type="text" id="vetsUsedName" name="previousPetCount" class="text" />
+			</div>		
+			<div class="column">
+				<input type="text" id="vetsUsedPhone" name="previousPetCount" class="text" />
+			</div>		
+		</div>
+		<div id="petHistory" class="row"></div>
+	</div>
 	<h3>Living Conditions</h3>
 	<div class="module">
 		<div class="row">
-			<label>Cat: will the animal be declawed?</label>
+			<label>If animal is a cat, will the animal be declawed?</label>
 			<div class="multi-option">
 				<input type="radio" name="declawed" value="true"> yes
 			</div>
