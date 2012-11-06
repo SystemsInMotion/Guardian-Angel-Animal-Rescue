@@ -3,27 +3,23 @@ package com.systemsinmotion.petrescue.web.bean;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.validation.constraints.NotNull;
+
+//import javax.validation.constraints.NotNull;
 
 public class AdoptionApplication implements Serializable {
 
 	private static final long serialVersionUID = 1118000426493607246L;
 
-	@NotNull
 	private String firstName;
 
-	@NotNull
 	private String lastName;
 
-	@NotNull
 	private String address1;
 
 	private String address2;
 
-	@NotNull
 	private String zipCode;
 
-	@NotNull
 	private String city;
 
 	private String homePhone;
