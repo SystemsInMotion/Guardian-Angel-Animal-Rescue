@@ -26,10 +26,8 @@
 		<tiles.version>2.2.2</tiles.version>
 	</properties>
 
-
-
-
 	<build>
+		<finalName>gaar</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -68,13 +66,8 @@
 					<url>http://www.skronek.org/manager/html</url>
 				</configuration>
 			</plugin>
-			<!-- <plugin> <groupId>org.liquibase</groupId> <artifactId>liquibase-maven-plugin</artifactId> 
-				<version>2.0.5</version> <executions> <execution> <phase>process-resources</phase> 
-				<configuration> <changeLogFile>src/db/db.changelog-master.xml</changeLogFile> 
-				<driver>${jdbc.driver}</driver> <url>${jdbc.url}</url> <username>${jdbc.username}</username> 
-				<password>${jdbc.password}</password> </configuration> <goals> <goal>update</goal> 
-				</goals> </execution> </executions> </plugin> -->
 		</plugins>
+		
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
@@ -124,13 +117,13 @@
 		</dependency>
 
 		<!-- JSR-303 Validation -->
+		<!-- 
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Beta1</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
+		 -->
 
 		<!-- JSON -->
 		<dependency>
@@ -180,6 +173,20 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
+				<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator-annotation-processor</artifactId>
+			<version>5.0.0.Alpha1</version>
+			<!-- <version>${hibernate.version}</version> -->
+		</dependency>
+		<!-- 
+		<dependency>
+			<groupId>hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.1beta6</version>
+			<classifier>sources</classifier>
+		</dependency>
+		 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -223,6 +230,7 @@
 			<artifactId>mail</artifactId>
 			<version>1.4.3</version>
 		</dependency>
+
 
 	</dependencies>
 
