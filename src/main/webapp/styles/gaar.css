@@ -51,20 +51,11 @@ label {
 	width: 620px;
 }
 
-.col1of2,.col2of2 {
-	float: left;
-	width: 49.9%;
-}
-
-.col1of3,.col2of3,.col3of3 {
-	float: left;
-	width: 33.3%;
-}
-
-.col1of4,.col2of4,.col3of4,.col4of4 {
-	float: left;
-	width: 24.9%;
-}
+.grid3col .column { width: 33%; margin-left: 0; }
+.grid3cola .column { margin-left: 0; }
+.grid4col .column { width: 24%; margin-left: 0; }
+.grid5col .column { width: 19%; margin-left: 0; }
+.grid6col .column { width: 16%; margin-left: 0; }
 
 .module {
 	background-color: #EEE;
@@ -87,6 +78,10 @@ label {
 .module .row {
 	margin-bottom: 10px;
 	zoom: 1;
+}
+
+.module .row.last {
+	margin-bottom: 0;
 }
 
 .module .row:after {

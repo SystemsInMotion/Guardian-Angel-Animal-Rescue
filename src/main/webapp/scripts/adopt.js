@@ -1,12 +1,12 @@
 $(document).ready(function() {
-	$('#previousPetCount').keyup(function() {
+	$('#currentPetCount').keyup(function() {
 		if (jQuery.isNumeric(this.value) && this.value < 21) {
-			petHistories(this.value);
+			currentPets(this.value);
 		} else if (this.value == ''){
 			this.value = '';
-			$('#petHistory').html("");
+			$('#currentPets').html("");
 		} else {
-			$('#petHistory').html("");
+			$('#currentPets').html("");
 			alert("Invalid value.  Please insert a number.");
 			this.value = '';
 			
@@ -14,25 +14,28 @@ $(document).ready(function() {
 	});
 });
 
-function petHistories(petCount) {
+function currentPets(petCount) {
 	if (jQuery.isNumeric(petCount)) {
-		var previousPets = '';
+		var currentPets = '';
 		for(var i = 0; i < petCount; i++) {
-			previousPets += '<hr>';
-			previousPets += '<div class="row grid2col">';
-			previousPets += '<div class="column">Name <input name="previousPets['+i+'].name" type="text" class="short"></div>';
-			previousPets += '<div class="column">Type/Breed <input name="previousPets['+i+'].breed" type="text"></div>';
-			previousPets += '</div><div class="row grid2col">';
-			previousPets += '<div class="column">Age <input name="previousPets['+i+'].age" type="text" class="input2char"></div>';
-			previousPets += '<div class="column">Indoor <input name="previousPets['+i+'].isIndoor" value="true" type="radio" class="short"> Outdoor <input name="previousPets['+i+'].isIndoor" value="true" type="radio" class="short"></div></div>';
-			previousPets += '</div><div class="row grid2col">';
-			previousPets += '<div class="column">Sterilized? <input name="previousPets['+i+'].sterilized" type="Radio" class="input2char"> Yes <input name="previousPets['+i+'].sterilized" type="Radio" class="input2char"> No </div>';
-			previousPets += '<div class="column">Current on Vaccines? <input name="previousPets['+i+'].currentVaccines" type="Radio" class="input2char"> Yes <input name="previousPets['+i+'].currentVaccines" type="Radio" class="input2char"> No</div></div>';
-			previousPets += '</div><div class="row grid2col">';
-			previousPets += '<div class="column">Heartworm Prevention? <input name="previousPets['+i+'].heartworm" type="Radio" class="input2char"> Yes <input name="previousPets['+i+'].heartworm" type="Radio" class="input2char"> No </div></div>';
-			
+			var isLast = (i + 1 == petCount) ? ' last' : '';
+			currentPets += '<hr>';
+			currentPets += '<div class="row grid3col">';
+			currentPets += '  <div class="column"><label for="currentPets['+i+'].name">Name</label><input name="currentPets['+i+'].name" type="text" class=""></div>';
+			currentPets += '  <div class="column"><label for="currentPets['+i+'].breed">Type/Breed</label><input name="currentPets['+i+'].breed" type="text"></div>';
+			currentPets += '  <div class="column"><label for="currentPets['+i+'].age">Age</label><input name="currentPets['+i+'].age" type="text" class="input2char"></div>';
+			currentPets += '</div>';
+			currentPets += '<div class="row grid2col">';
+			currentPets += '  <div class="column"><label for="currentPets['+i+'].isIndoor">Where does this pet primarily stay?</label><div class="multi-option"><input name="currentPets['+i+'].isIndoor" value="true" type="radio" class="short"> Indoor</div><input name="currentPets['+i+'].isIndoor" value="false" type="radio" class="short"> Outdoor</div>';
+			currentPets += '  <div class="column"><label for="currentPets['+i+'].isSterilized">Is this pet sterilized?</label><div class="multi-option"><input name="currentPets['+i+'].isSterilized" type="radio" value="true"> Yes</div><input name="currentPets['+i+'].isSterilized" type="radio" value="false"> No</div>';
+			currentPets += '</div>';
+			currentPets += '<div class="row grid2col">';
+			currentPets += '  <div class="column"><label for="currentPets['+i+'].hasVaccines">Is this pet current on its vaccines?</label><div class="multi-option"><input name="currentPets['+i+'].hasVaccines" type="radio" class="input2char"> Yes</div><input name="currentPets['+i+'].hasVaccines" type="radio" class="input2char"> No</div>';
+			currentPets += '  <div class="column"><label for="currentPets['+i+'].isHeartwormed">Is this pet on heartworm preventative?</label><div class="multi-option"><input name="currentPets['+i+'].isHeartwormed" type="radio" class="input2char"> Yes</div><input name="currentPets['+i+'].isHeartwormed" type="radio" class="input2char"> No</div>';
+			currentPets += '</div>';
+			currentPets += '<div class="row' + isLast + '"><label>Where is this pet now?</label><input type="text" name="currentPets['+i+'].whereNow" class="explanation"></div>';
 
 		};
-		$('#petHistory').html(previousPets);
+		$('#currentPets').html(currentPets);
 	}
 }

@@ -90,18 +90,18 @@
 			<div class="column">
 				<label>Are pets allowed?</label>
 				<div class="multi-option">
-					<input type="radio" name="petsAllowed" value="true"> yes
+					<input type="radio" name="petsAllowed" value="true"> Yes
 				</div>
-				<input type="radio" name="petsAllowed" value="false"> no
+				<input type="radio" name="petsAllowed" value="false"> No
 			</div>
 			<div class="column">
 				<label>Can you provide proof?</label>
 				<div class="multi-option">
 					<input type="radio" name="petsAllowedProof" value="true">
-					yes
+					Yes
 				</div>
 				<input type="radio" name="petsAllowedProof" value="false">
-				no
+				No
 			</div>
 		</div>
 		<div class="row">
@@ -124,7 +124,7 @@
 			<div class="multi-option">
 				<input type="radio" name="familyAware" value="false"> No
 			</div>
-			If no, explain: <input type="text" name="familyAwareNoReason"
+			If No, explain: <input type="text" name="familyAwareNoReason"
 				maxlength="255" class="explanation" />
 		</div>
 		<div class="row">
@@ -133,13 +133,13 @@
 		</div>
 	</div>
 
-	<h3>Pet History</h3>
+	<h3>Current Pets</h3>
 	<div class="module">
 		<div class="row">
-			<label>How many pets have you owned in the past ten years? (Max 20)</label><input
-				type="text" id="previousPetCount" name="previousPetCount" class="input2char" />
+			<label>How many pets do you currently own? (Max 20)</label><input
+				type="text" id="currentPetCount" name="currentPetCount" class="input2char" />
 		</div>
-		<div id="petHistory" class="row"></div>
+		<div id="currentPets"></div>
 	</div>
 	<h3>Vet History</h3>
 	<div class="module">
@@ -155,38 +155,37 @@
 		</div>
 		<div class="row grid2col">
 			<div class="column">
-				<input type="text" id="vetsUsedName" name="previousPetCount" class="text" />
+				<input type="text" id="vetsUsedName" class="text" />
 			</div>		
 			<div class="column">
-				<input type="text" id="vetsUsedPhone" name="previousPetCount" class="text" />
+				<input type="text" id="vetsUsedPhone" class="text" />
 			</div>		
 		</div>
 		<div class="row grid2col">
 			<div class="column">
-				<input type="text" id="vetsUsedName" name="previousPetCount" class="text" />
+				<input type="text" id="vetsUsedName" class="text" />
 			</div>		
 			<div class="column">
-				<input type="text" id="vetsUsedPhone" name="previousPetCount" class="text" />
+				<input type="text" id="vetsUsedPhone" class="text" />
 			</div>		
 		</div>
-		<div class="row grid2col">
+		<div class="row grid2col last">
 			<div class="column">
-				<input type="text" id="vetsUsedName" name="previousPetCount" class="text" />
+				<input type="text" id="vetsUsedName" class="text" />
 			</div>		
 			<div class="column">
-				<input type="text" id="vetsUsedPhone" name="previousPetCount" class="text" />
+				<input type="text" id="vetsUsedPhone" class="text" />
 			</div>		
 		</div>
-		<div id="petHistory" class="row"></div>
 	</div>
 	<h3>Living Conditions</h3>
 	<div class="module">
 		<div class="row">
 			<label>If animal is a cat, will the animal be declawed?</label>
 			<div class="multi-option">
-				<input type="radio" name="declawed" value="true"> yes
+				<input type="radio" name="declawed" value="true"> Yes
 			</div>
-			<input type="radio" name="declawed" value="false"> no
+			<input type="radio" name="declawed" value="false"> No
 		</div>
 		<div class="row">
 			<label>Where will the animal be living?</label>
@@ -214,17 +213,17 @@
 			</div>		
 		</div>
 		<div class="row">
-			<label>If no, would you be willing to install a physical or electric fence? </label>
+			<label>If No, would you be willing to install a physical or electric fence? </label>
 			<input type="checkbox" name="installFence" value="true"> Electric
 			<input type="checkbox" name="installFence" value="false"> Physical
 			<input type="checkbox" name="installFence" value="other"> No
 		</div>
 		<div class="row">
-			<label>If no, how will the animal be let outside and contained in your yard?</label>
+			<label>If No, how will the animal be let outside and contained in your yard?</label>
 			<input type="text" name="howContained" value="">
 		</div>
 		<div class="row">
-			<label>If no, how will the animal be let outside and contained in your yard?</label>
+			<label>If No, how will the animal be let outside and contained in your yard?</label>
 			<input type="text" name="howContained2" value="">
 		</div>
 		<div class="row">
@@ -264,13 +263,13 @@
 			<label>How long have you been looking for a pet?</label>
 			<input type="text" name="searchingLength" value="">
 		</div>
-		<div class="row">
+		<div class="row last">
 			<label>Have you applied elsewhere?</label>
 			<div class="multi-option">
 				<input  type="radio" name="appliedElsewhere">Yes
 				<input  type="radio" name="appliedElsewhere">No
 			</div>
-			<label>If yes, where?</label><input type="text" name="howContained" value="">			
+			<label>If Yes, where?</label><input type="text" name="howContained" value="">			
 		</div>
 	</div>	
 	<h3>Reasons for Adopting</h3>
@@ -298,7 +297,7 @@
 				<input  type="checkbox" name="whyWantPet"> Gift
 			</div>		
 		</div>
-		<div class="row grid4col">
+		<div class="row grid4col last">
 			<div class="column">
 				<input  type="checkbox" name="whyWantPet"> Other
 			</div>
@@ -312,16 +311,16 @@
 		<div class="row">
 			<label>Are you aware that rescue animals may have unknown medical and behavior history?</label>
 			<div class="multi-option">
-					<input type="radio" name="medicalAwareness" value="true"> yes
+					<input type="radio" name="medicalAwareness" value="true"> Yes
 				</div>
-				<input type="radio" name="medicalAwareness" value="false"> no			
+				<input type="radio" name="medicalAwareness" value="false"> No			
 		</div>
 		<div class="row">
 			<label>Would you object to a GAAR rep visiting/calling your home to inquire about the animal?</label>
 			<div class="multi-option">
-					<input type="radio" name="homeVisit" value="true"> yes
+					<input type="radio" name="homeVisit" value="true"> Yes
 				</div>
-				<input type="radio" name="homeVisit" value="false"> no			
+				<input type="radio" name="homeVisit" value="false"> No			
 		</div>
 		<div>
 			<label>What Each Applicant Should Know</label>
