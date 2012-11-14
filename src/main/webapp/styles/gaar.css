@@ -51,11 +51,29 @@ label {
 	width: 620px;
 }
 
-.grid3col .column { width: 33%; margin-left: 0; }
-.grid3cola .column { margin-left: 0; }
-.grid4col .column { width: 24%; margin-left: 0; }
-.grid5col .column { width: 19%; margin-left: 0; }
-.grid6col .column { width: 16%; margin-left: 0; }
+.grid3col .column {
+	width: 33%;
+	margin-left: 0;
+}
+
+.grid3cola .column {
+	margin-left: 0;
+}
+
+.grid4col .column {
+	width: 24%;
+	margin-left: 0;
+}
+
+.grid5col .column {
+	width: 19%;
+	margin-left: 0;
+}
+
+.grid6col .column {
+	width: 16%;
+	margin-left: 0;
+}
 
 .module {
 	background-color: #EEE;
@@ -207,6 +225,10 @@ label {
 	border-bottom: none;
 	height: 100px;
 	margin-bottom: 0;
+}
+
+#howContained, #installFence, #whereApplied {
+	display: none;
 }
 
 #petCarousels {
