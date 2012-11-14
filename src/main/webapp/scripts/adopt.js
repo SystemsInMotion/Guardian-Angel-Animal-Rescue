@@ -2,15 +2,37 @@ $(document).ready(function() {
 	$('#currentPetCount').keyup(function() {
 		if (jQuery.isNumeric(this.value) && this.value < 21) {
 			currentPets(this.value);
-		} else if (this.value == ''){
+		} else if (this.value == '') {
 			this.value = '';
 			$('#currentPets').html("");
 		} else {
 			$('#currentPets').html("");
 			alert("Invalid value.  Please insert a number.");
 			this.value = '';
-			
 		}
+	});
+	
+	$('input[name="fencedYard"]').click(function() {
+		$('#installFence').css('display','none');
+		$('input[name="installFence"]').removeAttr("checked");
+		$('#howContained').css('display','none');
+	});
+	$('input[name="fencedYard"][value="no"]').click(function() {
+		$('#installFence').css('display','block');
+	});
+
+	$('input[name="installFence"]').click(function() {
+		$('#howContained').css('display','none');
+	});
+	$('input[name="installFence"][value="no"]').click(function() {
+		$('#howContained').css('display','block');
+	});
+
+	$('input[name="haveAppliedElsewhere"]').click(function() {
+		$('#whereApplied').css('display','none');
+	});
+	$('input[name="haveAppliedElsewhere"][value="true"]').click(function() {
+		$('#whereApplied').css('display','block');
 	});
 });
 
@@ -34,7 +56,6 @@ function currentPets(petCount) {
 			currentPets += '  <div class="column"><label for="currentPets['+i+'].isHeartwormed">Is this pet on heartworm preventative?</label><div class="multi-option"><input name="currentPets['+i+'].isHeartwormed" type="radio" class="input2char"> Yes</div><input name="currentPets['+i+'].isHeartwormed" type="radio" class="input2char"> No</div>';
 			currentPets += '</div>';
 			currentPets += '<div class="row' + isLast + '"><label>Where is this pet now?</label><input type="text" name="currentPets['+i+'].whereNow" class="explanation"></div>';
-
 		};
 		$('#currentPets').html(currentPets);
 	}
