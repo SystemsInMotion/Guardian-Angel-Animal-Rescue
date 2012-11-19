@@ -12,6 +12,10 @@ h1,h2,h3,h4,h5,h6 {
 	margin-bottom: 0.2em;
 }
 
+hr {
+	margin: 0.5em auto;
+}
+
 html,body {
 	background: #73C0E6;
 }
@@ -35,7 +39,18 @@ input[type="text"].explanation {
 label {
 	display: block;
 	font-weight: bold;
-	font-size: 0.95em;
+	font-size: 0.9em;
+}
+
+label.inline {
+	display: inline;
+	margin-right: 1em;
+}
+
+label.minor {
+	display: inline;
+	font-weight: normal;
+	font-size: 1em;
 }
 
 .carousel {
@@ -199,6 +214,10 @@ label {
 	font-size: 0.85em;
 }
 
+#adoptionForm img#petImage {
+	height: 100px;
+}
+
 #content {
 	background-color: #FFF;
 	-moz-border-radius-bottomleft: 7px;
@@ -227,7 +246,8 @@ label {
 	margin-bottom: 0;
 }
 
-#howContained, #installFence, #whereApplied {
+#householdMemberAgesDiv,#howContainPetDiv,#petsAllowedDiv,#petsAllowedProofDiv,#whereAppliedDiv,#willingToInstallFenceDiv
+	{
 	display: none;
 }
 
@@ -260,7 +280,6 @@ label {
 }
 
 #previewImg {
-	height: 200px;
 	margin-top: 10px;
 	margin-left: 80px;
 }
