@@ -67,7 +67,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		
+
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
@@ -107,7 +107,20 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
+	
+	<repositories>
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	
 	<dependencies>
 		<!-- SPRING -->
 		<dependency>
@@ -117,13 +130,11 @@
 		</dependency>
 
 		<!-- JSR-303 Validation -->
-		<!-- 
 		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>1.1.0.Beta1</version>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.0.0.Alpha1</version>
 		</dependency>
-		 -->
 
 		<!-- JSON -->
 		<dependency>
@@ -173,20 +184,6 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-				<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator-annotation-processor</artifactId>
-			<version>5.0.0.Alpha1</version>
-			<!-- <version>${hibernate.version}</version> -->
-		</dependency>
-		<!-- 
-		<dependency>
-			<groupId>hibernate</groupId>
-			<artifactId>hibernate-annotations</artifactId>
-			<version>3.1beta6</version>
-			<classifier>sources</classifier>
-		</dependency>
-		 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -232,6 +229,13 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator-annotation-processor</artifactId>
+			<version>5.0.0.Alpha1</version>
+			<type>pom</type>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 </project>
