@@ -40,9 +40,16 @@ public class DefaultController {
 	public String doAdopt(@PathVariable("petId") Integer petId, Model model) {
 		final PetfinderPetRecord pet = petFinderService.readPet(BigInteger.valueOf(petId), null);
 		model.addAttribute("pet", pet);
+		model.addAttribute("adoptionApplication", new AdoptionApplication());
 		return View.adopt.name();
 	}
 
+	@RequestMapping(value = "adopt", method = RequestMethod.POST)
+	public String doAdopt_POST(@Validated AdoptionApplication application, Model model) {
+		System.out.println("application : " + application);
+		return "redirect:/app/adopt/11001164";
+	}
+	
 	@RequestMapping(value = "home", method = RequestMethod.GET)
 	public String doHome(Model model) {
 		final List<PetfinderPetRecord> cats = petFinderService.shelterCats(PetFinderConsumer.SHELTER_ID_GAAR, null,
@@ -71,11 +78,6 @@ public class DefaultController {
 	@RequestMapping(value = "adoptions", method = RequestMethod.GET)
 	public String doAdoptions(Model model) {
 		return View.adoptions.name();
-	}
-
-	@RequestMapping(value = "adopt", method = RequestMethod.POST)
-	public String doAdoptions_POST(@Validated AdoptionApplication application, Model model) {
-		return "redirect:/";
 	}
 
 	@RequestMapping(value = "contact", method = RequestMethod.GET)
