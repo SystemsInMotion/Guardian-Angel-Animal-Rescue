@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.apache.log4j.Logger;
 import org.gaar.util.StringUtils;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.Petfinder;
@@ -19,8 +20,6 @@ import org.petfinder.entity.PetfinderShelterRecord;
 import org.petfinder.entity.PetfinderShelterRecordList;
 import org.petfinder.web.service.Method;
 import org.petfinder.web.service.QueryParam;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.client.RestTemplate;
@@ -38,14 +37,16 @@ import org.springframework.web.util.UriUtils;
 @Service("petFinderService")
 public class PetFinderConsumer {
 
+	// private static Logger logger =
+	// LoggerFactory.getLogger(PetFinderConsumer.class);
+	private static final Logger logger = Logger.getLogger(PetFinderConsumer.class);
+
 	public static final String SHELTER_ID_GAAR = "MI144";
 
 	private static final String API_KEY = "15c639ff6d160dc55ff6d37677bb0880";
 	private static final String API_SECRET = "f14226e0353d1fceca8fcbd17ed06881";
 	private static final String PETFINDER_HOST = "http://api.petfinder.com/";
 	private static final String QUERY_AUTH_TOKEN = "key=" + API_KEY;
-
-	private static Logger logger = LoggerFactory.getLogger(PetFinderConsumer.class);
 
 	private static PetfinderAuthData authData;
 
@@ -116,7 +117,7 @@ public class PetFinderConsumer {
 		final String query = buildQuery(token, params, false);
 		final String sig = signatureParam(buildQuery(token, params, true));
 		final String url = StringUtils.concat(PETFINDER_HOST, method.value, query, sig);
-		logger.info("executeQuery(): url: {}", url);
+		logger.debug("executeQuery(): url: " + url);
 		return restTemplate.getForObject(url, Petfinder.class);
 	}
 
@@ -135,7 +136,10 @@ public class PetFinderConsumer {
 		params.put(QueryParam.format, format);
 
 		final Petfinder petfinder = executeQuery(Method.FIND_PET, params);
-		return petfinder.getPets();
+		final PetfinderPetRecordList pets = petfinder.getPets();
+
+		logger.debug("petRecordList : " + pets);
+		return pets;
 	}
 
 	public PetfinderShelterRecordList findShelter(String location, String name, Integer offset, Integer count,
@@ -176,7 +180,11 @@ public class PetFinderConsumer {
 		params.put(QueryParam.format, format);
 
 		final Petfinder petfinder = executeQuery(Method.GET_PET, params);
-		return petfinder.getPet();
+		final PetfinderPetRecord pet = petfinder.getPet();
+
+		logger.debug("pet : " + pet);
+
+		return pet;
 	}
 
 	public PetfinderShelterRecord readShelter(String shelterId, String format) {
@@ -213,7 +221,7 @@ public class PetFinderConsumer {
 			params.put(QueryParam.id, shelterId);
 			params.put(QueryParam.status, status);
 			params.put(QueryParam.offset, offset);
-			params.put(QueryParam.count, count);
+			params.put(QueryParam.count, defaultCount(count));
 			params.put(QueryParam.output, output);
 
 			final Petfinder petfinder = executeQuery(Method.SHELTER_PETS, params);
@@ -222,6 +230,13 @@ public class PetFinderConsumer {
 			// cacheWrapper.put("pets", pets);
 		}
 		return pets;
+	}
+
+	private Integer defaultCount(Integer count) {
+		if (count == null) {
+			count = 999;
+		}
+		return count;
 	}
 
 	public List<PetfinderPetRecord> shelterCats(String shelterId, Character status, Integer offset, Integer count,
