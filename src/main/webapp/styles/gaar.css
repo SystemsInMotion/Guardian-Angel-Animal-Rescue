@@ -1,5 +1,20 @@
 @CHARSET "UTF-8";
 
+blockquote {
+	color: #0033BB;
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+}
+
+blockquote.signature {
+	color: #999;
+	font-weight: normal;
+	font-style: italic;
+	text-align: center;
+}
+
 form div.multi-option {
 	float: left;
 	margin-right: 2em;
@@ -18,6 +33,21 @@ hr {
 
 html,body {
 	background: #73C0E6;
+}
+
+img.inline-left {
+	float: left;
+	margin-right: 1em;
+}
+
+img.inline-right {
+	float: right;
+	margin-left: 1em;
+}
+
+img#whatWeDo {
+	float: right;
+	margin-left: 1em;
 }
 
 input[type="text"] {
@@ -51,6 +81,25 @@ label.minor {
 	display: inline;
 	font-weight: normal;
 	font-size: 1em;
+}
+
+p {
+	margin: 0.5em 0
+}
+
+p.answer {
+	margin-top: 0;
+}
+
+p.question {
+	font-style: italic;
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-top: 1em;
+}
+
+p.question.first {
+	margin-top: 0;
 }
 
 .carousel {
@@ -91,7 +140,7 @@ label.minor {
 }
 
 .module {
-	background-color: #EEE;
+	background-color: #fafaf6;
 	border: 1px solid #DFDFDF;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -152,6 +201,10 @@ label.minor {
 	-webkit-box-shadow: rgba(2, 70, 160, 0.5) 0 2px 4px;
 	-moz-box-shadow: rgba(2, 70, 160, 0.5) 0 2px 4px;
 	box-shadow: rgba(2, 70, 160, 0.5) 0 2px 4px;
+}
+
+.pink {
+	color: #FF4AA5;
 }
 
 .slider .pet-thumbnail h3.gender-F {
@@ -244,11 +297,50 @@ label.minor {
 	border-bottom: none;
 	height: 100px;
 	margin-bottom: 0;
+	position: relative;
+}
+
+#globalheader #globalnav {
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+}
+
+#globalheader #globalnav li {
+	margin-left: 12px;
+}
+
+#globalheader #globalnav li a {
+	float: none;
+	height: auto;
+	width: auto;
 }
 
 #householdMemberAgesDiv,#howContainPetDiv,#petsAllowedDiv,#petsAllowedProofDiv,#whereAppliedDiv,#willingToInstallFenceDiv
 	{
 	display: none;
+}
+
+#local-nav {
+	border-right: 1px solid #CCC;
+	float: left;
+	font-size: .9em;
+	width: 15%;
+}
+
+#local-nav ul li a,#local-nav ul li:visited {
+	background: url(/gaar/images/sub_nav_arrow.gif) no-repeat 5px center;
+	display: block;
+	margin: 0 0 4px 0;
+	padding: 4px 10px 2px 20px;
+}
+
+#local-nav ul li.separator span {
+	background-color: #DDD;
+	display: block;
+	height: 1px;
+	margin-left: 13%;
+	width: 70%;
 }
 
 #petCarousels {
