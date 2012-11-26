@@ -14,6 +14,7 @@ import javax.mail.internet.MimeMessage;
 import org.gaar.web.View;
 import org.gaar.web.service.consumer.PetFinderConsumer;
 import org.petfinder.entity.PetfinderPetRecord;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,12 +29,14 @@ import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 @Controller
 public class DefaultController {
 
+	private static Logger logger = Logger.getLogger(DefaultController.class);
+
 	@Autowired
 	PetFinderConsumer petFinderService;
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String doDefault(Model model) {
-		return doHome(model);
+	@RequestMapping(value = "about", method = RequestMethod.GET)
+	public String doAbout(Model model) {
+		return View.about.name();
 	}
 
 	@RequestMapping(value = "adopt/{petId}", method = RequestMethod.GET)
@@ -49,7 +52,32 @@ public class DefaultController {
 		System.out.println("application : " + application);
 		return "redirect:/app/adopt/11001164";
 	}
-	
+
+	@RequestMapping(value = "adoptions", method = RequestMethod.GET)
+	public String doAdoptions(Model model) {
+		return View.adoptions.name();
+	}
+
+	@RequestMapping(value = "brokenWings", method = RequestMethod.GET)
+	public String doBrokenWings() {
+		return View.brokenWings.name();
+	}
+
+	@RequestMapping(value = "contact", method = RequestMethod.GET)
+	public String doContact(Model model) {
+		return View.contact.name();
+	}
+
+	@RequestMapping(method = RequestMethod.GET)
+	public String doDefault(Model model) {
+		return doHome(model);
+	}
+
+	@RequestMapping(value = "faq", method = RequestMethod.GET)
+	public String doFaq(Model model) {
+		return View.faq.name();
+	}
+
 	@RequestMapping(value = "home", method = RequestMethod.GET)
 	public String doHome(Model model) {
 		final List<PetfinderPetRecord> cats = petFinderService.shelterCats(PetFinderConsumer.SHELTER_ID_GAAR, null,
@@ -63,41 +91,9 @@ public class DefaultController {
 		return View.home.name();
 	}
 
-	@RequestMapping(value = "pet/{petId}", method = RequestMethod.GET)
-	public String doPet(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = petFinderService.readPet(BigInteger.valueOf(petId), null);
-		model.addAttribute("pet", pet);
-		return View.pet.name();
-	}
-
-	@RequestMapping(value = "about", method = RequestMethod.GET)
-	public String doAbout(Model model) {
-		return View.about.name();
-	}
-
-	@RequestMapping(value = "adoptions", method = RequestMethod.GET)
-	public String doAdoptions(Model model) {
-		return View.adoptions.name();
-	}
-
-	@RequestMapping(value = "contact", method = RequestMethod.GET)
-	public String doContact(Model model) {
-		return View.contact.name();
-	}
-
-	@RequestMapping(value = "faq", method = RequestMethod.GET)
-	public String doFaq(Model model) {
-		return View.faq.name();
-	}
-
 	@RequestMapping(value = "like", method = RequestMethod.GET)
 	public String doLike(Model model) {
 		return View.like.name();
-	}
-
-	@RequestMapping(value = "volunteer", method = RequestMethod.GET)
-	public String doVolunteer(Model model) {
-		return View.volunteer.name();
 	}
 
 	@RequestMapping(value = "mail", method = RequestMethod.GET)
@@ -144,5 +140,18 @@ public class DefaultController {
 			mex.printStackTrace();
 		}
 		return "success";
+	}
+
+	@RequestMapping(value = "pet/{petId}", method = RequestMethod.GET)
+	public String doPet(@PathVariable("petId") Integer petId, Model model) {
+		final PetfinderPetRecord pet = petFinderService.readPet(BigInteger.valueOf(petId), null);
+		logger.info("pet : " + pet);
+		model.addAttribute("pet", pet);
+		return View.pet.name();
+	}
+
+	@RequestMapping(value = "volunteer", method = RequestMethod.GET)
+	public String doVolunteer(Model model) {
+		return View.volunteer.name();
 	}
 }
