@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<h3>Shop at USBones.com</h3>
+<div class="module">
+	<p>
+		<a href="http://www.usbones.com/mm5/merchant.mvc?Affil=1566">USBones.com</a>
+		sells a variety of pet products and will donates 25% of your order
+		value (pre-tax &amp; pre-shipping) to Guardian Angel.
+	</p>
+	<div class="center">
+		<a href="http://www.usbones.com/mm5/merchant.mvc?Affil=1566"><img
+			class="shadow" src="http://www.usbones.com/images/logo.jpg"></a>
+	</div>
+</div>
+
+<h3>Search with GoodSearch</h3>
+<div class="module">
+	<p>
+		<a href="http://www.goodsearch.com/" target="_blank">GoodSearch</a>
+		will donate a penny to Guardian Angel every time you search.
+		&nbsp;Just create an account or login with your social network and set
+		"Guardian Angel Animal Rescue" as your charity of choice.
+	<ul class="circle">
+		<li><a href="http://www.goodsearch.com/uc_DownloadToolbar.aspx"
+			target="_blank">Install GoodSearch Toolbar on Internet Explorer
+				or Firefox</a></li>
+	</ul>
+	</p>
+	<p>
+</div>
