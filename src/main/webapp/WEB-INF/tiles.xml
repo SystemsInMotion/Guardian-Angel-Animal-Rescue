@@ -3,67 +3,92 @@
 
 <tiles-definitions>
 
-	<definition name="main" template="/WEB-INF/layouts/default_layout.jsp">
+	<definition name="default_layout" template="/WEB-INF/layouts/default_layout.jsp">
 		<put-attribute name="title" type="string" />
-		<put-attribute name="body" />
+		<put-attribute name="main-content" />
 	</definition>
 
-	<definition name="adopt" extends="main">
+	<definition name="split_layout" template="/WEB-INF/layouts/with_local_nav.jsp">
+		<put-attribute name="title" type="string" />
+		<put-attribute name="local-nav" />
+		<put-attribute name="main-content" />
+	</definition>
+
+	<definition name="support_layout" extends="split_layout">
+		<put-attribute name="local-nav" value="/WEB-INF/view/support/local-nav.jsp"/>
+	</definition>
+		
+	<definition name="adopt" extends="default_layout">
 		<put-attribute name="title" type="string" value="Adoption Application" />
 		<put-attribute name="page-js" value="/scripts/adopt.js" />
-		<put-attribute name="body" value="/WEB-INF/view/adopt.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/adopt.jsp" />
 	</definition>
 
-	<definition name="brokenWings" extends="main">
+	<definition name="brokenWings" extends="default_layout">
 		<put-attribute name="title" type="string" value="Broken Wings" />
-		<put-attribute name="body" value="/WEB-INF/view/brokenWings.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/brokenWings.jsp" />
 	</definition>
 
-	<definition name="home" extends="main">
+	<definition name="home" extends="default_layout">
 		<put-attribute name="title" type="string" value="Home" />
 		<put-attribute name="page-js" value="/scripts/home.js" />
-		<put-attribute name="body" value="/WEB-INF/view/home.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/home.jsp" />
 	</definition>
 
-	<definition name="pet" extends="main">
+	<definition name="pet" extends="default_layout">
 		<put-attribute name="title" type="string" value="Pet" />
 		<put-attribute name="page-js" value="/scripts/pet.js" />
-		<put-attribute name="body" value="/WEB-INF/view/pet.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/pet.jsp" />
 	</definition>
 
-	<definition name="about" extends="main">
+	<definition name="about" extends="default_layout">
 		<put-attribute name="title" type="string" value="About" />
-		<put-attribute name="body" value="/WEB-INF/view/about.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/about.jsp" />
 	</definition>
 
-	<definition name="adoptions" extends="main">
+	<definition name="adoptions" extends="default_layout">
 		<put-attribute name="title" type="string" value="Adoptions" />
-		<put-attribute name="body" value="/WEB-INF/view/adoptions.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/adoptions.jsp" />
 	</definition>
 
-	<definition name="contact" extends="main">
+	<definition name="contact" extends="default_layout">
 		<put-attribute name="title" type="string" value="Contact" />
-		<put-attribute name="body" value="/WEB-INF/view/contact.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/contact.jsp" />
 	</definition>
 
-	<definition name="faq" extends="main">
+	<definition name="faq" extends="default_layout">
 		<put-attribute name="title" type="string" value="Faq" />
-		<put-attribute name="body" value="/WEB-INF/view/faq.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/faq.jsp" />
 	</definition>
 
-	<definition name="like" extends="main">
+	<definition name="kroger" extends="support_layout">
+		<put-attribute name="title" type="string" value="Support - Kroger Community Rewards" />
+		<put-attribute name="main-content" value="/WEB-INF/view/support/kroger.jsp" />
+	</definition>
+
+	<definition name="like" extends="default_layout">
 		<put-attribute name="title" type="string" value="Like" />
-		<put-attribute name="body" value="/WEB-INF/view/like.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/like.jsp" />
 	</definition>
 
-	<definition name="support" extends="main">
+	<definition name="search_shop_earn" extends="support_layout">
+		<put-attribute name="title" type="string" value="Support - Search-Shop-Earn" />
+		<put-attribute name="main-content" value="/WEB-INF/view/support/search-shop-earn.jsp" />
+	</definition>
+
+	<definition name="support" extends="support_layout">
 		<put-attribute name="title" type="string" value="Support" />
-		<put-attribute name="body" value="/WEB-INF/view/support.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/support/support.jsp" />
 	</definition>
 	
-	<definition name="volunteer" extends="main">
+	<definition name="volunteer" extends="default_layout">
 		<put-attribute name="title" type="string" value="Volunteer" />
-		<put-attribute name="body" value="/WEB-INF/view/volunteer.jsp" />
+		<put-attribute name="main-content" value="/WEB-INF/view/volunteer.jsp" />
+	</definition>
+
+	<definition name="wish_list" extends="support_layout">
+		<put-attribute name="title" type="string" value="Support - Wish List" />
+		<put-attribute name="main-content" value="/WEB-INF/view/support/wishlist.jsp" />
 	</definition>
 
 </tiles-definitions>
