@@ -3,12 +3,9 @@ package com.systemsinmotion.petrescue.web.bean;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import com.systemsinmotion.util.OutputUtils;
-
 
 public class AdoptionApplication implements Serializable {
 
@@ -43,7 +40,7 @@ public class AdoptionApplication implements Serializable {
 	private String failedAdoptionReason;
 	private String familyNotAwareReason;
 	private String fencedYard;
-	
+
 	@NotNull
 	private String firstName;
 	private String giveUpSituation;
@@ -439,7 +436,7 @@ public class AdoptionApplication implements Serializable {
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
-	
+
 	@Override
 	public String toString() {
 		return OutputUtils.toString(this);
