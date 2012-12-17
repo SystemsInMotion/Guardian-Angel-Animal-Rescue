@@ -102,6 +102,10 @@ p.question.first {
 	margin-top: 0;
 }
 
+.bordered {
+	border: 1px solid #DFDFDF;
+}
+
 .carousel {
 	background-color: #EEE;
 	border: 1px solid #DFDFDF;
@@ -113,6 +117,10 @@ p.question.first {
 	padding: 2px 3px;
 	white-space: nowrap;
 	width: 620px;
+}
+
+.center {
+	text-align: center;
 }
 
 .grid3col .column {
@@ -325,7 +333,11 @@ p.question.first {
 	border-right: 1px solid #CCC;
 	float: left;
 	font-size: .9em;
-	width: 15%;
+	width: 17%;
+}
+
+#local-nav ul {
+	margin-left: -1em;
 }
 
 #local-nav ul li a,#local-nav ul li:visited {
@@ -333,6 +345,10 @@ p.question.first {
 	display: block;
 	margin: 0 0 4px 0;
 	padding: 4px 10px 2px 20px;
+}
+
+#local-nav ul li a.selected {
+	font-weight: bold;
 }
 
 #local-nav ul li.separator span {
@@ -374,6 +390,14 @@ p.question.first {
 #previewImg {
 	margin-top: 10px;
 	margin-left: 80px;
+}
+
+#splitContent {
+	border-left: 1px solid #CCC;
+	float: left;
+	margin-left: -1px;
+	padding-left: 1em;
+	width: 81%;
 }
 
 #yearsLived {
