@@ -21,7 +21,7 @@
 
 	<div id="main">
 		<div id="content">
-<tiles:insertAttribute name="body" />
+<tiles:insertAttribute name="main-content" />
 		</div><!--/content-->
 	</div><!--/main-->
 
