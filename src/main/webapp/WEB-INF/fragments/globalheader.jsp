@@ -9,7 +9,7 @@
 			<li><a href="<c:url value='/app/about'/>">About Us</a></li>
 			<li><a href="<c:url value='/app/brokenWings'/>">Broken Wings</a></li>
 			<li><a href="<c:url value='/app/faq'/>">FAQ</a></li>
-			<li>Support GAAR</li>
+			<li><a href="<c:url value='/app/support'/>">Support GAAR</a></li>
 			<li>Volunteer</li>
 			<li>Contact US</li>
 		</ul>
