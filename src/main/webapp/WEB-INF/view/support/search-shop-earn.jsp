@@ -21,11 +21,10 @@
 		will donate a penny to Guardian Angel every time you search.
 		&nbsp;Just create an account or login with your social network and set
 		"Guardian Angel Animal Rescue" as your charity of choice.
+	</p>
 	<ul class="circle">
 		<li><a href="http://www.goodsearch.com/uc_DownloadToolbar.aspx"
 			target="_blank">Install GoodSearch Toolbar on Internet Explorer
 				or Firefox</a></li>
 	</ul>
-	</p>
-	<p>
 </div>
