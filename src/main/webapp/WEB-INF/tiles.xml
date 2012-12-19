@@ -17,7 +17,11 @@
 	<definition name="support_layout" extends="split_layout">
 		<put-attribute name="local-nav" value="/WEB-INF/view/support/local-nav.jsp"/>
 	</definition>
-		
+
+	<definition name="about_layout" extends="split_layout">
+		<put-attribute name="local-nav" value="/WEB-INF/view/about/local-nav.jsp"/>
+	</definition>
+	
 	<definition name="adopt" extends="default_layout">
 		<put-attribute name="title" type="string" value="Adoption Application" />
 		<put-attribute name="page-js" value="/scripts/adopt.js" />
@@ -41,11 +45,16 @@
 		<put-attribute name="main-content" value="/WEB-INF/view/pet.jsp" />
 	</definition>
 
-	<definition name="about" extends="default_layout">
-		<put-attribute name="title" type="string" value="About" />
-		<put-attribute name="main-content" value="/WEB-INF/view/about.jsp" />
+	<definition name="about" extends="about_layout">
+		<put-attribute name="title" type="string" value="About GAAR" />
+		<put-attribute name="main-content" value="/WEB-INF/view/about/about.jsp" />
 	</definition>
 
+	<definition name="team" extends="about_layout">
+		<put-attribute name="title" type="string" value="About Our Team" />
+		<put-attribute name="main-content" value="/WEB-INF/view/about/team.jsp" />
+	</definition>
+	
 	<definition name="adoptions" extends="default_layout">
 		<put-attribute name="title" type="string" value="Adoptions" />
 		<put-attribute name="main-content" value="/WEB-INF/view/adoptions.jsp" />
