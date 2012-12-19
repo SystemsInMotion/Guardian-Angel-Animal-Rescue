@@ -34,11 +34,6 @@ public class DefaultController {
 	@Autowired
 	PetFinderConsumer petFinderService;
 
-	@RequestMapping(value = "about", method = RequestMethod.GET)
-	public String doAbout(Model model) {
-		return View.about.name();
-	}
-
 	@RequestMapping(value = "adopt/{petId}", method = RequestMethod.GET)
 	public String doAdopt(@PathVariable("petId") Integer petId, Model model) {
 		final PetfinderPetRecord pet = petFinderService.readPet(BigInteger.valueOf(petId), null);
