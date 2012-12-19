@@ -5,6 +5,10 @@
 <c:set var="uri"
 	value="${requestScope['javax.servlet.forward.request_uri']}" />
 <ul>
+	<li><a href="<c:url value='/app/support'/>"
+		<c:if test="${fn:endsWith(uri,'support')}">class='selected'</c:if>>Support
+			GAAR</a></li>
+	<li class="separator"><span>&nbsp;</span></li>
 	<li><a href="<c:url value='/app/support/kroger'/>"
 		<c:if test="${fn:contains(uri,'kroger')}">class='selected'</c:if>>Kroger
 			Community Rewards</a></li>
