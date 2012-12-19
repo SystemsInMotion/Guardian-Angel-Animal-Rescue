@@ -2,7 +2,8 @@ package org.gaar.web;
 
 public enum View {
 	/* @formatter:off */
-	about, 
+	about,
+		team,
 	adopt, 
 	adoptions, 
 	brokenWings, 
