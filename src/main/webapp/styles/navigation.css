@@ -14,7 +14,7 @@
 #globalheader #globalnav { position:relative; display:block; margin:0; padding:0; zoom:1; z-index:3; }
 #globalheader #globalnav:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
 #globalheader #globalnav li { display:inline; }
-#globalheader #globalnav li a { float:left; width:102px; height:36px; overflow:hidden; text-indent:-9999px; background:url(/global/nav/images/globalnav.png) no-repeat; cursor:pointer; }
+#globalheader #globalnav li a { float:left; width:102px; height:36px; overflow:hidden; text-indent:-9999px; /*background:url(/global/nav/images/globalnav.png) no-repeat;*/ cursor:pointer; }
 
 /* VML FOR IE */
 v\:roundrect,
