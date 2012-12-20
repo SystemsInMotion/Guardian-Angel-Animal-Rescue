@@ -37,8 +37,6 @@ import org.springframework.web.util.UriUtils;
 @Service("petFinderService")
 public class PetFinderConsumer {
 
-	// private static Logger logger =
-	// LoggerFactory.getLogger(PetFinderConsumer.class);
 	private static final Logger logger = Logger.getLogger(PetFinderConsumer.class);
 
 	public static final String SHELTER_ID_GAAR = "MI144";
