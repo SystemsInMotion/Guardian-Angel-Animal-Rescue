@@ -122,6 +122,13 @@
 	</repositories>
 
 	<dependencies>
+		<!-- PetFinder -->
+		<dependency>
+			<groupId>org.petfinder</groupId>
+			<artifactId>petfinder-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+
 		<!-- SPRING -->
 		<dependency>
 			<groupId>org.springframework</groupId>
