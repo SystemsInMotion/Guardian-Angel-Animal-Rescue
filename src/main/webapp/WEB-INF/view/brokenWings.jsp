@@ -12,7 +12,7 @@
 	<p>Some of our special needs animals are simply old or sick and
 		some have had to suffer through experiences that make it a little
 		harder for them to be adopted.</p>
-	<p>Most of them suffer from one or more of the below:
+	<p>Most of them suffer from one or more of the below:</p>
 	<ul class="square">
 		<li>a physical disability or a chronic terminal disease</li>
 		<li>be recovering from a serious injury</li>
@@ -20,26 +20,24 @@
 		<li>have emotional and/or behavioral problems</li>
 	</ul>
 	We believe that every life deserves a second chance.
-	</p>
 </div>
 
 
-<h3 class="pink">Here are
-				a few of our special needs cats and dogs.</h3>
+<h3 class="pink">Here are a few of our special needs cats and dogs.</h3>
 
-<p class="pink">If you are interested in a special
-		need pet, please email us!</p>
+<p class="pink">If you are interested in a special need pet, please
+	email us!</p>
 
 <div class="module">
 	<a href="<c:url value='/app/pet/13007319'/>"><img
-		src="<c:url value='/images/Bubbles.png'/>" class="shadow inline-left"></a> <a
-		href="<c:url value='/app/pet/13007319'/>">Bubbles</a> is a 10 year old
-	beautiful female kitty. She is a special needs kitty because she has
-	feline aids. She was rescued from another shelter: at that time, she
-	had a very bad infection in her eye that would not clear up, so the vet
-	thought it best to remove the eye. She is doing great and looking for a
-	home to call her own. She must go with no other cats or another feline
-	aids positive kitty.
+		src="<c:url value='/images/Bubbles.png'/>" class="shadow inline-left"></a>
+	<a href="<c:url value='/app/pet/13007319'/>">Bubbles</a> is a 10 year
+	old beautiful female kitty. She is a special needs kitty because she
+	has feline aids. She was rescued from another shelter: at that time,
+	she had a very bad infection in her eye that would not clear up, so the
+	vet thought it best to remove the eye. She is doing great and looking
+	for a home to call her own. She must go with no other cats or another
+	feline aids positive kitty.
 </div>
 
 <!-- 
