@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <blockquote>"To know even one life has breathed easier
 	because you have lived - that is to have succeeded."</blockquote>
-<blockquote class="signature">- Ralph Waldo Emerson</blockquote>
+<blockquote class="author">- Ralph Waldo Emerson</blockquote>
 <br>
 
 <div class="module">
