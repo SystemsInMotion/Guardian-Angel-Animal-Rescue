@@ -5,12 +5,15 @@ import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
+import org.petfinder.entity.PetfinderPetRecord;
+
 import com.systemsinmotion.util.OutputUtils;
 
 public class AdoptionApplication implements Serializable {
 
 	private static final long serialVersionUID = 1118000426493607246L;
 
+	private PetfinderPetRecord pet;
 	private Boolean agreedToHomeVisit;
 	private Boolean awareOfUnknownIssues;
 	private Boolean familyAware;
@@ -60,6 +63,14 @@ public class AdoptionApplication implements Serializable {
 	private String willingToInstallFence;
 	private String yearsLived;
 	private String zipCode;
+
+	public PetfinderPetRecord getPet() {
+		return pet;
+	}
+
+	public void setPet(PetfinderPetRecord pet) {
+		this.pet = pet;
+	}
 
 	public Boolean getAgreedToHomeVisit() {
 		return agreedToHomeVisit;
