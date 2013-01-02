@@ -8,7 +8,7 @@ blockquote {
 	text-align: center;
 }
 
-blockquote.signature {
+blockquote.author {
 	color: #999;
 	font-weight: normal;
 	font-style: italic;
@@ -107,7 +107,7 @@ p.question.first {
 }
 
 .carousel {
-	background-color: #EEE;
+	background-color: #F6F6F6;
 	border: 1px solid #DFDFDF;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -148,7 +148,7 @@ p.question.first {
 }
 
 .module {
-	background-color: #fafaf6;
+	background-color: #F6F6F6;
 	border: 1px solid #DFDFDF;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -215,6 +215,15 @@ p.question.first {
 	color: #FF4AA5;
 }
 
+.signature {
+	border-top: 1px solid #000;
+	font-weight: bold;
+	margin: 5em auto 1em;
+	text-align: center;
+	width: 90%;
+	text-align: center;
+}
+
 .slider .pet-thumbnail h3.gender-F {
 	color: deepPink;
 	line-height: 14px;
@@ -273,6 +282,18 @@ p.question.first {
 
 .smaller {
 	font-size: 0.85em;
+}
+
+#applicationTitle {
+	bottom: 0.5em;
+	color: #03B;
+	font-size: 2em;
+	font-weight: bold;
+	position: absolute;
+	right: 10em;
+	position: absolute;
+	font-weight: bold;
+	font-size: 2em;
 }
 
 #adoptionForm img#petImage {
@@ -403,4 +424,35 @@ p.question.first {
 #yearsLived {
 	float: left;
 	margin-right: 2em;
+}
+
+@media print {
+	body,#main,#content {
+		color: #000 !important;
+	}
+	a,a:link,a:visited {
+		color: #000 !important;
+		text-decoration: none !important;
+	}
+	hr {
+		border: none;
+		border-bottom: 1px solid #CCC;
+	}
+	.module,.section,.sub-module {
+		page-break-inside: avoid
+	}
+	#tabs,#globalfooter,#directorynav,.noprint,.hide {
+		display: none !important;
+	}
+	#main a.pdf,#main a.html,#main a.qt,#main a.ical,#main a.dl,#main a.dmg,#main a.zip,#main a.keynote,#main a.audio
+		{
+		padding-left: 0 !important;
+		background-image: none !important;
+	}
+	#content,#globalheader {
+		border: none;
+	}
+	#householdMemberAgesDiv,#petsAllowedDiv,#petsAllowedProofDiv {
+		display: block;
+	}
 }
