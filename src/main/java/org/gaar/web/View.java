@@ -16,6 +16,7 @@ public enum View {
 	cat_carousel,
 	contact,
 	dog_carousel,
+	email,
 	faq, 
 	home, 
 	like, 

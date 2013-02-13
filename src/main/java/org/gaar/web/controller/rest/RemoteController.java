@@ -38,7 +38,7 @@ public class RemoteController {
 	@RequestMapping(value = "pets", method = GET)
 	public @ResponseBody
 	List<PetfinderPetRecord> doGetPets() {
-		return petFinderService.shelterPets(PetFinderConsumer.SHELTER_ID_GAAR, ADOPTION_STATUS_NULL,
+		return petFinderService.shelterPets(PetFinderConsumer.shelterId, ADOPTION_STATUS_NULL,
 				RECORD_OFFSET_NULL, RETURN_COUNT_ALL, OUTPUT_NULL, FORMAT_NULL);
 	}
 

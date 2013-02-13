@@ -20,6 +20,7 @@ import org.petfinder.entity.PetfinderShelterRecord;
 import org.petfinder.entity.PetfinderShelterRecordList;
 import org.petfinder.web.service.Method;
 import org.petfinder.web.service.QueryParam;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.client.RestTemplate;
@@ -39,12 +40,18 @@ public class PetFinderConsumer {
 
 	private static final Logger logger = Logger.getLogger(PetFinderConsumer.class);
 
-	public static final String SHELTER_ID_GAAR = "MI144";
+	@Value("${shelter.id}")
+	public String shelterId;
 
-	private static final String API_KEY = "15c639ff6d160dc55ff6d37677bb0880";
-	private static final String API_SECRET = "f14226e0353d1fceca8fcbd17ed06881";
+	@Value("${shelter.api.key}")
+	private String shelterApiKey;
+	
+	@Value("${shelter.api.secret}")
+	private String shelterApiSecret = "f14226e0353d1fceca8fcbd17ed06881";
+	
+	private String queryAuthToken = "key=" + shelterApiKey;
+	
 	private static final String PETFINDER_HOST = "http://api.petfinder.com/";
-	private static final String QUERY_AUTH_TOKEN = "key=" + API_KEY;
 
 	private static PetfinderAuthData authData;
 
@@ -57,8 +64,8 @@ public class PetFinderConsumer {
 	 * @return PetfinderAuthData
 	 */
 	public PetfinderAuthData authToken() {
-		final String sig = signatureParam(QUERY_AUTH_TOKEN);
-		final String url = StringUtils.concat(PETFINDER_HOST, Method.AUTH_TOKEN.value, QUERY_AUTH_TOKEN, sig);
+		final String sig = signatureParam(queryAuthToken);
+		final String url = StringUtils.concat(PETFINDER_HOST, Method.AUTH_TOKEN.value, queryAuthToken, sig);
 		final Petfinder petfinder = restTemplate.getForObject(url, Petfinder.class);
 		final PetfinderAuthData auth = petfinder.getAuth();
 		logger.debug("authToken: " + auth.getToken());
@@ -85,7 +92,7 @@ public class PetFinderConsumer {
 		logger.debug("buildQuery()");
 
 		StringBuilder sb = new StringBuilder();
-		sb.append("key=").append(API_KEY);
+		sb.append("key=").append(shelterApiKey);
 		sb.append("&token=").append(token);
 		if (params != null && !params.isEmpty()) {
 			for (QueryParam key : params.keySet()) {
@@ -289,7 +296,7 @@ public class PetFinderConsumer {
 		logger.debug("generateSignature(): query parameter: " + query);
 
 		StringBuilder sb = new StringBuilder();
-		sb.append(API_SECRET).append(query);
+		sb.append(shelterApiSecret).append(query);
 		final String secretQuery = sb.toString();
 		logger.debug("generateSignature(): query to be encoded: " + secretQuery);
 

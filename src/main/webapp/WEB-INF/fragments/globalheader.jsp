@@ -10,8 +10,8 @@
 			<li><a href="<c:url value='/app/brokenWings'/>">Broken Wings</a></li>
 			<li><a href="<c:url value='/app/faq'/>">FAQ</a></li>
 			<li><a href="<c:url value='/app/support'/>">Support GAAR</a></li>
-			<li>Volunteer</li>
-			<li>Contact US</li>
+			<li><a href="<c:url value='/app/volunteer'/>">Volunteer</a></li>
+			<li><a href="<c:url value='/app/contact'/>">Contact Us</a></li>
 		</ul>
 	</div>
 </div>

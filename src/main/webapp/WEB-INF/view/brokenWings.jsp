@@ -1,8 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<blockquote>"To know even one life has breathed easier
-	because you have lived - that is to have succeeded."</blockquote>
-<blockquote class="author">- Ralph Waldo Emerson</blockquote>
-<br>
+<div class="module">
+	<blockquote>"To know even one life has breathed easier
+		because you have lived - that is to have succeeded."</blockquote>
+	<blockquote class="author">- Ralph Waldo Emerson</blockquote>
+</div>
 
 <div class="module">
 	<p>Pets with broken wings are our special needs animals. Special
@@ -22,13 +23,12 @@
 	We believe that every life deserves a second chance.
 </div>
 
-
-<h3 class="pink">Here are a few of our special needs cats and dogs.</h3>
-
-<p class="pink">If you are interested in a special need pet, please
-	email us!</p>
-
 <div class="module">
+	<h3 class="pink">Here are a few of our special needs cats and
+		dogs.</h3>
+	<p class="pink">If you are interested in a special need pet, please
+		email us!</p>
+	<hr>
 	<a href="<c:url value='/app/pet/13007319'/>"><img
 		src="<c:url value='/images/Bubbles.png'/>" class="shadow inline-left"></a>
 	<a href="<c:url value='/app/pet/13007319'/>">Bubbles</a> is a 10 year

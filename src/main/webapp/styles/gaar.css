@@ -28,11 +28,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 hr {
+	border: none;
+	border-top: 1px solid #E5E5E5;
 	margin: 0.5em auto;
 }
 
 html,body {
-	background: #73C0E6;
+	//background: #f5f6f7;//#73C0E6;
+	background: #FFF url(../images/jimdo_bg.gif) repeat scroll top left;
 }
 
 img.inline-left {
@@ -63,7 +66,7 @@ input[type="text"].input2char {
 }
 
 input[type="text"].explanation {
-	width: 50em;
+	width: 51.5em;
 }
 
 label {
@@ -107,8 +110,8 @@ p.question.first {
 }
 
 .carousel {
-	background-color: #F6F6F6;
-	border: 1px solid #DFDFDF;
+	background-color: #FFF;
+	border: 1px solid #E5E5E5;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	height: 104px;
@@ -116,7 +119,9 @@ p.question.first {
 	overflow: hidden;
 	padding: 2px 3px;
 	white-space: nowrap;
-	width: 620px;
+	width: 97%;//620px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 }
 
 .center {
@@ -148,10 +153,12 @@ p.question.first {
 }
 
 .module {
-	background-color: #F6F6F6;
-	border: 1px solid #DFDFDF;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	background-color: #FFF;
+	border: 1px solid #E5E5E5;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	margin-bottom: 1em;
 	padding: 1em;
 	zoom: 1;
@@ -181,6 +188,27 @@ p.question.first {
 	clear: both;
 	visibility: hidden;
 }
+.module-left {
+	background-color: #FFF;
+	border: 1px solid #E5E5E5;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	float: left;
+	margin-bottom: 1em;
+	padding: 1em;
+	width: 77%;
+	zoom: 1;
+}
+
+.module-left:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 
 .pet-desc {
 	clear: both;
@@ -197,6 +225,10 @@ p.question.first {
 	color: mediumBlue;
 	font: normal bold 1.5em "Lucida Grande", "Lucida Sans Unicode",
 		Helvetica, Arial, Verdana, sans-serif;
+}
+
+.pet-preview {
+	margin-bottom: 1.0em;
 }
 
 .pet-thumbnail h4 {
@@ -273,7 +305,7 @@ p.question.first {
 
 .slider-wrapper {
 	display: inline-block;
-	width: 564px;;
+	width: 91%;//564px;;
 	height: 110px;
 	overflow: hidden;
 	vertical-align: bottom;
@@ -301,15 +333,16 @@ p.question.first {
 }
 
 #content {
-	background-color: #FFF;
-	-moz-border-radius-bottomleft: 7px;
-	-moz-border-radius-bottomright: 7px;
-	border-bottom-left-radius: 7px;
-	border-bottom-right-radius: 7px;
-	border: 1px solid #CCC;
+	//background-color: #FFF;
+	//-moz-border-radius-bottomleft: 7px;
+	//-moz-border-radius-bottomright: 7px;
+	//border-bottom-left-radius: 7px;
+	//border-bottom-right-radius: 7px;
+	//border: 1px solid #CCC;
 	margin: 0 auto;
-	padding: 20px;
-	width: 940px;
+	//padding: 20px;
+	//width: 940px;
+
 }
 
 #gaar-logo {
@@ -318,14 +351,18 @@ p.question.first {
 
 #globalheader {
 	background: #FFF;
-	-moz-border-radius-topleft: 7px;
-	-moz-border-radius-topright: 7px;
-	border-top-left-radius: 7px;
-	border-top-right-radius: 7px;
-	border: 1px solid #CCC;
-	border-bottom: none;
+	//-moz-border-radius-topleft: 4px;
+	//-moz-border-radius-topright: 4px;
+	//border-top-left-radius: 4px;
+	//border-top-right-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #E5E5E5;
+	//border-bottom: none;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	height: 100px;
-	margin-bottom: 0;
+	margin: 1em auto;
 	position: relative;
 }
 
@@ -351,7 +388,12 @@ p.question.first {
 }
 
 #local-nav {
-	border-right: 1px solid #CCC;
+	//border-right: 1px solid #CCC;
+	background-color: #fff;
+	border-radius: 4px;
+	border: 1px solid #E5E5E5;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	float: left;
 	font-size: .9em;
 	width: 17%;
@@ -362,7 +404,7 @@ p.question.first {
 }
 
 #local-nav ul li a,#local-nav ul li:visited {
-	background: url(/gaar/images/sub_nav_arrow.gif) no-repeat 5px center;
+	background: url(../images/sub_nav_arrow.gif) no-repeat 5px center;
 	display: block;
 	margin: 0 0 4px 0;
 	padding: 4px 10px 2px 20px;
@@ -382,7 +424,7 @@ p.question.first {
 
 #petCarousels {
 	float: left;
-	width: 566px;
+	width: 70%;//566px;
 }
 
 #petDetails {
@@ -392,6 +434,11 @@ p.question.first {
 	width: 70px;
 }
 
+#petImageContainer {
+	float: left;
+	text-align: center;
+}
+
 #petOptions {
 	font-size: 0.9em;
 	padding-left: 1em;
@@ -399,7 +446,6 @@ p.question.first {
 
 #petThumbnails {
 	float: left;
-	width: 70px;
 	margin: 0 0 0 10px;
 	padding: 0 8px;
 }
@@ -410,11 +456,27 @@ p.question.first {
 
 #previewImg {
 	margin-top: 10px;
-	margin-left: 80px;
+	//margin-left: 80px;
+}
+
+#sidebar {
+	background-color: #fff;
+	border-radius: 4px;
+	border: 1px solid #E5E5E5;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	float: right;
+	padding: 0 0.5em;
+	text-align: center;
+	width: 17%;
+}
+
+#sidebar img {
+	max-width: 172px;
 }
 
 #splitContent {
-	border-left: 1px solid #CCC;
+	//border-left: 1px solid #CCC;
 	float: left;
 	margin-left: -1px;
 	padding-left: 1em;
@@ -424,35 +486,4 @@ p.question.first {
 #yearsLived {
 	float: left;
 	margin-right: 2em;
-}
-
-@media print {
-	body,#main,#content {
-		color: #000 !important;
-	}
-	a,a:link,a:visited {
-		color: #000 !important;
-		text-decoration: none !important;
-	}
-	hr {
-		border: none;
-		border-bottom: 1px solid #CCC;
-	}
-	.module,.section,.sub-module {
-		page-break-inside: avoid
-	}
-	#tabs,#globalfooter,#directorynav,.noprint,.hide {
-		display: none !important;
-	}
-	#main a.pdf,#main a.html,#main a.qt,#main a.ical,#main a.dl,#main a.dmg,#main a.zip,#main a.keynote,#main a.audio
-		{
-		padding-left: 0 !important;
-		background-image: none !important;
-	}
-	#content,#globalheader {
-		border: none;
-	}
-	#householdMemberAgesDiv,#petsAllowedDiv,#petsAllowedProofDiv {
-		display: block;
-	}
 }

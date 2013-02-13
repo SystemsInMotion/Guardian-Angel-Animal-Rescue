@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<h3>Kroger Community Rewards</h3>
 <div class="module">
+	<h3>Kroger Community Rewards</h3>
+	<hr>
 	<p>
 		It's easy and <strong>FREE</strong>. &nbsp;Use your Kroger Card for
 		the <strong>Kroger Community Rewards Program</strong> and donate to

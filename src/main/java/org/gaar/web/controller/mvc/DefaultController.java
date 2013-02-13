@@ -21,46 +21,51 @@ public class DefaultController {
 	@Autowired
 	PetFinderConsumer petFinderService;
 
-	@RequestMapping(value = "brokenWings", method = RequestMethod.GET)
-	public String doBrokenWings() {
+	@RequestMapping("brokenWings")
+	public String brokenWings() {
 		return View.brokenWings.name();
 	}
 
-	@RequestMapping(value = "contact", method = RequestMethod.GET)
-	public String doContact(Model model) {
+	@RequestMapping("contact")
+	public String contact(Model model) {
 		return View.contact.name();
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String doDefault(Model model) {
-		return doHome(model);
+	@RequestMapping("email")
+	private String email() {
+		return View.email.name();
 	}
 
-	@RequestMapping(value = "faq", method = RequestMethod.GET)
-	public String doFaq(Model model) {
+	@RequestMapping("faq")
+	public String faq(Model model) {
 		return View.faq.name();
 	}
 
-	@RequestMapping(value = "home", method = RequestMethod.GET)
-	public String doHome(Model model) {
+	@RequestMapping("home")
+	public String home(Model model) {
 		return View.home.name();
 	}
 
-	@RequestMapping(value = "like", method = RequestMethod.GET)
-	public String doLike(Model model) {
+	@RequestMapping("like")
+	public String like(Model model) {
 		return View.like.name();
 	}
 
-	@RequestMapping(value = "pet/{petId}", method = RequestMethod.GET)
-	public String doPet(@PathVariable("petId") Integer petId, Model model) {
+	@RequestMapping(method = RequestMethod.GET)
+	public String onDefault(Model model) {
+		return home(model);
+	}
+
+	@RequestMapping("pet/{petId}")
+	public String pet(@PathVariable("petId") Integer petId, Model model) {
 		final PetfinderPetRecord pet = petFinderService.readPet(BigInteger.valueOf(petId), null);
 		logger.info("pet : " + pet);
 		model.addAttribute("pet", pet);
 		return View.pet.name();
 	}
 
-	@RequestMapping(value = "volunteer", method = RequestMethod.GET)
-	public String doVolunteer(Model model) {
+	@RequestMapping("volunteer")
+	public String volunteer(Model model) {
 		return View.volunteer.name();
 	}
 }

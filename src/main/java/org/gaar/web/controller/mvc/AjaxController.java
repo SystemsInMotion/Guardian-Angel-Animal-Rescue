@@ -23,7 +23,7 @@ public class AjaxController {
 
 	@RequestMapping("cat-carousel")
 	public String catCarousel(Model model) {
-		final List<PetfinderPetRecord> cats = petFinderService.shelterCats(PetFinderConsumer.SHELTER_ID_GAAR, null,
+		final List<PetfinderPetRecord> cats = petFinderService.shelterCats(PetFinderConsumer.shelterId, null,
 				null, null, null, null);
 		model.addAttribute("cats", cats);
 		return View.cat_carousel.name();
@@ -31,7 +31,7 @@ public class AjaxController {
 
 	@RequestMapping("dog-carousel")
 	public String dogCarousel(Model model) {
-		final List<PetfinderPetRecord> dogs = petFinderService.shelterDogs(PetFinderConsumer.SHELTER_ID_GAAR, null,
+		final List<PetfinderPetRecord> dogs = petFinderService.shelterDogs(PetFinderConsumer.shelterId, null,
 				null, null, null, null);
 		model.addAttribute("dogs", dogs);
 		return View.dog_carousel.name();

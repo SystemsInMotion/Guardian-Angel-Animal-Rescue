@@ -1,8 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 
-<h3>Who We Are</h3>
 <div class="module">
-<img src="<c:url value='/images/about_who_we_are.jpg'/>" class="inline-right shadow">
+	<h3>Who We Are</h3>
+	<hr>
+	<img src="<c:url value='/images/about_who_we_are.jpg'/>"
+		class="inline-right shadow">
 	<p>Guardian Angel Animal Rescue is a registered Michigan 501(c)(3)
 		not-for-profit, no-kill rescue.</p>
 	<p>
@@ -21,8 +23,9 @@
 </div>
 
 <br>
-<h3>What We Do</h3>
 <div class="module">
+	<h3>What We Do</h3>
+	<hr>
 	<ul class="square">
 		<li>Rescue animals from senseless euthanization, neglect and
 			abuse</li>

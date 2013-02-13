@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<h3>Ways to Help</h3>
 <div class="module">
+	<h3>Ways to Help</h3>
+	<hr>
 	<p>If you are interested in volunteering your services, please
 		contact us. GAAR volunteers are the heart and soul of our
 		organization. We need help in different areas:</p>

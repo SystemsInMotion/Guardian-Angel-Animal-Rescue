@@ -429,6 +429,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- 
 		<hr>
 		<div class="sub-module">
 			<div class="row grid3col">
@@ -612,5 +613,6 @@
 				</div>
 			</div>
 		</div>
+		-->
 	</div>
 </div>

@@ -27,14 +27,14 @@
 	</properties>
 
 	<build>
-		<finalName>gaarmichigan</finalName>
+		<finalName>ga</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<warName>gaarmichigan</warName>
+					<warName>ga</warName>
 					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>

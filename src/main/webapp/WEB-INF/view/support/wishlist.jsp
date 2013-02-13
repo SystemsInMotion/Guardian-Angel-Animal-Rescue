@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<h3>Wish List</h3>
 <div class="module">
-Guardian Angel could always use the following:
+	<h3>Wish List</h3>
+	<hr>
+	Guardian Angel could always use the following:
 	<ul class="circle">
 		<li>Blankets</li>
 		<li>Brushes</li>
@@ -23,5 +24,4 @@ Guardian Angel could always use the following:
 		<li>Revolution for dogs and cats (Flea/ear/deworming medication)
 			or Frontline</li>
 	</ul>
-
 </div>
