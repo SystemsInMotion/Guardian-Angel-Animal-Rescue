@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+@media print {
+	body,#main,#content {
+		color: #000 !important;
+	}
+	a,a:link,a:visited {
+		color: #000 !important;
+		text-decoration: none !important;
+	}
+	hr {
+		border: none;
+		border-bottom: 1px solid #CCC;
+	}
+	input[type="text"] {
+		border: 1px solid #000;
+		height: 2em;
+		width: 21em;
+	}
+	input[type="text"].short {
+		width: 10em;
+	}
+	input[type="text"].input2char {
+		width: 2em;
+	}
+	input[type="text"].explanation {
+		width: 51.5em;
+	}
+	label {
+		margin-bottom: 0.2em
+	}
+	.module,.section,.sub-module {
+		page-break-inside: avoid
+	}
+	.module {
+		border: 1px solid #0033BB;
+	}
+	#tabs,#globalfooter,#directorynav,.noprint,.hide {
+		display: none !important;
+	}
+	#main a.pdf,#main a.html,#main a.qt,#main a.ical,#main a.dl,#main a.dmg,#main a.zip,#main a.keynote,#main a.audio
+		{
+		padding-left: 0 !important;
+		background-image: none !important;
+	}
+	#content,#globalheader {
+		border: none;
+	}
+	#householdMemberAgesDiv,#petsAllowedDiv,#petsAllowedProofDiv {
+		display: block;
+	}
+}
