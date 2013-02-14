@@ -7,7 +7,6 @@ import javax.mail.internet.AddressException;
 
 import org.apache.log4j.Logger;
 import org.gaar.web.View;
-import org.gaar.web.service.consumer.PetFinderConsumer;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetfinderPetRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.systemsinmotion.petrescue.mail.MailManager;
+import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
 @Controller
@@ -30,29 +30,32 @@ public class AdoptionController {
 
 	@Autowired
 	PetFinderConsumer petFinderService;
-	
+
 	@Autowired
 	MailManager mailManager;
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.GET)
 	public String adopt_GET(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = petFinderService.readPet(BigInteger.valueOf(petId), null);
+		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
+
+		AdoptionApplication application = new AdoptionApplication();
+		application.setPetName(pet.getName());
+		application.setAnimalType(pet.getAnimal().value());
+		application.setBreeds(pet.getBreeds().getBreed());
+
 		model.addAttribute("pet", pet);
 		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
 		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
-		
-		AdoptionApplication application = new AdoptionApplication();
-		application.setPet(pet);
-		
 		model.addAttribute("application", application);
+
 		return View.adopt.name();
 	}
 
-	@RequestMapping(value = "adopt", method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST)
 	public String adopt_POST(@Validated AdoptionApplication application, Model model) {
 		System.out.println("application : " + application);
 		try {
-			mailManager.send(application);
+			this.mailManager.send(application);
 		} catch (AddressException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -60,7 +63,13 @@ public class AdoptionController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		model.addAttribute("petName", application.getPet().getName());
+		model.addAttribute("petName", application.getPetName());
+		return View.adopt_thanks.name();
+	}
+
+	@RequestMapping("thanks")
+	public String thanks(Model model) {
+		model.addAttribute("petName", "a pet from GAAR");
 		return View.adopt_thanks.name();
 	}
 }
