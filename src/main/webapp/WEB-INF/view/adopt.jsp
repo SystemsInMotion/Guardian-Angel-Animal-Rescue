@@ -3,8 +3,7 @@
 
 <div class="module">
 	<div id="adoptionForm">
-		<form:form modelAttribute="application" action="/gaar/app/adopt"
-			method="post">
+		<form:form method="post" modelAttribute="application" action="/app/adopt">
 			<c:import url="/WEB-INF/fragments/adopt/pet-info.jsp" />
 			<c:import url="/WEB-INF/fragments/adopt/applicant-info.jsp" />
 			<c:import url="/WEB-INF/fragments/adopt/household-info.jsp" />
