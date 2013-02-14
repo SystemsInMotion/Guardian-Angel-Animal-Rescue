@@ -2,7 +2,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <h3>Pet to Adopt</h3>
 <div class="module">
-	<form:hidden path="pet.name" />
+	<form:hidden path="petName" />
+	<form:hidden path="animalType" />
+	<form:hidden path="breeds"/>
 	<c:choose>
 		<c:when test="${not empty pet.media}">
 			<c:forEach items="${pet.media.photos.photo}" var="photo">
