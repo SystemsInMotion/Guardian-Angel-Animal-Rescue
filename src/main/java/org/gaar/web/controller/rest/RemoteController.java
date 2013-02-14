@@ -2,18 +2,17 @@ package org.gaar.web.controller.rest;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.gaar.web.service.consumer.PetFinderConsumer;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetfinderPetRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 
 @Controller
 public class RemoteController {
@@ -28,19 +27,6 @@ public class RemoteController {
 
 	@Autowired
 	PetFinderConsumer petFinderService;
-
-	@RequestMapping(value = "pet/{petId}", method = GET)
-	public @ResponseBody
-	PetfinderPetRecord doGetPet(@PathVariable(value = "petId") Integer id) {
-		return petFinderService.readPet(BigInteger.valueOf(id), FORMAT_NULL);
-	}
-
-	@RequestMapping(value = "pets", method = GET)
-	public @ResponseBody
-	List<PetfinderPetRecord> doGetPets() {
-		return petFinderService.shelterPets(PetFinderConsumer.shelterId, ADOPTION_STATUS_NULL,
-				RECORD_OFFSET_NULL, RETURN_COUNT_ALL, OUTPUT_NULL, FORMAT_NULL);
-	}
 
 	@RequestMapping(value = "cats", method = GET)
 	public @ResponseBody
@@ -66,6 +52,13 @@ public class RemoteController {
 			}
 		}
 		return dogs;
+	}
+
+	@RequestMapping(value = "pets", method = GET)
+	public @ResponseBody
+	List<PetfinderPetRecord> doGetPets() {
+		return this.petFinderService.shelterPets(ADOPTION_STATUS_NULL, RECORD_OFFSET_NULL, RETURN_COUNT_ALL,
+				OUTPUT_NULL, FORMAT_NULL);
 	}
 
 }
