@@ -1,15 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<div class="module">
-	<h3>Showings</h3>
-	<p>
-		<strong>Cats shown every Sat 1-4 pm</strong> at <a
-			href="http://stores.petsmart.com/Store/Details/686" target="_blank">PetSmart
-			in Commerce Twp</a> unless otherwise noted. If interested in meeting a
-		particular pet, please <a href="mailto:guardian_angel_rescue@hotmail.com">email</a>
-		us in advance. Private home visits may also be available. Our hotline
-		number is (734) 516-2171.
-	</p>
-</div>
 
 <div id="pet-preview" class="selfclear">
 	<div id="petCarousels">
@@ -28,6 +17,13 @@
 </div>
 
 <div id="sidebar">
+	<p>
+		<a
+			href="http://www.theanimalrescuesite.com/clickToGive/shelterchallenge.faces?siteId=3&link=ctg_ars_shelterchallenge_from_home" target="_blank"><img
+			alt="The Animal Rescue Site" title="Vote for Guardian Angel Animal Rescue"
+			src="http://cdn.theanimalrescuesite.com/charityusa_vitalstream_com/ctg/p3/images/content/ShelterChallenge-Jan7_120CATVote.jpg?ccv=1360782929011" /></a>
+	</p>
+	<hr>
 	<p>
 		<a href="https://www.facebook.com/rallytorescue" target="_blank"><img
 			src="<c:url value='/images/PurinaProPlanRally2Rescue.jpg'/>"
@@ -49,6 +45,20 @@
 			src="<c:url value='/images/kuranda.png'/>" alt="Kuranda Dog Beds"
 			title="Kuranda Dog Beds">
 		</a>
+	</p>
+</div>
+
+<div class="module-left">
+	<h3>Showings</h3>
+	<hr>
+	<p>
+		<strong>Cats shown every Sat 1-4 pm</strong> at <a
+			href="http://stores.petsmart.com/Store/Details/686" target="_blank">PetSmart
+			in Commerce Twp</a> unless otherwise noted. If interested in meeting a
+		particular pet, please <a
+			href="mailto:guardian_angel_rescue@hotmail.com">email</a> us in
+		advance. Private home visits may also be available. Our hotline number
+		is (734) 516-2171.
 	</p>
 </div>
 
