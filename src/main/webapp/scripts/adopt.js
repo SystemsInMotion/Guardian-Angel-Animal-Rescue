@@ -76,7 +76,6 @@ function currentPets(petCount) {
 	if (jQuery.isNumeric(petCount)) {
 		var currentPets = '';
 		for(var i = 0; i < petCount; i++) {
-			var isLast = (i + 1 == petCount) ? ' last' : '';
 			currentPets += '<hr>';
 			currentPets += '<div class="row grid3col">';
 			currentPets += '  <div class="column"><label for="currentPets['+i+'].name">Name</label><input name="currentPets['+i+'].name" type="text" class=""></div>';
@@ -91,7 +90,6 @@ function currentPets(petCount) {
 			currentPets += '  <div class="column"><label for="currentPets['+i+'].hasVaccines">Is this pet current on its vaccines?</label><div class="multi-option"><input name="currentPets['+i+'].hasVaccines" type="radio" class="input2char"> Yes</div><input name="currentPets['+i+'].hasVaccines" type="radio" class="input2char"> No</div>';
 			currentPets += '  <div class="column"><label for="currentPets['+i+'].isHeartwormed">Is this pet on heartworm preventative?</label><div class="multi-option"><input name="currentPets['+i+'].isHeartwormed" type="radio" class="input2char"> Yes</div><input name="currentPets['+i+'].isHeartwormed" type="radio" class="input2char"> No</div>';
 			currentPets += '</div>';
-			//currentPets += '<div class="row' + isLast + '"><label>Where is this pet now?</label><input type="text" name="currentPets['+i+'].whereNow" class="explanation"></div>';
 		};
 		$('#currentPets').html(currentPets);
 	}
