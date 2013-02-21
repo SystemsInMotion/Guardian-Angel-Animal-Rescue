@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
+<script type="text/javascript" src="<c:url value='/scripts/jquery-1.9.1.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/scripts/jquery-ui-1.10.1.custom.min.js'/>"></script>
 <script type="text/javascript">var contextPath = '${pageContext.request.contextPath}';</script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
