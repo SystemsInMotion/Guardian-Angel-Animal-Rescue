@@ -232,6 +232,7 @@ p.question.first {
 }
 
 .pet-thumbnail h4 {
+	font-weight: normal;
 	line-height: 13px;
 	margin-bottom: 0;
 }
