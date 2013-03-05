@@ -173,17 +173,11 @@
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
 			<version>${tiles.version}</version>
-		 <exclusions>
-		  <exclusion>
-		   <artifactId>jcl-over-slf4j</artifactId>
-		   <groupId>org.slf4j</groupId>
-		  </exclusion>
-		 </exclusions>
 		</dependency>
 	 <dependency>
 	  <groupId>org.slf4j</groupId>
 	  <artifactId>jcl-over-slf4j</artifactId>
-	  <version>1.7.2</version>
+	  <version>${slf4j.version}</version>
 	 </dependency>
 	</dependencies>
 
