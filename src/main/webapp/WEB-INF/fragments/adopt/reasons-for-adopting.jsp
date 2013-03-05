@@ -2,7 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <h3>Reasons for Adopting</h3>
 <div class="module">
-	<form:label for="whyWantPet" path="whyWantPet" cssErrorClass="error">Why do you want ${pet.name} as a pet? (Check all that
+	<form:label for="whyWantPet" path="whyWantPet" cssClass="autoWidth" cssErrorClass="error">Why do you want ${pet.name} as a pet? (Check all that
 			apply)</form:label>
 	<div class="row grid4col">
 		<div class="column">

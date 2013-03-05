@@ -4,27 +4,32 @@
 <div class="module">
 	<div class="row">
 		<form:label for="medicalAwareness" path="awareOfUnknownIssues"
-			cssErrorClass="error">Are you aware that rescue animals may have unknown
+			cssClass="autoWidth" cssErrorClass="error">Are you aware that rescue animals may have unknown
 				medical and behavior history?</form:label>
-		<div class="multi-option">
-			<input type="radio" name="awareOfUnknownIssues" value="true">
-			Yes
+		<div class="minorElemSmall">
+			<label for="awareOfUnknownIssues">Yes</label> <input type="radio"
+				name="awareOfUnknownIssues" value="true" class="required">
 		</div>
-		<input type="radio" name="awareOfUnknownIssues" value="false">
-		No
+		<div class="minorElemSmall">
+			<label for="awareOfUnknownIssues">No</label> <input type="radio"
+				name="awareOfUnknownIssues" value="false">
+		</div>
 	</div>
 	<div class="row">
 		<form:label for="homeVisit" path="agreedToHomeVisit"
-			cssErrorClass="error">Would you allow a GAAR volunteer to do a home visit
+			cssClass="autoWidth" cssErrorClass="error">Would you allow a GAAR volunteer to do a home visit
 				before or upon adoption?</form:label>
-		<div class="multi-option">
-			<input type="radio" name="agreedToHomeVisit" value="true">
-			Yes
+		<div class="minorElemSmall">
+			<label for="agreedToHomeVisit">Yes</label> <input type="radio"
+				name="agreedToHomeVisit" value="true" class="required">
 		</div>
-		<input type="radio" name="agreedToHomeVisit" value="false"> No
+		<div class="minorElemSmall">
+			<label for="agreedToHomeVisit">No</label> <input type="radio"
+				name="agreedToHomeVisit" value="false">
+		</div>
 	</div>
 	<div>
-		<label>What Each Applicant Should Know</label>
+		<label class="autoWidth">What Each Applicant Should Know</label>
 		<ul class="circle">
 			<li>All animals, unless otherwise stated, come with age
 				appropriate vaccines and sterilization.</li>

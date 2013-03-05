@@ -2,8 +2,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <div class="module">
-	<div id="adoptionForm">
-		<form:form method="post" modelAttribute="application" action="/app/adopt">
+	<div>
+		<form:form method="post" modelAttribute="application" action="/app/adopt" id="adoptionForm" name="adoptionForm">
 			<c:import url="/WEB-INF/fragments/adopt/pet-info.jsp" />
 			<c:import url="/WEB-INF/fragments/adopt/applicant-info.jsp" />
 			<c:import url="/WEB-INF/fragments/adopt/household-info.jsp" />
@@ -15,7 +15,7 @@
 			<c:import url="/WEB-INF/fragments/adopt/disclaimer.jsp" />
 
 			<div class="row">
-				<input type="submit" value="Submit">
+				<button type="button" id="submitBtn">Apply</button>
 			</div>
 		</form:form>
 	</div>

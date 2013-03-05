@@ -15,9 +15,47 @@ blockquote.author {
 	text-align: center;
 }
 
+form div.module {
+	background-color: #F9F9F9;
+	border: 1px solid #CCC;
+	box-shadow: none;
+}
+
+form div.minorElem {
+	margin: 0.2em 0;
+}
+
+form div.minorElem label {
+	font-size: 1em;
+	font-weight: normal;
+	width: 5em;
+}
+
+form div.minorElemBig label {
+	font-size: 1em;
+	font-weight: normal;
+	width: 7.5em;
+}
+
+form div.minorElemBigger label {
+	font-size: 1em;
+	font-weight: normal;
+	width: 9.5em;
+}
+
+form div.minorElemSmall label {
+	font-size: 1em;
+	font-weight: normal;
+	width: 2em;
+}
+
+form div.minorElem label.error, form div.minorElemBig label.error, form div.minorElemBigger label.error, form div.minorElemSmall label.error {
+	font-weight: bold;
+	width: auto;
+}
+
 form div.multi-option {
-	float: left;
-	margin-right: 2em;
+	margin: .2em 2em .2em 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -34,7 +72,6 @@ hr {
 }
 
 html,body {
-	//background: #f5f6f7;//#73C0E6;
 	background: #FFF url(../images/jimdo_bg.gif) repeat scroll top left;
 }
 
@@ -70,9 +107,21 @@ input[type="text"].explanation {
 }
 
 label {
-	display: block;
+	display: inline-block;
 	font-weight: bold;
 	font-size: 0.9em;
+	width: 10em;
+}
+
+label.autoWidth {
+	width: auto;
+}
+
+label.error {
+	color: #E90000;
+	display: none;
+	margin-left: 1em;
+	width: auto;
 }
 
 label.inline {
@@ -80,10 +129,8 @@ label.inline {
 	margin-right: 1em;
 }
 
-label.minor {
-	display: inline;
-	font-weight: normal;
-	font-size: 1em;
+label.valid {
+	display: none;
 }
 
 p {
@@ -306,7 +353,7 @@ p.question.first {
 
 .slider-wrapper {
 	display: inline-block;
-	width: 91%;//564px;;
+	width: 91%;
 	height: 110px;
 	overflow: hidden;
 	vertical-align: bottom;
@@ -333,17 +380,12 @@ p.question.first {
 	height: 100px;
 }
 
-#content {
-	//background-color: #FFF;
-	//-moz-border-radius-bottomleft: 7px;
-	//-moz-border-radius-bottomright: 7px;
-	//border-bottom-left-radius: 7px;
-	//border-bottom-right-radius: 7px;
-	//border: 1px solid #CCC;
-	margin: 0 auto;
-	//padding: 20px;
-	//width: 940px;
+#caretakerDiv, #familyAwareDiv {
+	display: none;
+}
 
+#content {
+	margin: 0 auto;
 }
 
 #gaar-logo {
@@ -352,14 +394,9 @@ p.question.first {
 
 #globalheader {
 	background: #FFF;
-	//-moz-border-radius-topleft: 4px;
-	//-moz-border-radius-topright: 4px;
-	//border-top-left-radius: 4px;
-	//border-top-right-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	border: 1px solid #E5E5E5;
-	//border-bottom: none;
 	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	height: 100px;
@@ -388,13 +425,17 @@ p.question.first {
 	display: none;
 }
 
-#local-nav {
-	//border-right: 1px solid #CCC;
+#householdMemberAgesError {
+	color: #E90000;
+	display: none;
+}
+
+#local-nav { 
 	background-color: #fff;
 	border-radius: 4px;
 	border: 1px solid #E5E5E5;
-	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
-	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 	float: left;
 	font-size: .9em;
 	width: 17%;
@@ -457,7 +498,6 @@ p.question.first {
 
 #previewImg {
 	margin-top: 10px;
-	//margin-left: 80px;
 }
 
 #sidebar {

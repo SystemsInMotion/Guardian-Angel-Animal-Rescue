@@ -1,17 +1,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<div class="column" id="petsAllowedDiv">
-	<form:label for="petsAllowed" path="petsAllowed" cssErrorClass="error">Are pets allowed?</form:label>
-	<div class="multi-option">
-		<input type="radio" name="petsAllowed" value="true"> Yes
+<div class="row" id="petsAllowedDiv">
+	<form:label for="petsAllowed" path="petsAllowed" cssClass="autoWidth"
+		cssErrorClass="error">Are pets allowed?</form:label>
+	<div class="minorElem">
+		<label for="petsAllowed">Yes</label><input type="radio"
+			name="petsAllowed" value="true" class="required">
 	</div>
-	<input type="radio" name="petsAllowed" value="false"> No
+	<div class="minorElem">
+		<label for="petsAllowed">No</label><input type="radio"
+			name="petsAllowed" value="false">
+	</div>
 </div>
-<div class="column" id="petsAllowedProofDiv">
+<div class="row" id="petsAllowedProofDiv">
 	<form:label for="petsAllowedProof" path="petsAllowedProof"
-		cssErrorClass="error">Can you provide proof?</form:label>
-	<div class="multi-option">
-		<input type="radio" name="petsAllowedProof" value="true"> Yes
+		cssClass="autoWidth" cssErrorClass="error">Can you provide proof?</form:label>
+	<div class="minorElem">
+		<label for="petsAllowedProof">Yes</label><input type="radio"
+			name="petsAllowedProof" value="true" class="required">
 	</div>
-	<input type="radio" name="petsAllowedProof" value="false"> No
+	<div class="minorElem">
+		<label for="petsAllowedProof">No</label><input type="radio"
+			name="petsAllowedProof" value="false">
+	</div>
 </div>

@@ -3,10 +3,10 @@
 <h3>Current Pets</h3>
 <div class="module">
 	<div class="row">
-		<form:label for="currentPetCount" path="currentPetCount"
+		<form:label for="currentPetCount" path="currentPetCount" cssClass="autoWidth"
 			cssErrorClass="error">How many pets do you currently own? (Max 20)</form:label>
-		<input type="text" id="currentPetCount" name="currentPetCount"
-			class="input2char" />
+		&nbsp;<input type="text" id="currentPetCount" name="currentPetCount"
+			class="input2char digits required" />
 	</div>
 	<div id="currentPets"></div>
 </div>
