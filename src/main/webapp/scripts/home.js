@@ -1,4 +1,4 @@
-(function($) {
+ $(document).ready(function() {
 	var methods = {
 		init : function(options) {
 
@@ -80,7 +80,7 @@
 			$.error("jQuery.zoomCarousel." + method + " does not exist");
 		}
 	};
-}(jQuery));
+});
 
 $(window).ready(function() {
 	$.get(contextPath + '/app/ajax/cat-carousel', function(data) {
