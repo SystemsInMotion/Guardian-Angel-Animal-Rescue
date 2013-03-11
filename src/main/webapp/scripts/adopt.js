@@ -25,16 +25,6 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('#submitBtn').click(function(){
-		var result = validator.form();
-		var numberOfInvalids = validator.numberOfInvalids();
-		alert("result : " + result + "\nnumberOfInvalids : " + numberOfInvalids);
-//		if (numberOfInvalids == 0) {
-//			this.form.submit();
-//		}
-	});
-
-	
 	$('#livingSituation').change(function(){
 		if(this.options[this.selectedIndex].value != 'own'){
 			$('#petsAllowedDiv').css('display','block');
