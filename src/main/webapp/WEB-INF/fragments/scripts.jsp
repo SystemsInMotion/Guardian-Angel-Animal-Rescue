@@ -1,8 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<script type="text/javascript" src="<c:url value='/scripts/jquery-1.9.1.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/scripts/jquery-ui-1.10.1.custom.min.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/scripts/jquery.validate.min.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/scripts/jquery-validation-additional-methods-min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/scripts/jquery/jquery-1.9.1.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/scripts/jquery/jquery-ui-1.10.1.custom.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/scripts/jquery/jquery.validate.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/scripts/jquery/jquery-validation-additional-methods-min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/scripts/jquery/jquery.mobile-1.3.0.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/scripts/gaar.js'/>"></script>
 <script type="text/javascript">var contextPath = '${pageContext.request.contextPath}';</script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
