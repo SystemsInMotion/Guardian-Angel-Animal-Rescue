@@ -164,7 +164,7 @@ p.question.first {
 	height: 104px;
 	margin-bottom: 10px;
 	overflow: hidden;
-	padding: 2px 3px;
+	/*padding: 2px 3px;*/
 	white-space: nowrap;
 	width: 97%;//620px;
 	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
@@ -199,6 +199,17 @@ p.question.first {
 	margin-left: 0;
 }
 
+.innards {
+	margin: 1em;
+	zoom: 1;
+}
+.innards:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 .module {
 	background-color: #FFF;
 	border: 1px solid #E5E5E5;
@@ -206,21 +217,10 @@ p.question.first {
 	border-radius: 4px;
 	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
-	margin-bottom: 1em;
-	padding: 1em;
-	zoom: 1;
-}
-
-.module:after {
-	content: '.';
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
 }
 
 .module .row {
-	margin-bottom: 10px;
+	/*margin-bottom: 10px;*/
 	zoom: 1;
 }
 
@@ -243,19 +243,9 @@ p.question.first {
 	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 	float: left;
-	margin-bottom: 1em;
-	padding: 1em;
-	width: 77%;
-	zoom: 1;
+	width: 78.5%;
 }
 
-.module-left:after {
-	content: '.';
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
 
 .pet-desc {
 	clear: both;
@@ -341,7 +331,7 @@ p.question.first {
 	font-family: "Segoe UI", Tahoma, sans-serif;
 	font-size: 40px;
 	line-height: 96px;
-	margin: auto 1px 10px 1px;
+	margin: auto auto 10px -1px;
 	outline: none;
 	padding: 0;
 	width: 22px;
@@ -385,7 +375,7 @@ p.question.first {
 }
 
 #content {
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 }
 
 #gaar-logo {
@@ -402,6 +392,11 @@ p.question.first {
 	height: 100px;
 	margin: 1em auto;
 	position: relative;
+	width: 100%;
+}
+
+#globalheader, #local-nav, .module, .module .row, .module-left {
+	margin-bottom: 1em;
 }
 
 #globalheader #globalnav {
@@ -416,8 +411,17 @@ p.question.first {
 
 #globalheader #globalnav li a {
 	float: none;
+	font-weight: normal;
 	height: auto;
 	width: auto;
+}
+
+#globalheader #globalnav-mini {
+	display: none;
+}
+
+#globalheader .innards {
+	margin: 0;
 }
 
 #householdMemberAgesDiv,#howContainPetDiv,#petsAllowedDiv,#petsAllowedProofDiv,#whereAppliedDiv,#willingToInstallFenceDiv
@@ -507,9 +511,9 @@ p.question.first {
 	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	float: right;
-	padding: 0 0.5em;
 	text-align: center;
-	width: 17%;
+	width: 20%;
+	min-width: 190px;
 }
 
 #sidebar img {
@@ -517,14 +521,122 @@ p.question.first {
 }
 
 #splitContent {
-	//border-left: 1px solid #CCC;
-	float: left;
-	margin-left: -1px;
-	padding-left: 1em;
-	width: 81%;
+	float: right;
+	width: 81.5%;
 }
 
 #yearsLived {
 	float: left;
 	margin-right: 2em;
 }
+
+@media only screen and (max-width : 1024px) {
+	#content {
+		width: 95%;
+	}
+	#gaar-logo {
+		margin: 0 auto;
+	}
+	#globalheader {
+		border-radius: 4px;
+		height: auto;
+		margin: 2% auto 2% auto;
+		text-align: center;
+	}
+	#globalheader #globalnav {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin-top: 1%;
+	}
+	#globalheader #globalnav li {
+		margin: auto 0.5em;
+	}
+	#globalheader #globalnav li a {
+		font-size: 1.1em;
+	}
+	#local-nav {
+	
+		width: 100%;
+	}
+	#previewImg {
+		display: none;
+	}
+	#petCarousels {
+		width: 100%
+	}
+	#sidebar {
+		width: 32%;
+	}
+	#splitContent {
+		float: left;
+		width: 100%;
+	}
+	.carousel {
+		width: 100%;
+	}
+	.innards, #globalheader .innards {
+		margin: 0.7em;
+	}
+	.module-left {
+		width: 65%;
+	}
+	#globalheader, #local-nav, .module, .module .row, .module-left {
+		margin-bottom: 1.5%;
+	}
+}
+
+@media only screen and (max-width : 500px) {
+/*
+	#globalheader #globalnav {
+		display: block;
+		font-size: 2em;
+		line-height: 1.5em;
+		position: relative;
+		right: auto;
+	}
+	#globalheader #globalnav li {
+		background-color: #B2CDDA;
+		border: 1px solid #CCC;
+		border-radius: 4px;
+		display: inline-block;
+		font-size: 0.5em;
+		margin: 0.2em auto;
+		width: 90%;
+	}
+	#globalheader #globalnav li a {
+		color: #333;
+		display: inline-block;
+		text-indent: 0;
+		width: 100%;
+	}
+*/
+	#globalheader #globalnav {
+		display: none;
+	}
+	
+	#globalheader #globalnav-mini {
+		display: block;
+	}
+
+	#main {
+		min-width: 0;
+	}
+	#petCarousels {
+		display: none;
+	}
+	#sidebar {
+		display: none;
+	}
+	.innards, #globalheader .innards {
+		margin: 0.5em;
+	}
+	.module-left {
+		border-radius: 4px;
+		float: none;
+		width: 100%;
+	}
+	#globalheader, #local-nav, .module, .module .row, .module-left {
+		margin-bottom: 2%;
+	}
+)
