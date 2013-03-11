@@ -19,20 +19,17 @@
 <title><tiles:getAsString name="title" /> - GAAR Michigan</title>
 </head>
 <body id="home" class="home responsive">
-	<jsp:include page="/WEB-INF/fragments/globalheader.jsp" />
+	<div id="content">
+		<jsp:include page="/WEB-INF/fragments/globalheader.jsp" />
 
-	<div id="main">
-		<div id="content">
-			<div id="local-nav">
-				<tiles:insertAttribute name="local-nav" />
-			</div>
-			<div id="splitContent">
-				<tiles:insertAttribute name="main-content" />
-			</div>
+		<div id="local-nav">
+			<tiles:insertAttribute name="local-nav" />
 		</div>
-		<!--/content-->
+		<div id="splitContent">
+			<tiles:insertAttribute name="main-content" />
+		</div>
 	</div>
-	<!--/main-->
+	<!--/content-->
 
 </body>
 </html>
