@@ -15,7 +15,7 @@
 			<c:import url="/WEB-INF/fragments/adopt/disclaimer.jsp" />
 
 			<div class="row">
-				<button type="button" id="submitBtn">Apply</button>
+				<button type="submit" id="submitBtn">Apply</button>
 			</div>
 		</form:form>
 	</div>
