@@ -1,5 +1,9 @@
 @CHARSET "UTF-8";
 
+html,body, body.ui-mobile-viewport, .ui-body-c, .ui-overlay-c {
+	background: #FFF url(../images/jimdo_bg.gif) repeat scroll top left;
+}
+
 blockquote {
 	color: #0033BB;
 	font-family: Georgia, "Times New Roman", serif;
@@ -69,10 +73,6 @@ hr {
 	border: none;
 	border-top: 1px solid #E5E5E5;
 	margin: 0.5em auto;
-}
-
-html,body {
-	background: #FFF url(../images/jimdo_bg.gif) repeat scroll top left;
 }
 
 img.inline-left {
@@ -268,6 +268,13 @@ p.question.first {
 	margin-bottom: 1.0em;
 }
 
+.pet-thumbnail img {
+	height: 75px;
+	padding: 5px;
+	background: white;
+	margin: 2px;
+}
+
 .pet-thumbnail h4 {
 	font-weight: normal;
 	line-height: 13px;
@@ -279,6 +286,10 @@ p.question.first {
 	-webkit-box-shadow: rgba(2, 70, 160, 0.5) 0 2px 4px;
 	-moz-box-shadow: rgba(2, 70, 160, 0.5) 0 2px 4px;
 	box-shadow: rgba(2, 70, 160, 0.5) 0 2px 4px;
+}
+
+.pets-thumbnails .pet-thumbnail {
+	display: inline-block;
 }
 
 .pink {
@@ -302,13 +313,6 @@ p.question.first {
 .slider .pet-thumbnail h3.gender-M {
 	color: mediumBlue;
 	line-height: 14px;
-}
-
-.slider .pet-thumbnail img {
-	height: 75px;
-	padding: 5px;
-	background: white;
-	margin: 2px;
 }
 
 .slider .pet-thumbnail {
@@ -450,7 +454,6 @@ p.question.first {
 }
 
 #local-nav ul li a,#local-nav ul li:visited {
-	background: url(../images/sub_nav_arrow.gif) no-repeat 5px center;
 	display: block;
 	margin: 0 0 4px 0;
 	padding: 4px 10px 2px 20px;
@@ -530,7 +533,7 @@ p.question.first {
 	margin-right: 2em;
 }
 
-@media only screen and (max-width : 1024px) {
+@media only screen and (max-width : 800px) {
 	#content {
 		width: 95%;
 	}
@@ -581,12 +584,16 @@ p.question.first {
 	.module-left {
 		width: 65%;
 	}
+	.pets-thumbnails .pet-thumbnail {
+		width: 24%;
+		text-align: center;
+	}
 	#globalheader, #local-nav, .module, .module .row, .module-left {
 		margin-bottom: 1.5%;
 	}
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 480px) {
 /*
 	#globalheader #globalnav {
 		display: block;
@@ -636,7 +643,15 @@ p.question.first {
 		float: none;
 		width: 100%;
 	}
+	.pets-thumbnails .pet-thumbnail {
+		width: 32%;
+	}
 	#globalheader, #local-nav, .module, .module .row, .module-left {
 		margin-bottom: 2%;
 	}
-)
+}
+@media only screen and (max-width : 320px) {
+	.pets-thumbnails .pet-thumbnail {
+		width: 49%;
+}
+	}
