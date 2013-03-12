@@ -1,6 +1,7 @@
 package org.gaar.web.controller.mvc;
 
 import java.math.BigInteger;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.gaar.web.View;
@@ -27,9 +28,23 @@ public class DefaultController {
 		return View.brokenWings.name();
 	}
 
+	@RequestMapping("cats")
+	public String cats(Model model) {
+		final List<PetfinderPetRecord> cats = this.petFinderService.shelterCats();
+		model.addAttribute("pets", cats);
+		return View.cats.name();
+	}
+
 	@RequestMapping("contact")
 	public String contact(Model model) {
 		return View.contact.name();
+	}
+
+	@RequestMapping("dogs")
+	public String dogs(Model model) {
+		final List<PetfinderPetRecord> dogs = this.petFinderService.shelterDogs();
+		model.addAttribute("pets", dogs);
+		return View.dogs.name();
 	}
 
 	@RequestMapping("email")
