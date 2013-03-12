@@ -6,7 +6,6 @@
 	<!-- LAYOUTS -->
 	<definition name="default_layout" template="/WEB-INF/layouts/default_layout.jsp">
 		<put-attribute name="title" type="string" />
-		<put-attribute name="animalType" type="string" />
 		<put-attribute name="main-content" />
 	</definition>
 
@@ -72,7 +71,6 @@
 
 	<definition name="cats" extends="default_layout">
 		<put-attribute name="title" type="string" value="Adoptable Cats" />
-		<put-attribute name="animalType" type="string" value="Cats" />
 		<put-attribute name="main-content" value="/WEB-INF/view/pets.jsp" />
 	</definition>
 
@@ -87,7 +85,6 @@
 
 	<definition name="dogs" extends="default_layout">
 		<put-attribute name="title" type="string" value="Adoptable Dogs" />
-		<put-attribute name="animalType" type="string" value="Dogs" />
 		<put-attribute name="main-content" value="/WEB-INF/view/pets.jsp" />
 	</definition>
 	

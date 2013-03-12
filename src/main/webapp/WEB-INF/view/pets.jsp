@@ -4,7 +4,7 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <div class="module">
 	<div class="innards">
-		<h3><tiles:getAsString name="animalType" /></h3>
+		<h3>${animalType}</h3>
 		<hr><div class="pets-thumbnails">
 		<c:forEach items="${pets}" var="pet">
 			<div class="pet-thumbnail">

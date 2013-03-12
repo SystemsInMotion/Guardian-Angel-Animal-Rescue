@@ -32,6 +32,7 @@ public class DefaultController {
 	public String cats(Model model) {
 		final List<PetfinderPetRecord> cats = this.petFinderService.shelterCats();
 		model.addAttribute("pets", cats);
+		model.addAttribute("animalType", "Cats");
 		return View.cats.name();
 	}
 
@@ -44,6 +45,7 @@ public class DefaultController {
 	public String dogs(Model model) {
 		final List<PetfinderPetRecord> dogs = this.petFinderService.shelterDogs();
 		model.addAttribute("pets", dogs);
+		model.addAttribute("animalType", "Dogs");
 		return View.dogs.name();
 	}
 
