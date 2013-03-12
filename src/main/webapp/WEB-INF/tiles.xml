@@ -3,8 +3,10 @@
 
 <tiles-definitions>
 
+	<!-- LAYOUTS -->
 	<definition name="default_layout" template="/WEB-INF/layouts/default_layout.jsp">
 		<put-attribute name="title" type="string" />
+		<put-attribute name="animalType" type="string" />
 		<put-attribute name="main-content" />
 	</definition>
 
@@ -27,12 +29,14 @@
 		<put-attribute name="local-nav"
 			value="/WEB-INF/view/support/local-nav.jsp" />
 	</definition>
-	
+
 	<definition name="volunteer_layout" extends="split_layout">
 		<put-attribute name="local-nav"
 			value="/WEB-INF/view/volunteer/local-nav.jsp" />
 	</definition>
-	
+
+
+	<!-- PAGES -->
 	<definition name="admin" extends="default_layout">
 		<put-attribute name="title" type="string" value="Administration" />
 		<!-- <put-attribute name="page-js" value="/scripts/adopt.js" /> -->
@@ -66,16 +70,27 @@
 
 	<definition name="cat_carousel" template="/WEB-INF/fragments/cat-carousel.jsp" />
 
+	<definition name="cats" extends="default_layout">
+		<put-attribute name="title" type="string" value="Adoptable Cats" />
+		<put-attribute name="animalType" type="string" value="Cats" />
+		<put-attribute name="main-content" value="/WEB-INF/view/pets.jsp" />
+	</definition>
+
 	<definition name="dog_adoption" extends="print_app_layout">
 		<put-attribute name="title" type="string"
 			value="Dog Adoption Application" />
-		<!-- <put-attribute name="page-js" value="/scripts/adopt.js" /> -->
 		<put-attribute name="main-content"
 			value="/WEB-INF/view/admin/adoption-application.jsp" />
 	</definition>
 
 	<definition name="dog_carousel" template="/WEB-INF/fragments/dog-carousel.jsp" />
 
+	<definition name="dogs" extends="default_layout">
+		<put-attribute name="title" type="string" value="Adoptable Dogs" />
+		<put-attribute name="animalType" type="string" value="Dogs" />
+		<put-attribute name="main-content" value="/WEB-INF/view/pets.jsp" />
+	</definition>
+	
 	<definition name="email" template="/WEB-INF/view/email.jsp" />
 
 	<definition name="home" extends="default_layout">
