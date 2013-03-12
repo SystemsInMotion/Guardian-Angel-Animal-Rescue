@@ -20,5 +20,4 @@
 	<li><a href="<c:url value='/app/support/wishlist'/>"
 		<c:if test="${fn:contains(uri,'wishlist')}">class='selected'</c:if>>Wish
 			List</a></li>
-	<li class="separator"><span>&nbsp;</span></li>
 </ul>

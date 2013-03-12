@@ -11,5 +11,4 @@
 	<li class="separator"><span>&nbsp;</span></li>
 	<li><a href="<c:url value='/app/about/team'/>"
 		<c:if test="${fn:contains(uri,'team')}">class='selected'</c:if>>Our Team</a></li>
-	<li class="separator"><span>&nbsp;</span></li>
 </ul>
