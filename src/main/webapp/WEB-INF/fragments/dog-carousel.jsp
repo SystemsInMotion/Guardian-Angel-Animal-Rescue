@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<button class="slider-button">&lt;</button>
+<button class="slider-button-left">&nbsp;</button>
 <div class="slider-wrapper">
 	<div class="slider">
 		<c:forEach items="${dogs}" var="dog">
@@ -16,4 +16,4 @@
 		</c:forEach>
 	</div>
 </div>
-<button class="slider-button">&gt;</button>
+<button class="slider-button-right">&nbsp;</button>
