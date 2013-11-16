@@ -13,16 +13,20 @@ $(document).ready(function() {
 	}, "Please provide a reason why your family is not aware of your desire to adopt a pet.");
 
 	validator = $("#adoptionForm").validate({
-		rules: {
-			emailConfirm: {
-				equalTo: "#email"
+			rules: {
+				emailConfirm: {
+					equalTo: "#email"
+				}
+			},
+			messages: {
+				emailConfirm: {
+					equalTo: "Emails do not match.  Please re-enter."
+				}
+			}, 
+			submitHandler : function(form, event) {
+//				alert("form submitted");
+				form.submit();
 			}
-		},
-		messages: {
-			emailConfirm: {
-				equalTo: "Emails do not match.  Please re-enter."
-			}
-		}
 	});
 	
 	$('#livingSituation').change(function(){
@@ -85,6 +89,7 @@ $(document).ready(function() {
 		$('input[name="willingToInstallFenceDiv"]').removeAttr("checked");
 		$('#howContainPetDiv').css('display','none');
 	});
+	
 	$('input[name="fencedYard"][value="no"]').click(function() {
 		$('#willingToInstallFenceDiv').css('display','block');
 	});
@@ -92,6 +97,7 @@ $(document).ready(function() {
 	$('input[name="willingToInstallFence"]').click(function() {
 		$('#howContainPetDiv').css('display','none');
 	});
+	
 	$('input[name="willingToInstallFence"][value="no"]').click(function() {
 		$('#howContainPetDiv').css('display','block');
 	});
@@ -99,6 +105,7 @@ $(document).ready(function() {
 	$('input[name="haveAppliedElsewhere"]').click(function() {
 		$('#whereAppliedDiv').css('display','none');
 	});
+	
 	$('input[name="haveAppliedElsewhere"][value="true"]').click(function() {
 		$('#whereAppliedDiv').css('display','block');
 	});
