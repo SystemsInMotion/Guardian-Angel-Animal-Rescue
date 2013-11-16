@@ -3,7 +3,7 @@
 <script type="text/javascript" src="<c:url value='/scripts/jquery/jquery-ui-1.10.1.custom.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/scripts/jquery/jquery.validate.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/scripts/jquery/jquery-validation-additional-methods-min.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/scripts/jquery/jquery.mobile-1.3.0.min.js'/>"></script>
+<!-- <script type="text/javascript" src="<c:url value='/scripts/jquery/jquery.mobile-1.3.0.min.js'/>"></script> -->
 <script type="text/javascript" src="<c:url value='/scripts/gaar.js'/>"></script>
 <script type="text/javascript">var contextPath = '${pageContext.request.contextPath}';</script>
 <script type="text/javascript">
