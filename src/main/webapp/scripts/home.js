@@ -47,14 +47,14 @@
 				}, ANIMATION_PERIOD, "linear", repeat);
 			};
 
-			$this.find(".slider-button:first-child").click(function() {
+			$this.find(".slider-button-left").click(function() {
 				$this.find(".slider").stop().animate({
 					left : getTargetOffset(options.click, RIGHT)
 				}, ANIMATION_PERIOD, "linear", scrollRight);
 			}).mouseover(scrollRight).mouseout(function() {
 				$this.find(".slider").stop();
 			});
-			$this.find(".slider-button:last-child").click(function() {
+			$this.find(".slider-button-right").click(function() {
 				$this.find(".slider").stop().animate({
 					left : getTargetOffset(options.click, LEFT)
 				}, ANIMATION_PERIOD, "linear", scrollLeft);
