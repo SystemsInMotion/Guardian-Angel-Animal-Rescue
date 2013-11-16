@@ -18,7 +18,7 @@
 <body id="home" class="home responsive">
 	<div id="content">
 		<jsp:include page="/WEB-INF/fragments/globalheader.jsp" />
-
+		<jsp:include page="/WEB-INF/fragments/sidebar.jsp" />
 		<tiles:insertAttribute name="main-content" />
 	</div>	<!--/content-->
 </body>
