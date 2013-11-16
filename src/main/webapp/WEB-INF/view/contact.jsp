@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<div class="module">
+<div class="module-left">
 	<div class="innards">
 		<h3>Contact Information</h3>
 		<hr>

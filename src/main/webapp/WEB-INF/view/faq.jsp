@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 
-<div class="module">
+<div class="module-left">
 	<div class="innards">
 		<img src="<c:url value='/images/faq_pet_1.jpg'/>"
 			class="shadow inline-left">

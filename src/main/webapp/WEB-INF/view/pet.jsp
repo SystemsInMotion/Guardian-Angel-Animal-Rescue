@@ -9,7 +9,7 @@
 	});
 //-->
 </script>
-<div class="module">
+<div class="module-left">
 	<div class="innards">
 		<div class="selfclear">
 			<c:forEach items="${pet.media.photos.photo}" var="photo">
@@ -50,7 +50,7 @@
 					</c:forEach>
 				</ul>
 			</div>
-			<div style="float: left">
+			<div style="text-align: center">
 				<button type="button" id="btnAdopt">Adopt ${pet.name}</button>
 			</div>
 		</div>

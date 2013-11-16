@@ -18,7 +18,7 @@
 		<p>Please explore the links on the sidebar for more information.</p>
 		<p>Every donation is valuable. 100% of every contribution is
 			tax-deductible and goes directly towards our animals. You can donate
-			online using the PayPal link below or mail your donation to Guardian
+			online using the PayPal link to the right or mail your donation to Guardian
 			Angel Animal Rescue, P.O. Box 511309, Livonia, MI 48151.</p>
 	</div>
 </div>

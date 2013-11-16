@@ -11,7 +11,7 @@
 			value (pre-tax &amp; pre-shipping) to Guardian Angel.
 		</p>
 		<div class="center">
-			<a href="http://www.usbones.com/mm5/merchant.mvc?Affil=1566"><img
+			<a href="http://www.usbones.com/mm5/merchant.mvc?Affil=1566"><img id="usBonesBanner"
 				class="shadow" src="http://www.usbones.com/images/logo.jpg"></a>
 		</div>
 	</div>

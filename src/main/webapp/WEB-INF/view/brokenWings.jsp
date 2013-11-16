@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<div class="module">
+<div class="module-left">
 	<div class="innards">
 		<blockquote>"To know even one life has breathed easier
 			because you have lived - that is to have succeeded."</blockquote>
@@ -7,7 +7,7 @@
 	</div>
 </div>
 
-<div class="module">
+<div class="module-left">
 	<div class="innards">
 		<p>Pets with broken wings are our special needs animals. Special
 			needs pets may have different forms of disabilities, which require
@@ -27,7 +27,7 @@
 	</div>
 </div>
 
-<div class="module">
+<div class="module-left">
 	<div class="innards">
 		<h3 class="pink">Here are a few of our special needs cats and
 			dogs.</h3>
