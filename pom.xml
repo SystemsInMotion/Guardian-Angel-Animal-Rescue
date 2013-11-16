@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.systemsinmotion</groupId>
 		<artifactId>petrescue-parent</artifactId>
-		<version>0.5-SNAPSHOT</version>
+		<version>0.6-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -15,7 +15,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+   	</properties>
 
 	<build>
 		<finalName>ga</finalName>
@@ -24,13 +24,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.3</version>
+				<version>2.4</version>
 				<configuration>
 					<warName>ga</warName>
 					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>
-
+<!--
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>properties-maven-plugin</artifactId>
@@ -59,14 +59,17 @@
 					<url>http://www.skronek.org:8080/manager/html</url>
 				</configuration>
 			</plugin>
+-->
 
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration >
+
+                </configuration>
+            </plugin>
+
 		</plugins>
 
 		<pluginManagement>
@@ -97,9 +100,6 @@
 											</goal>
 										</goals>
 									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
 								</pluginExecution>
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
@@ -133,7 +133,7 @@
 		<dependency>
 			<groupId>com.systemsinmotion</groupId>
 			<artifactId>petrescue-core</artifactId>
-			<version>0.5-SNAPSHOT</version>
+			<version>0.6-SNAPSHOT</version>
 		</dependency>
 
 
