@@ -19,7 +19,7 @@
 		</div>
 		<div id="globalnav-mini" data-role="fieldcontain">
 			<select id="select-mobile-nav" data-mini="true">
-				<option>Go to...</option>
+				<option>Menu</option>
 				<option value="<c:url value='/app/about'/>">About Us</option>
 				<option value="<c:url value='/app/cats'/>">Cats</option>
 				<option value="<c:url value='/app/dogs'/>">Dogs</option>
