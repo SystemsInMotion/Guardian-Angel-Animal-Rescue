@@ -75,6 +75,11 @@ hr {
 	margin: 0.5em auto;
 }
 
+iframe {
+	display: block;
+	margin: auto;
+}
+
 img.inline-left {
 	float: left;
 	margin-right: 1em;
@@ -199,6 +204,8 @@ p.question.first {
 	margin-left: 0;
 }
 
+.hideError { display: none; }
+
 .innards {
 	margin: 1em;
 	zoom: 1;
@@ -255,7 +262,7 @@ p.question.first {
 
 .pet-details {
 	float: left;
-	margin: 0 2em;
+	margin: 0 2em 1em 2em;
 }
 
 .pet-name {
@@ -528,8 +535,13 @@ p.question.first {
 }
 
 #splitContent {
-	float: right;
-	width: 81.5%;
+	float: left;
+	margin-left: 1em;
+	width: 60%;
+}
+
+#usBonesBanner {
+	max-width: 98%;
 }
 
 #yearsLived {
@@ -563,8 +575,8 @@ p.question.first {
 		font-size: 1.1em;
 	}
 	#local-nav {
-	
-		width: 100%;
+		text-align: center;
+		width: 66.5%;
 	}
 	#previewImg {
 		display: none;
@@ -573,11 +585,15 @@ p.question.first {
 		width: 100%
 	}
 	#sidebar {
-		width: 32%;
+		width: 30%;
 	}
 	#splitContent {
 		float: left;
-		width: 100%;
+		margin-left: 0;
+		width: 66.5%;
+	}
+	#usBonesBanner {
+		max-width: 96%;
 	}
 	.carousel {
 		width: 100%;
@@ -585,12 +601,21 @@ p.question.first {
 	.innards, #globalheader .innards {
 		margin: 0.7em;
 	}
+	.module {
+		width: 100%;
+	}
 	.module-left {
-		width: 65%;
+		width: 66.5%;
 	}
 	.pets-thumbnails .pet-thumbnail {
-		width: 24%;
+		margin-right: 2%;
+		overflow: hidden;
 		text-align: center;
+		width: 47%;
+	}
+	.pets-thumbnails .pet-thumbnail img {
+		height: auto;
+		width: 91%;
 	}
 	#globalheader, #local-nav, .module, .module .row, .module-left {
 		margin-bottom: 1.5%;
@@ -598,38 +623,15 @@ p.question.first {
 }
 
 @media only screen and (max-width : 480px) {
-/*
-	#globalheader #globalnav {
-		display: block;
-		font-size: 2em;
-		line-height: 1.5em;
-		position: relative;
-		right: auto;
-	}
-	#globalheader #globalnav li {
-		background-color: #B2CDDA;
-		border: 1px solid #CCC;
-		border-radius: 4px;
-		display: inline-block;
-		font-size: 0.5em;
-		margin: 0.2em auto;
-		width: 90%;
-	}
-	#globalheader #globalnav li a {
-		color: #333;
-		display: inline-block;
-		text-indent: 0;
-		width: 100%;
-	}
-*/
 	#globalheader #globalnav {
 		display: none;
 	}
-	
 	#globalheader #globalnav-mini {
 		display: block;
 	}
-
+	#local-nav {
+		width: 100%;
+	}
 	#main {
 		min-width: 0;
 	}
@@ -638,6 +640,9 @@ p.question.first {
 	}
 	#sidebar {
 		display: none;
+	}
+	#splitContent {
+		width: 100%;
 	}
 	.innards, #globalheader .innards {
 		margin: 0.5em;
