@@ -127,7 +127,7 @@
 		<dependency>
 			<groupId>org.petfinder</groupId>
 			<artifactId>petfinder-api</artifactId>
-			<version>1.0</version>
+			<version>0.9</version>
 		</dependency>
 
 		<dependency>

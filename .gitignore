@@ -7,3 +7,5 @@
 .classpath
 .codepro/
 .settings/
+/RemoteSystemsTempFiles
+/gaar.iml

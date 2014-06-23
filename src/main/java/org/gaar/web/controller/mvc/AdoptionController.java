@@ -36,7 +36,8 @@ public class AdoptionController {
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.GET)
 	public String adopt_GET(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
+		final PetfinderPetRecord pet = this.petFinderService.readPet(
+				BigInteger.valueOf(petId), null);
 
 		AdoptionApplication application = new AdoptionApplication();
 		application.setPetName(pet.getName());
@@ -51,8 +52,9 @@ public class AdoptionController {
 		return View.adopt.name();
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
-	public String adopt_POST(@Validated AdoptionApplication application, Model model) {
+	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
+	public String adopt_POST(@Validated AdoptionApplication application,
+			Model model) {
 		System.out.println("application : " + application);
 		try {
 			this.mailManager.send(application);
