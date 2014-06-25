@@ -84,11 +84,23 @@
 
 $(window).ready(function() {
 	$.get(contextPath + '/app/ajax/cat-carousel', function(data) {
+			
 		loadCarousel('#cat-carousel', data);
+		var catsHere = $("#cat-checker").text();
+		if(catsHere == "")
+			{
+				$('#pet-preview').hide();
+			}
 	});
 	$.get(contextPath + '/app/ajax/dog-carousel', function(data) {
+		
 		loadCarousel('#dog-carousel', data);
-	});
+		var dogsHere = $('#dog-checker').text();
+		if (dogsHere == ""){
+			$('#pet-preview').hide();
+		}
+			
+		});
 
 });
 

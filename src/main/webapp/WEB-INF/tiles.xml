@@ -107,9 +107,9 @@
 		<put-attribute name="main-content" value="/WEB-INF/view/pets.jsp" />
 	</definition>
 	
-<!-- 
-	<definition name="email" template="/WEB-INF/view/email.jsp" />
- -->
+
+	<definition name="email" template="/WEB-INF/email.jsp" />
+
 
 	<definition name="faq" extends="base_layout">
 		<put-attribute name="title" type="string" value="FAQ" />

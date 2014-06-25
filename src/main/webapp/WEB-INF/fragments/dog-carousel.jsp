@@ -4,7 +4,7 @@
 	<div class="slider">
 		<c:forEach items="${dogs}" var="dog">
 			<div class="pet-thumbnail">
-				<h4>${dog.name}</h4>
+				<h4 id = "dog-checker">${dog.name}</h4>
 				<c:forEach items="${dog.media.photos.photo}" var="photo"
 					varStatus="status">
 					<c:if test="${photo.id eq 1 and photo.size eq 'pn' }">
