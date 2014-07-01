@@ -38,14 +38,14 @@
 
 <div class="module-left">
     <div class="innards selfclear">
-        <h3>Foster Home Needed</h3>
+         <h3>Cat and Dog Brushes Needed</h3>
         <hr>
         <p>
-            <img src="<c:url value='/images/IMG_4157.jpg'/>" class="inline-left shadow">This is a four month old puppy
-            in Detroit that needs a foster ASAP.
-            She is a female and the owner is willing to give her up to GAAR for a price, otherwise she will be used for
-            breeding and live a horrible life. If you can help, please contact us at 734-788-6857 or <a
-                href="mailto:guardian_angel_rescue@hotmail.com">guardian_angel_rescue@hotmail.com</a>.
+   Our Detroit babies need cat and dog brushes. If anybody has any extra that they are 
+   willing to donate, please contact us at 734-788-6857 or guardian_angel_rescue@hotmail.com 
+   and we can pick them up. Otherwise, you may drop any extra brushes off at 
+   <a href="http://stores.petsmart.com/Store/Details/686" target="_blank">PetSmart in Commerce Twp</a>
+   and we will deliver them to Detroit. Thank you.
         </p>
     </div>
 </div>
