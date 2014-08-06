@@ -17,7 +17,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 
 @Controller
-public class DefaultController {
+public class DefaultController extends BaseController {
 
 	private static Logger logger = Logger.getLogger(DefaultController.class);
 
@@ -32,11 +32,10 @@ public class DefaultController {
 	@RequestMapping("cats")
 	public String cats(Model model) {
 		List<PetfinderPetRecord> cats = null;
-		try{
+		try {
 			cats = this.petFinderService.shelterCats();
-		}
-		catch(HttpServerErrorException e){
-			
+		} catch (HttpServerErrorException e) {
+
 		}
 		model.addAttribute("pets", cats);
 		model.addAttribute("animalType", "Cats");
@@ -51,11 +50,10 @@ public class DefaultController {
 	@RequestMapping("dogs")
 	public String dogs(Model model) {
 		List<PetfinderPetRecord> dogs = null;
-		try{
+		try {
 			dogs = this.petFinderService.shelterDogs();
-		}
-		catch(HttpServerErrorException e){
-			
+		} catch (HttpServerErrorException e) {
+
 		}
 		model.addAttribute("pets", dogs);
 		model.addAttribute("animalType", "Dogs");
@@ -89,7 +87,8 @@ public class DefaultController {
 
 	@RequestMapping("pet/{petId}")
 	public String pet(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
+		final PetfinderPetRecord pet = this.petFinderService.readPet(
+				BigInteger.valueOf(petId), null);
 		logger.info("pet : " + pet);
 		model.addAttribute("pet", pet);
 		return View.pet.name();

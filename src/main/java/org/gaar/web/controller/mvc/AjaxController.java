@@ -15,7 +15,7 @@ import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 
 @Controller
 @RequestMapping("ajax")
-public class AjaxController {
+public class AjaxController extends BaseController {
 
 	@SuppressWarnings("unused")
 	private static Logger logger = Logger.getLogger(AjaxController.class);
@@ -26,11 +26,10 @@ public class AjaxController {
 	@RequestMapping("cat-carousel")
 	public String catCarousel(Model model) {
 		List<PetfinderPetRecord> cats = null;
-		try{
-		cats = this.petFinderService.shelterCats();
-		}
-		catch(HttpServerErrorException e){
-			
+		try {
+			cats = this.petFinderService.shelterCats();
+		} catch (HttpServerErrorException e) {
+
 		}
 		model.addAttribute("cats", cats);
 		return View.cat_carousel.name();
@@ -39,11 +38,10 @@ public class AjaxController {
 	@RequestMapping("dog-carousel")
 	public String dogCarousel(Model model) {
 		List<PetfinderPetRecord> dogs = null;
-		try{
+		try {
 			dogs = this.petFinderService.shelterDogs();
-		}
-		catch(HttpServerErrorException e){
-			
+		} catch (HttpServerErrorException e) {
+
 		}
 		model.addAttribute("dogs", dogs);
 		return View.dog_carousel.name();

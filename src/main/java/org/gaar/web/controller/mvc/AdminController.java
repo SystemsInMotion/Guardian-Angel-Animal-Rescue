@@ -14,7 +14,7 @@ import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
 @Controller
 @RequestMapping("admin")
-public class AdminController {
+public class AdminController extends BaseController {
 
 	@SuppressWarnings("unused")
 	private static Logger logger = Logger.getLogger(AdminController.class);

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("about")
-public class AboutController {
+public class AboutController extends BaseController {
 
 	@SuppressWarnings("unused")
 	private static Logger logger = Logger.getLogger(AboutController.class);

@@ -133,7 +133,7 @@
 		<dependency>
 			<groupId>com.systemsinmotion</groupId>
 			<artifactId>petrescue-core</artifactId>
-			<version>0.6-SNAPSHOT</version>
+			<version>0.7-SNAPSHOT</version>
 		</dependency>
 
 

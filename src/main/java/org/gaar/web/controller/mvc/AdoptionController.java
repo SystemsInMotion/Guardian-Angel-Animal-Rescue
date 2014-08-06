@@ -23,7 +23,7 @@ import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
 @Controller
 @RequestMapping("adopt")
-public class AdoptionController {
+public class AdoptionController extends BaseController {
 
 	@SuppressWarnings("unused")
 	private static Logger logger = Logger.getLogger(AdoptionController.class);

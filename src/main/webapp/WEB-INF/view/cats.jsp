@@ -5,7 +5,7 @@
 		<hr><div class="pets-thumbnails">
 		<c:choose>
 		<c:when test="${cats == null}">
-			testing
+			testing 
 		</c:when>
 		<c:otherwise>
 			<c:forEach items="${cats}" var="cat">
