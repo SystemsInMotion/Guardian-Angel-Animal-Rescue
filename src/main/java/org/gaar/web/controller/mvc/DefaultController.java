@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.HttpServerErrorException;
+import org.springframework.web.client.RestClientException;
 
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 
@@ -32,11 +33,7 @@ public class DefaultController extends BaseController {
 	@RequestMapping("cats")
 	public String cats(Model model) {
 		List<PetfinderPetRecord> cats = null;
-		try {
-			cats = this.petFinderService.shelterCats();
-		} catch (HttpServerErrorException e) {
-
-		}
+		cats = this.petFinderService.shelterCats();
 		model.addAttribute("pets", cats);
 		model.addAttribute("animalType", "Cats");
 		return View.cats.name();
@@ -50,11 +47,7 @@ public class DefaultController extends BaseController {
 	@RequestMapping("dogs")
 	public String dogs(Model model) {
 		List<PetfinderPetRecord> dogs = null;
-		try {
-			dogs = this.petFinderService.shelterDogs();
-		} catch (HttpServerErrorException e) {
-
-		}
+		dogs = this.petFinderService.shelterDogs();
 		model.addAttribute("pets", dogs);
 		model.addAttribute("animalType", "Dogs");
 		return View.dogs.name();
@@ -87,8 +80,7 @@ public class DefaultController extends BaseController {
 
 	@RequestMapping("pet/{petId}")
 	public String pet(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(
-				BigInteger.valueOf(petId), null);
+		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
 		logger.info("pet : " + pet);
 		model.addAttribute("pet", pet);
 		return View.pet.name();
