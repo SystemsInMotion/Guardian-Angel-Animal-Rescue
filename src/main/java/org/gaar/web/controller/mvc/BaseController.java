@@ -23,29 +23,23 @@ public abstract class BaseController {
 	public ModelAndView handleExceptions(final Exception exception, HttpServletRequest request, HttpServletResponse response) throws MessagingException {
 		ModelAndView mav = new ModelAndView();
 		mailManager.send_error(exception, request.getPathInfo());
-		switch (request.getPathInfo()) {
-		case "/dogs":
+		if (request.getPathInfo().equals("/dogs")) {
 			mav.setViewName(View.dogs.name());
 			mav.addObject("pets", null);
 			mav.addObject("animalType", "Dogs");
-			break;
-		case "/cats":
+		} else if (request.getPathInfo().equals("/cats")) {
 			mav.setViewName(View.cats.name());
 			mav.addObject("pets", null);
 			mav.addObject("animalType", "Cats");
-			break;
-		case "/cat-carousel":
+		} else if (request.getPathInfo().equals("/ajax/cat-carousel")) {
 			mav.setViewName(View.cat_carousel.name());
 			mav.addObject("cats", null);
-			break;
-		case "/dog-carousel":
+		} else if (request.getPathInfo().equals("/ajax/dog-carousel")) {
 			mav.setViewName(View.cat_carousel.name());
 			mav.addObject("dogs", null);
-			break;
-		default:
+		} else {
 			mav.setViewName(View.support.name());
 		}
 		return mav;
 	}
-
 }
