@@ -1,6 +1,9 @@
 package org.gaar.web.controller.mvc;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
@@ -21,6 +24,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.systemsinmotion.petrescue.mail.MailManager;
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
+import com.systemsinmotion.petrescue.web.bean.PreviousPet;
+import com.systemsinmotion.petrescue.web.bean.Vet;
 
 @Controller
 @RequestMapping("adopt")
@@ -79,6 +84,52 @@ public class AdoptionController extends BaseController {
 		application.setMobilePhone("2342342345");
 		application.setEmail("bob@law.com");
 		application.setEmailConfirm("bob@law.com");
+		
+		List<Vet> vets = new ArrayList<Vet>();
+		Vet vet = new Vet();
+		vet.setName("Mr. Vet");
+		vet.setPhone("2342342345");
+		vets.add(vet);
+		Vet vet2 = new Vet();
+		vet2.setName("Mr. Rival");
+		vet2.setPhone("2342342346");
+		vets.add(vet2);
+		
+		application.setVets(vets);
+		
+		application.setLivingSituation("rent");
+		application.setPetsAllowed(true);
+		application.setPetsAllowedProof(true);
+		
+		application.setYearsLived("10");
+		application.setMonthsLived("0");
+		application.setHouseholdMemberCount(3);
+		application.setHouseholdMemberAges(Arrays.asList(new Integer[]{10,15,25}));
+		application.setFamilyAware(false);
+		application.setFamilyNotAwareReason("Because they smell and I don't talk to them");
+		application.setCaretaker("Gramama");
+		
+		application.setAwareOfUnknownIssues(true);
+		application.setAgreedToHomeVisit(false);
+		
+		application.setCurrentPetCount(2);
+		
+		application.setPreviousPetCount(2);
+		List<PreviousPet> prevPets = new ArrayList<PreviousPet>();
+		PreviousPet ppet1= new PreviousPet();
+		ppet1.setBreed("Doggy");
+		ppet1.setAge(5);
+		ppet1.setIndoor(true);
+		ppet1.setName("Spike");
+		PreviousPet ppet2= new PreviousPet();
+		ppet2.setBreed("Kitty Cat");
+		ppet2.setAge(10);
+		ppet2.setIndoor(false);
+		ppet2.setName("Meow");
+		prevPets.add(ppet1);
+		prevPets.add(ppet2);
+		application.setPreviousPets(prevPets);
+		
 		String response = new String();
 		try {
 			response = this.mailManager.testEmail(application, pet);
