@@ -16,6 +16,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.systemsinmotion.petrescue.mail.MailManager;
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
@@ -51,13 +52,51 @@ public class AdoptionController extends BaseController {
 
 		return View.adopt.name();
 	}
+	
+	@RequestMapping(value = "/test/{petId}", method = RequestMethod.GET)
+	public @ResponseBody String adoptTest_GET(@PathVariable("petId") Integer petId, Model model) {
+		final PetfinderPetRecord pet = this.petFinderService.readPet(
+				BigInteger.valueOf(petId), null);
+
+		AdoptionApplication application = new AdoptionApplication();
+		application.setPetName(pet.getName());
+		application.setAnimalType(pet.getAnimal().value());
+		application.setBreeds(pet.getBreeds().getBreed());
+
+		model.addAttribute("pet", pet);
+		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
+		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
+		model.addAttribute("application", application);
+
+		// Testing Attr
+		application.setFirstName("Bob");
+		application.setLastName("Law");
+		application.setAddress1("1234 Unknown Av");
+		application.setAddress2("Apt -1");
+		application.setZipCode( "48197");
+		application.setCity("Ypsitucky");
+		application.setHomePhone("2342342345");
+		application.setMobilePhone("2342342345");
+		application.setEmail("bob@law.com");
+		application.setEmailConfirm("bob@law.com");
+		String response = new String();
+		try {
+			response = this.mailManager.testEmail(application, pet);
+		} catch (MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return response;
+	}	
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
-	public String adopt_POST(@Validated AdoptionApplication application,
+	public String adopt_POST(@PathVariable("petId") Integer petId, @Validated AdoptionApplication application,
 			Model model) {
-		System.out.println("application : " + application);
+		final PetfinderPetRecord pet = this.petFinderService.readPet(
+				BigInteger.valueOf(petId), null);
 		try {
-			this.mailManager.send(application);
+			this.mailManager.send(application, pet);
 		} catch (AddressException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

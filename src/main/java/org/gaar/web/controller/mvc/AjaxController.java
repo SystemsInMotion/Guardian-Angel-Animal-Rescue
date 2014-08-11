@@ -6,12 +6,9 @@ import org.apache.log4j.Logger;
 import org.gaar.web.View;
 import org.petfinder.entity.PetfinderPetRecord;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.HttpServerErrorException;
-import org.springframework.web.client.RestClientException;
 
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 
