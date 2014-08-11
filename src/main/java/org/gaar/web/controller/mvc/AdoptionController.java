@@ -24,6 +24,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.systemsinmotion.petrescue.mail.MailManager;
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
+import com.systemsinmotion.petrescue.web.bean.CurrentPet;
+import com.systemsinmotion.petrescue.web.bean.PreviousPet;
+import com.systemsinmotion.petrescue.web.bean.Vet;
 
 import com.systemsinmotion.petrescue.web.bean.PreviousPet;
 import com.systemsinmotion.petrescue.web.bean.Vet;
@@ -86,7 +89,7 @@ public class AdoptionController extends BaseController {
 		application.setEmail("bob@law.com");
 		application.setEmailConfirm("bob@law.com");
 		application.setWhyWantPet(Arrays.asList("Reason one", "Reason two", "Reason three"));
-		
+
 		List<Vet> vets = new ArrayList<Vet>();
 		Vet vet = new Vet();
 		vet.setName("Mr. Vet");
