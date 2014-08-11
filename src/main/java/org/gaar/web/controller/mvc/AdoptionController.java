@@ -1,6 +1,9 @@
 package org.gaar.web.controller.mvc;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
@@ -21,6 +24,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.systemsinmotion.petrescue.mail.MailManager;
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
+
+import com.systemsinmotion.petrescue.web.bean.PreviousPet;
+import com.systemsinmotion.petrescue.web.bean.Vet;
 
 @Controller
 @RequestMapping("adopt")
@@ -79,6 +85,73 @@ public class AdoptionController extends BaseController {
 		application.setMobilePhone("2342342345");
 		application.setEmail("bob@law.com");
 		application.setEmailConfirm("bob@law.com");
+		application.setWhyWantPet(Arrays.asList("Reason one", "Reason two", "Reason three"));
+		
+		List<Vet> vets = new ArrayList<Vet>();
+		Vet vet = new Vet();
+		vet.setName("Mr. Vet");
+		vet.setPhone("2342342345");
+		vets.add(vet);
+		Vet vet2 = new Vet();
+		vet2.setName("Mr. Rival");
+		vet2.setPhone("2342342346");
+		vets.add(vet2);
+		
+		application.setVets(vets);
+		
+		application.setLivingSituation("rent");
+		application.setPetsAllowed(true);
+		application.setPetsAllowedProof(true);
+		
+		application.setYearsLived("10");
+		application.setMonthsLived("0");
+		application.setHouseholdMemberCount(3);
+		application.setHouseholdMemberAges(Arrays.asList(new Integer[]{10,15,25}));
+		application.setFamilyAware(false);
+		application.setFamilyNotAwareReason("Because they smell and I don't talk to them");
+		application.setCaretaker("Gramama");
+		
+		application.setAwareOfUnknownIssues(true);
+		application.setAgreedToHomeVisit(false);
+		
+		application.setCurrentPetCount(2);
+		List<CurrentPet> curPets = new ArrayList<CurrentPet>();
+		CurrentPet cpet1 = new CurrentPet();
+		cpet1.setName("Spike Jr.");
+		cpet1.setBreed("Doggy");
+		cpet1.setAge(1);
+		cpet1.setIsIndoor(true);
+		cpet1.setHasVaccines(true);
+		cpet1.setIsHeartwormed(true);
+		cpet1.setIsSterilized(false);
+		CurrentPet cpet2 = new CurrentPet();
+		cpet2.setName("Meow 2");
+		cpet2.setBreed("Catty Kit");
+		cpet2.setAge(3);
+		cpet2.setIsIndoor(false);
+		cpet2.setHasVaccines(true);
+		cpet2.setIsHeartwormed(false);
+		cpet2.setIsSterilized(true);
+		curPets.add(cpet1);
+		curPets.add(cpet2);
+		application.setCurrentPets(curPets);
+		
+		application.setPreviousPetCount(2);
+		List<PreviousPet> prevPets = new ArrayList<PreviousPet>();
+		PreviousPet ppet1= new PreviousPet();
+		ppet1.setName("Spike");
+		ppet1.setBreed("Doggy");
+		ppet1.setAge(5);
+		ppet1.setIsIndoor(true);
+		PreviousPet ppet2= new PreviousPet();
+		ppet2.setBreed("Kitty Cat");
+		ppet2.setAge(10);
+		ppet2.setIsIndoor(false);
+		ppet2.setName("Meow");
+		prevPets.add(ppet1);
+		prevPets.add(ppet2);
+		application.setPreviousPets(prevPets);
+		
 		String response = new String();
 		try {
 			response = this.mailManager.testEmail(application, pet);
