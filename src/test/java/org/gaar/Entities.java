@@ -28,7 +28,6 @@ public class Entities {
 	public static final Integer ADULTCOUNT = 2;
 	public static final Integer CHILDCOUNT = 3;
 	public static final Integer HOURSALONE = 5;
-	public static final Integer PREVIOUSPETCOUNT = 7;
 	
 	public static final String ADDRESS1 = "Address 1";
 	public static final String ADDRESS2 = "Address 2";
@@ -68,6 +67,10 @@ public class Entities {
 	public static final List<Vet> VETS = vets();
 	public static final List<CurrentPet> CURRENTPETS =currentPets();
 	public static final List<PreviousPet> PREVIOUSPETS = previousPets();
+	public static final Integer PREVIOUSPETCOUNT = PREVIOUSPETS.size();
+	public static final Integer CURRENTPETCOUNT = CURRENTPETS.size();
+	public static final Integer HOUSEHOLDMEMBERCOUNT = HOUSEHOLDMEMBERAGES.size();
+	
 
 
 	public static AdoptionApplication getApplication() {
@@ -95,7 +98,7 @@ public class Entities {
 		application.setEmailConfirm(EMAILCONFIRM);
 		application.setWhyWantPet(WHYWANTPET);
 		application.setHouseholdMemberAges(HOUSEHOLDMEMBERAGES);
-		application.setHouseholdMemberCount(HOUSEHOLDMEMBERAGES.size());
+		application.setHouseholdMemberCount(HOUSEHOLDMEMBERCOUNT);
 		application.setFamilyAware(FAMILYAWARE);
 		application.setFamilyNotAwareReason(FAMILYNOTAWAREREASON);
 		application.setCaretaker(CARETAKER);
@@ -117,10 +120,10 @@ public class Entities {
 		application.setFencedYard(FENCEDYARD);
 		application.setGiveUpSituation(GIVEUPSITUATION);
 
-		application.setCurrentPetCount(CURRENTPETS.size());
+		application.setCurrentPetCount(CURRENTPETCOUNT);
 		application.setCurrentPets(CURRENTPETS);
 
-		application.setPreviousPetCount(PREVIOUSPETS.size());
+		application.setPreviousPetCount(PREVIOUSPETCOUNT);
 		application.setPreviousPets(PREVIOUSPETS);
 
 		return application;
