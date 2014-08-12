@@ -53,9 +53,10 @@ public class AdoptionController extends BaseController {
 
 		return View.adopt.name();
 	}
-	
+
 	@RequestMapping(value = "/test/{petId}", method = RequestMethod.GET)
-	public @ResponseBody String adoptTest_GET(@PathVariable("petId") Integer petId, Model model) {
+	public @ResponseBody String adoptTest_GET(
+			@PathVariable("petId") Integer petId, Model model) {
 		final PetfinderPetRecord pet = this.petFinderService.readPet(
 				BigInteger.valueOf(petId), null);
 
@@ -64,6 +65,7 @@ public class AdoptionController extends BaseController {
 		application.setAnimalType(pet.getAnimal().value());
 		application.setBreeds(pet.getBreeds().getBreed());
 
+		pet.setAnimal(AnimalType.DOG);
 		model.addAttribute("pet", pet);
 		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
 		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
@@ -78,11 +80,11 @@ public class AdoptionController extends BaseController {
 		}
 
 		return response;
-	}	
+	}
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
-	public String adopt_POST(@PathVariable("petId") Integer petId, @Validated AdoptionApplication application,
-			Model model) {
+	public String adopt_POST(@PathVariable("petId") Integer petId,
+			@Validated AdoptionApplication application, Model model) {
 		final PetfinderPetRecord pet = this.petFinderService.readPet(
 				BigInteger.valueOf(petId), null);
 		try {

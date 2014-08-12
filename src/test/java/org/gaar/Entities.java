@@ -27,10 +27,7 @@ public class Entities {
 	
 	public static final Integer ADULTCOUNT = 2;
 	public static final Integer CHILDCOUNT = 3;
-	public static final Integer CURRENTPETCOUNT = 4;
 	public static final Integer HOURSALONE = 5;
-	public static final Integer HOUSEHOLDMEMBERCOUNT = 6;
-	public static final Integer PREVIOUSPETCOUNT = 7;
 	
 	public static final String ADDRESS1 = "Address 1";
 	public static final String ADDRESS2 = "Address 2";
@@ -65,19 +62,29 @@ public class Entities {
 	public static final List<String> WHYWANTPET = Arrays.asList("Reason one", "Reason two", "Reason three");
 	public static final List<Integer> HOUSEHOLDMEMBERAGES = Arrays.asList(10,15,20);
 	public static final List<Integer> HOUSEHOLDMEMBERAGES1 = Arrays.asList(new Integer[] { 10, 15, 25 });
+	public static final List<Integer> CHILDAGES = Arrays.asList(10,15);
+	
+	public static final List<Vet> VETS = vets();
+	public static final List<CurrentPet> CURRENTPETS =currentPets();
+	public static final List<PreviousPet> PREVIOUSPETS = previousPets();
+	public static final Integer PREVIOUSPETCOUNT = PREVIOUSPETS.size();
+	public static final Integer CURRENTPETCOUNT = CURRENTPETS.size();
+	public static final Integer HOUSEHOLDMEMBERCOUNT = HOUSEHOLDMEMBERAGES.size();
+	
 
 
 	public static AdoptionApplication getApplication() {
 		AdoptionApplication application = new AdoptionApplication();
 		
-		List<Integer> CHILDAGES;
-		List<CurrentPet> CURRENTPETS;
-		List<PreviousPet> PREVIOUSPETS;
-		List<Vet> VETS;
 
 		application.setPetName(PETNAME);
 		application.setAnimalType(ANIMALTYPE);
 		application.setBreeds(BREED);
+		application.setVets(VETS);
+		application.setPetLivingLocation(PETLIVINGLOCATION);
+		application.setPlanToDeclaw(PLANTODECLAW);
+		application.setDestructiveBehavior(DESTRUCTIVEBEHAVIOR);
+		application.setAnimalType(ANIMALTYPE);
 
 		application.setFirstName(FIRSTNAME);
 		application.setLastName(LASTNAME);
@@ -90,8 +97,13 @@ public class Entities {
 		application.setEmail(EMAIL);
 		application.setEmailConfirm(EMAILCONFIRM);
 		application.setWhyWantPet(WHYWANTPET);
-
-		application.setVets(vets());
+		application.setHouseholdMemberAges(HOUSEHOLDMEMBERAGES);
+		application.setHouseholdMemberCount(HOUSEHOLDMEMBERCOUNT);
+		application.setFamilyAware(FAMILYAWARE);
+		application.setFamilyNotAwareReason(FAMILYNOTAWAREREASON);
+		application.setCaretaker(CARETAKER);
+		application.setAwareOfUnknownIssues(AWAREOFUNKNOWNISSUES);
+		application.setAgreedToHomeVisit(AGREEDTOHOMEVISIT);
 
 		application.setLivingSituation(LIVINGSITUATION);
 		application.setPetsAllowed(PETSALLOWED);
@@ -99,19 +111,7 @@ public class Entities {
 
 		application.setYearsLived(YEARSLIVED);
 		application.setMonthsLived(MONTHSLIVED);
-		application.setHouseholdMemberCount(HOUSEHOLDMEMBERCOUNT);
-		application.setHouseholdMemberAges(HOUSEHOLDMEMBERAGES);
-		application.setFamilyAware(FAMILYAWARE);
-		application.setFamilyNotAwareReason(FAMILYNOTAWAREREASON);
-		application.setCaretaker(CARETAKER);
 
-		application.setAwareOfUnknownIssues(AWAREOFUNKNOWNISSUES);
-		application.setAgreedToHomeVisit(AGREEDTOHOMEVISIT);
-
-		application.setPetLivingLocation(PETLIVINGLOCATION);
-		application.setPlanToDeclaw(PLANTODECLAW);
-		application.setDestructiveBehavior(DESTRUCTIVEBEHAVIOR);
-		application.setAnimalType(ANIMALTYPE);
 		application.setHaveAppliedElsewhere(HAVEAPPLIEDELSEWHERE);
 		application.setTimeSearching(TIMESEARCHING);
 		application.setWhereApplied(WHEREAPPLIED);
@@ -121,18 +121,26 @@ public class Entities {
 		application.setGiveUpSituation(GIVEUPSITUATION);
 
 		application.setCurrentPetCount(CURRENTPETCOUNT);
-		List<CurrentPet> curPets = new ArrayList<CurrentPet>();
-		curPets.add(getCurrentPet("Spike Jr."));
-		curPets.add(getCurrentPet("Meow 2"));
-		application.setCurrentPets(curPets);
+		application.setCurrentPets(CURRENTPETS);
 
-		application.setPreviousPetCount(2);
+		application.setPreviousPetCount(PREVIOUSPETCOUNT);
+		application.setPreviousPets(PREVIOUSPETS);
+
+		return application;
+	}
+
+	private static List<PreviousPet> previousPets() {
 		List<PreviousPet> prevPets = new ArrayList<PreviousPet>();
 		prevPets.add(getPreviousPet("Spike"));
 		prevPets.add(getPreviousPet("Meow"));
-		application.setPreviousPets(prevPets);
+		return prevPets;
+	}
 
-		return application;
+	private static List<CurrentPet> currentPets() {
+		List<CurrentPet> curPets = new ArrayList<CurrentPet>();
+		curPets.add(getCurrentPet("Spike Jr."));
+		curPets.add(getCurrentPet("Meow 2"));
+		return curPets;
 	}
 
 	private static List<Vet> vets() {

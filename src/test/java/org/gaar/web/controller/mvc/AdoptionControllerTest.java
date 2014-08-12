@@ -21,7 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetfinderPetRecord;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
@@ -31,6 +31,7 @@ import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
 @RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("/test-context.xml")
 public class AdoptionControllerTest {
 
 	private Integer petId;
@@ -39,10 +40,8 @@ public class AdoptionControllerTest {
 	
 	private String petFormat = null;
 	
-	@Autowired
 	private PetFinderConsumer petFinderService;
 	
-	@Autowired
 	private MailManager mailManager;
 	
 	private PetfinderPetRecord mockPet;
@@ -64,9 +63,11 @@ public class AdoptionControllerTest {
 		petId = random.nextInt();
 		bigPetId = BigInteger.valueOf(petId);
 		petFinderService = mock(PetFinderConsumer.class);
+		controller.petFinderService = this.petFinderService;
 		when(petFinderService.readPet(eq(bigPetId), eq(petFormat))).thenReturn(mockPet);
 
 		mailManager = mock(MailManager.class);
+		controller.mailManager = this.mailManager;
 		doNothing().when(mailManager).send(mockApplication, mockPet);
 	}
 	
