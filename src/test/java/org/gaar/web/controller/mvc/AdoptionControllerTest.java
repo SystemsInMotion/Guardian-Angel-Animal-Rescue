@@ -2,13 +2,15 @@ package org.gaar.web.controller.mvc;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.math.BigInteger;
+import java.util.Random;
 
 import javax.mail.MessagingException;
 
@@ -19,7 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetfinderPetRecord;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
@@ -29,18 +31,19 @@ import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/test-context.xml")
 public class AdoptionControllerTest {
 
-	private static final Integer PET_ID = 10;
+	private Integer petId;
 	
-	private static final BigInteger BIG_PET_ID = BigInteger.TEN;
+	private BigInteger bigPetId;
 	
-	private static final String PET_FORMAT = null;
+	private String petFormat = null;
 	
-	private PetFinderConsumer mockPetFinderService;
+	@Autowired
+	private PetFinderConsumer petFinderService;
 	
-	private MailManager mockMailManager;
+	@Autowired
+	private MailManager mailManager;
 	
 	private PetfinderPetRecord mockPet;
 	
@@ -50,24 +53,26 @@ public class AdoptionControllerTest {
 
 	private AdoptionController controller;
 	
+	private static Random random = new Random();
+	
 	@Before
 	public void init() throws MessagingException {
 		controller = new AdoptionController();
 		mockPet = Entities.getPet();
 		mockApplication = Entities.getApplication();
 		
-		mockPetFinderService = mock(PetFinderConsumer.class);
-		when(mockPetFinderService.readPet(BIG_PET_ID, PET_FORMAT)).thenReturn(mockPet);
-		
-		mockMailManager = mock(MailManager.class);
-		doNothing().when(mockMailManager).send(mockApplication, mockPet);
-		
-		when(BigInteger.valueOf(PET_ID)).thenReturn(BIG_PET_ID);
+		petId = random.nextInt();
+		bigPetId = BigInteger.valueOf(petId);
+		petFinderService = mock(PetFinderConsumer.class);
+		when(petFinderService.readPet(eq(bigPetId), eq(petFormat))).thenReturn(mockPet);
+
+		mailManager = mock(MailManager.class);
+		doNothing().when(mailManager).send(mockApplication, mockPet);
 	}
 	
 	@Test
 	public void testAdopt_GET() {
-		String view = controller.adopt_GET(PET_ID, model);
+		String view = controller.adopt_GET(petId, model);
 		
 		PetfinderPetRecord controllerPet = (PetfinderPetRecord) model.asMap().get("pet");
 		AdoptionApplication controllerApplication =  (AdoptionApplication) model.asMap().get("application"); 
@@ -86,11 +91,11 @@ public class AdoptionControllerTest {
 	
 	@Test
 	public void testAdopt_POST() throws MessagingException {
-		String view = controller.adopt_POST(PET_ID, mockApplication, model);
+		String view = controller.adopt_POST(petId, mockApplication, model);
 		
 		assertNotNull(view);
 		assertEquals(View.adopt_thanks.name(), view);
-		verify(mockMailManager, atLeastOnce()).send(mockApplication, mockPet);		
+		verify(mailManager, atLeastOnce()).send(mockApplication, mockPet);		
 	}
 	
 	@Test
