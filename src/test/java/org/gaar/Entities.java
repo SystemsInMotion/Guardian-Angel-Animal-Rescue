@@ -15,6 +15,7 @@ public class Entities {
 	
 	public static final String PETNAME = "Pet name";
 	public static final String ANIMALTYPE = "Animal type";
+	public static final List<String> BREED = Arrays.asList("Breed one", "Breed two", "Breed three");
 
 	public static final Boolean AGREEDTOHOMEVISIT = true;
 	public static final Boolean AWAREOFUNKNOWNISSUES = true;
@@ -69,16 +70,14 @@ public class Entities {
 	public static AdoptionApplication getApplication() {
 		AdoptionApplication application = new AdoptionApplication();
 		
-		List<String> BREEDS;
 		List<Integer> CHILDAGES;
 		List<CurrentPet> CURRENTPETS;
 		List<PreviousPet> PREVIOUSPETS;
 		List<Vet> VETS;
 
-		PetfinderPetRecord pet = getPet();
-		application.setPetName(pet.getName());
-		application.setAnimalType(pet.getAnimal().value());
-		application.setBreeds(pet.getBreeds().getBreed());
+		application.setPetName(PETNAME);
+		application.setAnimalType(ANIMALTYPE);
+		application.setBreeds(BREED);
 
 		application.setFirstName(FIRSTNAME);
 		application.setLastName(LASTNAME);
