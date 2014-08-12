@@ -14,7 +14,7 @@ import java.util.Random;
 
 import javax.mail.MessagingException;
 
-import org.gaar.Entities;
+import org.gaar.util.Entities;
 import org.gaar.web.View;
 import org.junit.Before;
 import org.junit.Test;

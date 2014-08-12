@@ -1,9 +1,0 @@
-<html>
-	<head>
-		
-	</head>
-	<body>
-		#set ($foo = "Velocity")
-		Hello $foo World!
-	</body>
-</html>

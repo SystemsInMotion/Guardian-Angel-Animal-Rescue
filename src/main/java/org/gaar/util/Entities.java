@@ -1,4 +1,4 @@
-package org.gaar;
+package org.gaar.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -114,12 +114,16 @@ public class Entities {
 		application.setYearsLived(YEARSLIVED);
 		application.setMonthsLived(MONTHSLIVED);
 
+		application.setHoursAlone(HOURSALONE);
+		application.setMovingPlan(MOVINGPLAN);
+		application.setIdealPet(IDEALPET);
 		application.setHaveAppliedElsewhere(HAVEAPPLIEDELSEWHERE);
 		application.setTimeSearching(TIMESEARCHING);
 		application.setWhereApplied(WHEREAPPLIED);
 		application.setSleepLocation(SLEEPLOCATION);
 		application.setFailedAdoptionReason(FAILEDADOPTIONREASON);
 		application.setFencedYard(FENCEDYARD);
+		application.setHowContainPet(HOWCONTAINPET);
 		application.setGiveUpSituation(GIVEUPSITUATION);
 
 		application.setCurrentPetCount(CURRENTPETCOUNT);
@@ -160,6 +164,11 @@ public class Entities {
 
 	public static PetfinderPetRecord getPet() {
 		PetfinderPetRecord pet = new PetfinderPetRecord();
+		pet.setName("Meow");
+		pet.setAnimal(AnimalType.CAT);
+		
+		PetfinderBreedList petBreeds = new PetfinderBreedList();
+		pet.setBreeds(petBreeds);
 
 		return pet;
 	}
@@ -167,10 +176,6 @@ public class Entities {
 	public static PetfinderPetRecord getPet(String name) {
 		PetfinderPetRecord pet = getPet();
 		pet.setName(name);
-		pet.setAnimal(AnimalType.CAT);
-		
-		PetfinderBreedList petBreeds = new PetfinderBreedList();
-		pet.setBreeds(petBreeds);
 		return pet;
 		
 	}

@@ -6,7 +6,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 
 import org.apache.log4j.Logger;
-import org.gaar.Entities;
+import org.gaar.util.Entities;
 import org.gaar.web.View;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetfinderPetRecord;
