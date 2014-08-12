@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.petfinder.entity.AnimalType;
+import org.petfinder.entity.PetfinderBreedList;
 import org.petfinder.entity.PetfinderPetRecord;
 
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
@@ -165,7 +167,10 @@ public class Entities {
 	public static PetfinderPetRecord getPet(String name) {
 		PetfinderPetRecord pet = getPet();
 		pet.setName(name);
-
+		pet.setAnimal(AnimalType.CAT);
+		
+		PetfinderBreedList petBreeds = new PetfinderBreedList();
+		pet.setBreeds(petBreeds);
 		return pet;
 		
 	}
