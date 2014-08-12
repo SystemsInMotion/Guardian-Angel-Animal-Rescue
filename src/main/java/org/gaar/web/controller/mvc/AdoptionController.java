@@ -52,17 +52,20 @@ public class AdoptionController extends BaseController {
 
 		return View.adopt.name();
 	}
-	
+
 	@RequestMapping(value = "/test/{petId}", method = RequestMethod.GET)
-	public @ResponseBody String adoptTest_GET(@PathVariable("petId") Integer petId, Model model) {
+	public @ResponseBody String adoptTest_GET(
+			@PathVariable("petId") Integer petId, Model model) {
 		final PetfinderPetRecord pet = this.petFinderService.readPet(
 				BigInteger.valueOf(petId), null);
 
 		AdoptionApplication application = new AdoptionApplication();
+
 		application.setPetName(pet.getName());
 		application.setAnimalType(pet.getAnimal().value());
 		application.setBreeds(pet.getBreeds().getBreed());
 
+		pet.setAnimal(AnimalType.DOG);
 		model.addAttribute("pet", pet);
 		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
 		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
@@ -73,12 +76,29 @@ public class AdoptionController extends BaseController {
 		application.setLastName("Law");
 		application.setAddress1("1234 Unknown Av");
 		application.setAddress2("Apt -1");
-		application.setZipCode( "48197");
+		application.setZipCode("48197");
 		application.setCity("Ypsitucky");
 		application.setHomePhone("2342342345");
 		application.setMobilePhone("2342342345");
 		application.setEmail("bob@law.com");
 		application.setEmailConfirm("bob@law.com");
+		application.setPetLivingLocation("outside");
+		application.setPlanToDeclaw("all");
+		application.setDestructiveBehavior("cry");
+		application.setAnimalType("DOG");
+		application.setHaveAppliedElsewhere(true);
+		application.setTimeSearching("along");
+		application.setWhereApplied("home");
+		application.setSleepLocation("in bed");
+		application.setFailedAdoptionReason("None");
+		application.setFencedYard("completely");
+		application.setGiveUpSituation("None");
+		application.setPlanToAttendObedienceClasses(true);
+		application.setHoursAlone(1);
+		application.setDaytimeLocation("Home");
+		application.setMovingPlan("bring with");
+		application.setIdealPet("Dog");
+
 		String response = new String();
 		try {
 			response = this.mailManager.testEmail(application, pet);
@@ -88,11 +108,11 @@ public class AdoptionController extends BaseController {
 		}
 
 		return response;
-	}	
+	}
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
-	public String adopt_POST(@PathVariable("petId") Integer petId, @Validated AdoptionApplication application,
-			Model model) {
+	public String adopt_POST(@PathVariable("petId") Integer petId,
+			@Validated AdoptionApplication application, Model model) {
 		final PetfinderPetRecord pet = this.petFinderService.readPet(
 				BigInteger.valueOf(petId), null);
 		try {
