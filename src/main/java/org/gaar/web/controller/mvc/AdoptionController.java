@@ -6,6 +6,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 
 import org.apache.log4j.Logger;
+import org.gaar.Entities;
 import org.gaar.web.View;
 import org.petfinder.entity.AnimalType;
 import org.petfinder.entity.PetfinderPetRecord;
@@ -59,8 +60,12 @@ public class AdoptionController extends BaseController {
 		final PetfinderPetRecord pet = this.petFinderService.readPet(
 				BigInteger.valueOf(petId), null);
 
+<<<<<<< HEAD
 		AdoptionApplication application = new AdoptionApplication();
 
+=======
+		AdoptionApplication application = Entities.getApplication();
+>>>>>>> d9a31918acabf064e938ed3cef1b4fede8ba5343
 		application.setPetName(pet.getName());
 		application.setAnimalType(pet.getAnimal().value());
 		application.setBreeds(pet.getBreeds().getBreed());
@@ -71,6 +76,7 @@ public class AdoptionController extends BaseController {
 		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
 		model.addAttribute("application", application);
 
+<<<<<<< HEAD
 		// Testing Attr
 		application.setFirstName("Bob");
 		application.setLastName("Law");
@@ -99,6 +105,8 @@ public class AdoptionController extends BaseController {
 		application.setMovingPlan("bring with");
 		application.setIdealPet("Dog");
 
+=======
+>>>>>>> d9a31918acabf064e938ed3cef1b4fede8ba5343
 		String response = new String();
 		try {
 			response = this.mailManager.testEmail(application, pet);
