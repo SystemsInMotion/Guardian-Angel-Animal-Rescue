@@ -60,7 +60,12 @@ public class AdoptionController extends BaseController {
 		final PetfinderPetRecord pet = this.petFinderService.readPet(
 				BigInteger.valueOf(petId), null);
 
+<<<<<<< HEAD
+		AdoptionApplication application = new AdoptionApplication();
+
+=======
 		AdoptionApplication application = Entities.getApplication();
+>>>>>>> d9a31918acabf064e938ed3cef1b4fede8ba5343
 		application.setPetName(pet.getName());
 		application.setAnimalType(pet.getAnimal().value());
 		application.setBreeds(pet.getBreeds().getBreed());
@@ -71,6 +76,37 @@ public class AdoptionController extends BaseController {
 		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
 		model.addAttribute("application", application);
 
+<<<<<<< HEAD
+		// Testing Attr
+		application.setFirstName("Bob");
+		application.setLastName("Law");
+		application.setAddress1("1234 Unknown Av");
+		application.setAddress2("Apt -1");
+		application.setZipCode("48197");
+		application.setCity("Ypsitucky");
+		application.setHomePhone("2342342345");
+		application.setMobilePhone("2342342345");
+		application.setEmail("bob@law.com");
+		application.setEmailConfirm("bob@law.com");
+		application.setPetLivingLocation("outside");
+		application.setPlanToDeclaw("all");
+		application.setDestructiveBehavior("cry");
+		application.setAnimalType("DOG");
+		application.setHaveAppliedElsewhere(true);
+		application.setTimeSearching("along");
+		application.setWhereApplied("home");
+		application.setSleepLocation("in bed");
+		application.setFailedAdoptionReason("None");
+		application.setFencedYard("completely");
+		application.setGiveUpSituation("None");
+		application.setPlanToAttendObedienceClasses(true);
+		application.setHoursAlone(1);
+		application.setDaytimeLocation("Home");
+		application.setMovingPlan("bring with");
+		application.setIdealPet("Dog");
+
+=======
+>>>>>>> d9a31918acabf064e938ed3cef1b4fede8ba5343
 		String response = new String();
 		try {
 			response = this.mailManager.testEmail(application, pet);
