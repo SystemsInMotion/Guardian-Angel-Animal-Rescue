@@ -203,8 +203,8 @@ public class Entities {
 		PreviousPet pet = new PreviousPet();
 		pet.setName("Spike");
 		pet.setBreed("Doggy");
-		pet.setAge(5);
-		pet.setIsIndoor(true);
+		pet.setOwnedHowLong(5);
+		pet.setWhereNow("Pet Cemetary");
 
 		return pet;
 	}

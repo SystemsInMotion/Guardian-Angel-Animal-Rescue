@@ -54,32 +54,32 @@ public class AdoptionController extends BaseController {
 		return View.adopt.name();
 	}
 
-	@RequestMapping(value = "/test/{petId}", method = RequestMethod.GET)
-	public @ResponseBody String adoptTest_GET(
-			@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(
-				BigInteger.valueOf(petId), null);
-
-		AdoptionApplication application = Entities.getApplication();
-		application.setPetName(pet.getName());
-		application.setAnimalType(pet.getAnimal().value());
-		application.setBreeds(pet.getBreeds().getBreed());
-
-		model.addAttribute("pet", pet);
-		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
-		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
-		model.addAttribute("application", application);
-
-		String response = new String();
-		try {
-			response = this.mailManager.testEmail(application, pet);
-		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return response;
-	}
+//	@RequestMapping(value = "/test/{petId}", method = RequestMethod.GET)
+//	public @ResponseBody String adoptTest_GET(
+//			@PathVariable("petId") Integer petId, Model model) {
+//		final PetfinderPetRecord pet = this.petFinderService.readPet(
+//				BigInteger.valueOf(petId), null);
+//
+//		AdoptionApplication application = Entities.getApplication();
+//		application.setPetName(pet.getName());
+//		application.setAnimalType(pet.getAnimal().value());
+//		application.setBreeds(pet.getBreeds().getBreed());
+//
+//		model.addAttribute("pet", pet);
+//		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
+//		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
+//		model.addAttribute("application", application);
+//
+//		String response = new String();
+//		try {
+//			response = this.mailManager.getText(application, pet);
+//		} catch (MessagingException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//
+//		return response;
+//	}
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
 	public String adopt_POST(@PathVariable("petId") Integer petId,

@@ -8,33 +8,33 @@
 			apply)</form:label>
 		<div class="row grid4col">
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Companion
+				<input type="checkbox" name="whyWantPet" value="Companion"> Companion
 			</div>
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Child's Pet
+				<input type="checkbox" name="whyWantPet" value="Child's Pet"> Child's Pet
 			</div>
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Companion to
+				<input type="checkbox" name="whyWantPet" value="Companion to another pet"> Companion to
 				another pet
 			</div>
 		</div>
 		<div class="row grid4col">
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Hunter
+				<input type="checkbox" name="whyWantPet" value="Hunter"> Hunter
 			</div>
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Mouser
+				<input type="checkbox" name="whyWantPet" value="Mouser"> Mouser
 			</div>
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Gift
+				<input type="checkbox" name="whyWantPet" value="Gift"> Gift
 			</div>
 		</div>
 		<div class="row grid4col last">
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Other
+				<input type="checkbox" name="whyWantPet" value="Other"> Other
 			</div>
 			<div class="column">
-				<input type="checkbox" name="whyWantPet"> Guard
+				<input type="checkbox" name="whyWantPet" value="Guard"> Guard
 			</div>
 		</div>
 	</div>
