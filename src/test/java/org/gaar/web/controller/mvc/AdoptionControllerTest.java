@@ -14,7 +14,6 @@ import java.util.Random;
 
 import javax.mail.MessagingException;
 
-import org.gaar.util.Entities;
 import org.gaar.web.View;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,6 +28,7 @@ import org.springframework.ui.Model;
 import com.systemsinmotion.petrescue.mail.MailManager;
 import com.systemsinmotion.petrescue.web.PetFinderConsumer;
 import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
+import com.systemsinmotion.petrescue.web.bean.Entities;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/test-context.xml")
