@@ -29,6 +29,12 @@
 		<url-pattern>/app/*</url-pattern>
 	</servlet-mapping>
 
+	<!-- Mapping for bookmarks and cached pages -->
+	<servlet-mapping>
+		<servlet-name>MVC Servlet</servlet-name>
+		<url-pattern>/ga/app/*</url-pattern>
+	</servlet-mapping>
+	
 	<filter>
 		<filter-name>characterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
