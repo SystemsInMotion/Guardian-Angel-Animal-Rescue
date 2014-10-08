@@ -20,13 +20,17 @@
 			<input type="text" name="address2" id="address2">
 		</div>
 		<div class="row">
+			<form:label for="city" path="city" cssErrorClass="error">City</form:label>
+			<input type="text" name="city" id="city" class="required">
+		</div>
+		<div class="row">
+			<form:label for="state" path="state" cssErrorClass="error">State</form:label>
+			<input type="text" name="state" id="state" class="required">
+		</div>
+		<div class="row">
 			<form:label for="zipCode" path="zipCode" cssErrorClass="error">Zip code</form:label>
 			<input type="text" name="zipCode" id="zipCode"
 				class="zipcodeUS required">
-		</div>
-		<div class="row">
-			<form:label for="city" path="city" cssErrorClass="error">City</form:label>
-			<input type="text" name="city" id="city" class="required">
 		</div>
 		<div class="row">
 			<form:label for="homePhone" path="homePhone" cssErrorClass="error">Home phone</form:label>
