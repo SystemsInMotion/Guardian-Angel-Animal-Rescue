@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.systemsinmotion</groupId>
 		<artifactId>petrescue-parent</artifactId>
-		<version>0.8-SNAPSHOT</version>
+		<version>0.8.4</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -15,60 +15,58 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-   	</properties>
+	</properties>
 
 	<build>
 		<finalName>ga</finalName>
 
 		<plugins>
+			<!-- <plugin> -->
+			<!-- <groupId>org.apache.maven.plugins</groupId> -->
+			<!-- <artifactId>maven-war-plugin</artifactId> -->
+			<!-- <version>2.4</version> -->
+			<!-- <configuration> -->
+			<!-- <warName>ga</warName> -->
+			<!-- <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.codehaus.mojo</groupId> -->
+<!-- 				<artifactId>properties-maven-plugin</artifactId> -->
+<!-- 				<version>1.0-alpha-2</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<phase>initialize</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>read-project-properties</goal> -->
+<!-- 						</goals> -->
+<!-- 						<configuration> -->
+<!-- 							<files> -->
+<!-- 							</files> -->
+<!-- 						</configuration> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.codehaus.mojo</groupId> -->
+<!-- 				<artifactId>tomcat-maven-plugin</artifactId> -->
+<!-- 				<version>1.1</version> -->
+<!-- 				<configuration> -->
+<!-- 					<charset>UTF-8</charset> -->
+<!-- 					<server>skronek.org</server> -->
+<!-- 					<url>http://www.skronek.org:8080/manager/html</url> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
+
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
 				<configuration>
-					<warName>ga</warName>
-					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+					<server>localTomcat7</server>
+					<path>/ga</path>
 				</configuration>
 			</plugin>
-<!--
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>properties-maven-plugin</artifactId>
-				<version>1.0-alpha-2</version>
-				<executions>
-					<execution>
-						<phase>initialize</phase>
-						<goals>
-							<goal>read-project-properties</goal>
-						</goals>
-						<configuration>
-							<files>
-							</files>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>tomcat-maven-plugin</artifactId>
-				<version>1.1</version>
-				<configuration>
-					<charset>UTF-8</charset>
-					<server>skronek.org</server>
-					<url>http://www.skronek.org:8080/manager/html</url>
-				</configuration>
-			</plugin>
--->
-
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
-                <configuration >
-
-                </configuration>
-            </plugin>
 
 		</plugins>
 
@@ -124,16 +122,11 @@
 
 	<dependencies>
 		<!-- PetFinder and PetRescue -->
-		<dependency>
-			<groupId>org.petfinder</groupId>
-			<artifactId>petfinder-api</artifactId>
-			<version>0.9</version>
-		</dependency>
 
 		<dependency>
 			<groupId>com.systemsinmotion</groupId>
 			<artifactId>petrescue-core</artifactId>
-			<version>${parent.version}</version>
+			<version>0.8.4</version>
 		</dependency>
 
 
