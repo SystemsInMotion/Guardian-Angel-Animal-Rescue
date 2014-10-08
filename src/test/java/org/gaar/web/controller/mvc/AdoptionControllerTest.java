@@ -68,7 +68,7 @@ public class AdoptionControllerTest {
 
 		mailManager = mock(MailManager.class);
 		controller.mailManager = this.mailManager;
-		doNothing().when(mailManager).send(mockApplication, mockPet);
+		doNothing().when(mailManager).sendAdoptionApplication(mockApplication, mockPet);
 	}
 	
 	@Test
@@ -96,7 +96,7 @@ public class AdoptionControllerTest {
 		
 		assertNotNull(view);
 		assertEquals(View.adopt_thanks.name(), view);
-		verify(mailManager, atLeastOnce()).send(mockApplication, mockPet);		
+		verify(mailManager, atLeastOnce()).sendAdoptionApplication(mockApplication, mockPet);		
 	}
 	
 	@Test
