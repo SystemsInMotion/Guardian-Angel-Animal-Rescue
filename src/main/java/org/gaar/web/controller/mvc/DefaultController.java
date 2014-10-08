@@ -3,6 +3,7 @@ package org.gaar.web.controller.mvc;
 import java.math.BigInteger;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gaar.web.View;
 import org.petfinder.entity.PetfinderPetRecord;
@@ -77,11 +78,21 @@ public class DefaultController extends BaseController {
 	}
 
 	@RequestMapping("pet/{petId}")
-	public String pet(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
-		logger.info("pet : " + pet);
-		model.addAttribute("pet", pet);
-		return View.pet.name();
+	public String pet(@PathVariable("petId") String petId, Model model) {
+		View view = View.pet_unavailable;
+		if (StringUtils.isNotBlank(petId) && StringUtils.isNumeric(petId)) {
+			final PetfinderPetRecord pet = this.petFinderService.readPet(new BigInteger(petId), null);
+			if (pet != null) {
+				logger.info("Retrieved pet : " + pet.getName());
+				model.addAttribute("pet", pet);
+				view = View.pet;
+			} else {
+				logger.info("Pet with id " + petId + " not found.");
+			}
+		} else {
+			logger.info("Invalid pet identifier requested: " + petId);
+		}
+		return view.name();
 	}
 
 	@RequestMapping("volunteer")
