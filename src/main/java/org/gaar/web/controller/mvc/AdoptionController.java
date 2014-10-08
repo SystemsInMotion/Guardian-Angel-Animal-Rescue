@@ -3,7 +3,6 @@ package org.gaar.web.controller.mvc;
 import java.math.BigInteger;
 
 import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 
 import org.apache.log4j.Logger;
 import org.gaar.web.View;
@@ -36,8 +35,7 @@ public class AdoptionController extends BaseController {
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.GET)
 	public String adopt_GET(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(
-				BigInteger.valueOf(petId), null);
+		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
 
 		AdoptionApplication application = new AdoptionApplication();
 		application.setPetName(pet.getName());
@@ -53,17 +51,12 @@ public class AdoptionController extends BaseController {
 	}
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
-	public String adopt_POST(@PathVariable("petId") Integer petId,
-			@Validated AdoptionApplication application, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(
-				BigInteger.valueOf(petId), null);
+	public String adopt_POST(@PathVariable("petId") Integer petId, @Validated AdoptionApplication application,
+			Model model) {
+		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
 		try {
-			this.mailManager.send(application, pet);
-		} catch (AddressException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			this.mailManager.sendAdoptionApplication(application, pet);
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		model.addAttribute("petName", application.getPetName());
