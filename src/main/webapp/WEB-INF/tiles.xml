@@ -51,12 +51,6 @@
 		<put-attribute name="title" type="string" value="About Our Team" />
 		<put-attribute name="center-content" value="/WEB-INF/view/about/team.jsp" />
 	</definition>
-<!-- 
-	<definition name="admin" extends="default_layout">
-		<put-attribute name="title" type="string" value="Administration" />
-		<put-attribute name="main-content" value="/WEB-INF/view/admin/admin.jsp" />
-	</definition>
--->
 
 	<definition name="adopt" extends="home_layout">
 		<put-attribute name="title" type="string" value="Adoption Application" />
@@ -68,19 +62,12 @@
 		<put-attribute name="title" type="string" value="Thank You" />
 		<put-attribute name="main-content" value="/WEB-INF/view/adopt-thanks.jsp" />
 	</definition>
-
+	
 	<definition name="brokenWings" extends="base_layout">
 		<put-attribute name="title" type="string" value="Broken Wings" />
 		<put-attribute name="main-content" value="/WEB-INF/view/brokenWings.jsp" />
 	</definition>
-<!-- 
-	<definition name="cat_adoption" extends="print_app_layout">
-		<put-attribute name="title" type="string"
-			value="Cat Adoption Application" />
-		<put-attribute name="main-content"
-			value="/WEB-INF/view/admin/adoption-application.jsp" />
-	</definition>
--->
+
 	<definition name="cat_carousel" template="/WEB-INF/fragments/cat-carousel.jsp" />
 	
 	<definition name="cats" extends="base_layout">
@@ -92,24 +79,15 @@
 		<put-attribute name="title" type="string" value="Contact" />
 		<put-attribute name="main-content" value="/WEB-INF/view/contact.jsp" />
 	</definition>
-<!-- 
-	<definition name="dog_adoption" extends="print_app_layout">
-		<put-attribute name="title" type="string"
-			value="Dog Adoption Application" />
-		<put-attribute name="main-content"
-			value="/WEB-INF/view/admin/adoption-application.jsp" />
-	</definition>
--->
+
 	<definition name="dog_carousel" template="/WEB-INF/fragments/dog-carousel.jsp" />
 
 	<definition name="dogs" extends="base_layout">
 		<put-attribute name="title" type="string" value="Adoptable Dogs" />
 		<put-attribute name="main-content" value="/WEB-INF/view/pets.jsp" />
 	</definition>
-	
 
 	<definition name="email" template="/WEB-INF/email.jsp" />
-
 
 	<definition name="faq" extends="base_layout">
 		<put-attribute name="title" type="string" value="FAQ" />
@@ -128,17 +106,11 @@
 		<put-attribute name="main-content" value="/WEB-INF/view/pet.jsp" />
 	</definition>
 
-<!-- 
-	<definition name="adoptions" extends="default_layout">
-		<put-attribute name="title" type="string" value="Adoptions" />
-		<put-attribute name="main-content" value="/WEB-INF/view/adoptions.jsp" />
+	<definition name="pet_unavailable" extends="base_layout">
+		<put-attribute name="title" type="string" value="Pet Unavailable" />
+		<put-attribute name="main-content" value="/WEB-INF/view/pet-unavailable.jsp" />
 	</definition>
-
-	<definition name="like" extends="default_layout">
-		<put-attribute name="title" type="string" value="Like" />
-		<put-attribute name="center-content" value="/WEB-INF/view/like.jsp" />
-	</definition>
--->
+	
 	<definition name="kroger" extends="support_layout">
 		<put-attribute name="title" type="string" value="Support - Kroger Community Rewards" />
 		<put-attribute name="center-content" value="/WEB-INF/view/support/kroger.jsp" />
