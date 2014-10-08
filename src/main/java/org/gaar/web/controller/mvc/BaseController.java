@@ -20,21 +20,25 @@ public abstract class BaseController {
 
 	@ExceptionHandler(Exception.class)
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-	public ModelAndView handleExceptions(final Exception exception, HttpServletRequest request, HttpServletResponse response) throws MessagingException {
+	public ModelAndView handleExceptions(final Exception exception,
+			HttpServletRequest request, HttpServletResponse response)
+			throws MessagingException {
 		ModelAndView mav = new ModelAndView();
-		mailManager.send_error(exception, request.getPathInfo());
-		if (request.getPathInfo().equals("/dogs")) {
+		String pathInfo = request.getPathInfo();
+		mailManager.sendErrorEmail(exception, pathInfo);
+		
+		if (pathInfo.equals("/dogs")) {
 			mav.setViewName(View.dogs.name());
 			mav.addObject("pets", null);
 			mav.addObject("animalType", "Dogs");
-		} else if (request.getPathInfo().equals("/cats")) {
+		} else if (pathInfo.equals("/cats")) {
 			mav.setViewName(View.cats.name());
 			mav.addObject("pets", null);
 			mav.addObject("animalType", "Cats");
-		} else if (request.getPathInfo().equals("/ajax/cat-carousel")) {
+		} else if (pathInfo.equals("/ajax/cat-carousel")) {
 			mav.setViewName(View.cat_carousel.name());
 			mav.addObject("cats", null);
-		} else if (request.getPathInfo().equals("/ajax/dog-carousel")) {
+		} else if (pathInfo.equals("/ajax/dog-carousel")) {
 			mav.setViewName(View.cat_carousel.name());
 			mav.addObject("dogs", null);
 		} else {
