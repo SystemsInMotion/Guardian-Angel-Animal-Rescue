@@ -2,7 +2,7 @@ package org.gaar.web.controller.mvc;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.mockito.Matchers.eq;
+import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
@@ -38,6 +38,8 @@ public class AdoptionControllerTest {
 	
 	private BigInteger bigPetId;
 	
+	private BigInteger unknownPetId;
+	
 	private String petFormat = null;
 	
 	private PetFinderConsumer petFinderService;
@@ -56,24 +58,26 @@ public class AdoptionControllerTest {
 	
 	@Before
 	public void init() throws MessagingException {
-		controller = new AdoptionController();
 		mockPet = Entities.getPet();
 		mockApplication = Entities.getApplication();
 		
-		petId = random.nextInt();
+		petId = Math.abs(random.nextInt());
 		bigPetId = BigInteger.valueOf(petId);
+		unknownPetId = BigInteger.valueOf(Math.abs(random.nextInt()));
+		
 		petFinderService = mock(PetFinderConsumer.class);
-		controller.petFinderService = this.petFinderService;
 		when(petFinderService.readPet(eq(bigPetId), eq(petFormat))).thenReturn(mockPet);
+		when(petFinderService.readPet(eq(unknownPetId), eq(petFormat))).thenReturn(null);
 
 		mailManager = mock(MailManager.class);
-		controller.mailManager = this.mailManager;
 		doNothing().when(mailManager).sendAdoptionApplication(mockApplication, mockPet);
+		
+		controller = new AdoptionController(this.petFinderService, this.mailManager);
 	}
 	
 	@Test
-	public void testAdopt_GET() {
-		String view = controller.adopt_GET(petId, model);
+	public void testAdopt_GET_petExists() {
+		String view = controller.adopt_GET(petId.toString(), model);
 		
 		PetfinderPetRecord controllerPet = (PetfinderPetRecord) model.asMap().get("pet");
 		AdoptionApplication controllerApplication =  (AdoptionApplication) model.asMap().get("application"); 
@@ -90,6 +94,13 @@ public class AdoptionControllerTest {
 		assertEquals(AnimalType.DOG.equals(mockPet.getAnimal()),isDog);
 	}
 	
+	@Test
+	public void testAdopt_GET_petDoesNotExists() {
+		String view = controller.adopt_GET(unknownPetId.toString(), model);
+		assertNotNull(view);
+		assertEquals(View.pet_unavailable.name(), view);
+	}
+
 	@Test
 	public void testAdopt_POST() throws MessagingException {
 		String view = controller.adopt_POST(petId, mockApplication, model);

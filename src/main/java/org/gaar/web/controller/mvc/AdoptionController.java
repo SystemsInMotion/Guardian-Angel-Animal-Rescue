@@ -4,6 +4,7 @@ import java.math.BigInteger;
 
 import javax.mail.MessagingException;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gaar.web.View;
 import org.petfinder.entity.AnimalType;
@@ -24,30 +25,35 @@ import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 @RequestMapping("adopt")
 public class AdoptionController extends BaseController {
 
-	@SuppressWarnings("unused")
 	private static Logger logger = Logger.getLogger(AdoptionController.class);
 
-	@Autowired
-	PetFinderConsumer petFinderService;
+	private final MailManager mailManager;
+
+	private final PetFinderConsumer petFinderService;
 
 	@Autowired
-	MailManager mailManager;
+	public AdoptionController(PetFinderConsumer petFinderService, MailManager mailManager) {
+		this.petFinderService = petFinderService;
+		this.mailManager = mailManager;
+	}
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.GET)
-	public String adopt_GET(@PathVariable("petId") Integer petId, Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
-
-		AdoptionApplication application = new AdoptionApplication();
-		application.setPetName(pet.getName());
-		application.setAnimalType(pet.getAnimal().value());
-		application.setBreeds(pet.getBreeds().getBreed());
-
-		model.addAttribute("pet", pet);
-		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
-		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
-		model.addAttribute("application", application);
-
-		return View.adopt.name();
+	public String adopt_GET(@PathVariable("petId") String petId, Model model) {
+		View view = View.pet_unavailable;
+		if (StringUtils.isNotBlank(petId) && StringUtils.isNumeric(petId)) {
+			final PetfinderPetRecord pet = this.petFinderService.readPet(new BigInteger(petId), null);
+			if (pet != null) {
+				logger.info("Retrieved pet : " + pet.getName());
+				AdoptionApplication application = buildAdoptionApplication(pet);
+				addModelAttributes(model, pet, application);
+				view = View.adopt;
+			} else {
+				logger.info("Pet with id " + petId + " not found.");
+			}
+		} else {
+			logger.info("Invalid pet identifier requested: " + petId);
+		}
+		return view.name();
 	}
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
@@ -67,5 +73,20 @@ public class AdoptionController extends BaseController {
 	public String thanks(Model model) {
 		model.addAttribute("petName", "a pet from GAAR");
 		return View.adopt_thanks.name();
+	}
+
+	private void addModelAttributes(Model model, final PetfinderPetRecord pet, AdoptionApplication application) {
+		model.addAttribute("pet", pet);
+		model.addAttribute("isCat", AnimalType.CAT.equals(pet.getAnimal()));
+		model.addAttribute("isDog", AnimalType.DOG.equals(pet.getAnimal()));
+		model.addAttribute("application", application);
+	}
+
+	private AdoptionApplication buildAdoptionApplication(final PetfinderPetRecord pet) {
+		AdoptionApplication application = new AdoptionApplication();
+		application.setPetName(pet.getName());
+		application.setAnimalType(pet.getAnimal().value());
+		application.setBreeds(pet.getBreeds().getBreed());
+		return application;
 	}
 }
