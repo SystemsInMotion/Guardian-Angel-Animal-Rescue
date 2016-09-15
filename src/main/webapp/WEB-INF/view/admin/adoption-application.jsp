@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <div id="adoptionForm">
-	<form:form modelAttribute="application" action="/gaar/app/adopt"
+	<form:form modelAttribute="application" action="/app/adopt"
 		method="post">
 		<div class="section">
 			<c:import url="/WEB-INF/fragments/adopt/pet-info.jsp" />

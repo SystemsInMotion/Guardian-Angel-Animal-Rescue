@@ -4,8 +4,7 @@
 	<div class="innards">
 		<h3>Who We Are</h3>
 		<hr>
-		<img src="<c:url value='/images/about_who_we_are.jpg'/>"
-			class="inline-right shadow">
+		<img src="/images/about_who_we_are.jpg" class="inline-right shadow">
 		<p>Guardian Angel Animal Rescue is a registered Michigan 501(c)(3)
 			not-for-profit, no-kill rescue.</p>
 		<p>

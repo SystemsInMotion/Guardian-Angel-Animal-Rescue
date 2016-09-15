@@ -96,7 +96,7 @@
 	
 	<definition name="home" extends="home_layout">
 		<put-attribute name="title" type="string" value="Home" />
-		<put-attribute name="page-js" value="/scripts/home.js" />
+		<put-attribute name="page-js" value="/scripts/home.js"  />
 		<put-attribute name="main-content" value="/WEB-INF/view/home.jsp" />
 	</definition>
 

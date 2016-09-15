@@ -4,7 +4,7 @@
 	<div class="innards">
 		<h3>Sandra</h3>
 		<hr>
-		<img src="<c:url value='/images/sandra.png'/>"
+		<img src="/images/sandra.png"
 			class="inline-left shadow"> For all dog adoptions or volunteer
 		opportunities, please contact Sandy at: <a
 			href="mailto:guardian_angel_rescue@hotmail.com">guardian_angel_rescue@hotmail.com</a>
@@ -14,7 +14,7 @@
 	<div class="innards">
 		<h3>Donna</h3>
 		<hr>
-		<img src="<c:url value='/images/donna.png'/>"
+		<img src="/images/donna.png"
 			class="inline-left shadow"> For all cat adoptions or volunteer
 		opportunities, please contact Donna at: <a
 			href="mailto:guardian_angel_rescue@hotmail.com">guardian_angel_rescue@hotmail.com</a>

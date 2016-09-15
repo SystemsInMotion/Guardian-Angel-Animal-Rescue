@@ -1,8 +1,6 @@
 package org.gaar.web.controller.mvc;
 
-import java.math.BigInteger;
-import java.util.List;
-
+import com.systemsinmotion.petrescue.data.PetRepository;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gaar.web.View;
@@ -14,7 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.systemsinmotion.petrescue.web.PetFinderConsumer;
+import java.math.BigInteger;
+import java.util.List;
 
 @Controller
 public class DefaultController extends BaseController {
@@ -22,7 +21,7 @@ public class DefaultController extends BaseController {
 	private static Logger logger = Logger.getLogger(DefaultController.class);
 
 	@Autowired
-	PetFinderConsumer petFinderService;
+	private PetRepository petRepository;
 
 	@RequestMapping("brokenWings")
 	public String brokenWings() {
@@ -32,7 +31,7 @@ public class DefaultController extends BaseController {
 	@RequestMapping("cats")
 	public String cats(Model model) {
 		List<PetfinderPetRecord> cats = null;
-		cats = this.petFinderService.shelterCats();
+		cats = this.petRepository.getCats();
 		model.addAttribute("pets", cats);
 		model.addAttribute("animalType", "Cats");
 		return View.cats.name();
@@ -46,7 +45,7 @@ public class DefaultController extends BaseController {
 	@RequestMapping("dogs")
 	public String dogs(Model model) {
 		List<PetfinderPetRecord> dogs = null;
-		dogs = this.petFinderService.shelterDogs();
+		dogs = this.petRepository.getDogs();
 		model.addAttribute("pets", dogs);
 		model.addAttribute("animalType", "Dogs");
 		return View.dogs.name();
@@ -81,7 +80,7 @@ public class DefaultController extends BaseController {
 	public String pet(@PathVariable("petId") String petId, Model model) {
 		View view = View.pet_unavailable;
 		if (StringUtils.isNotBlank(petId) && StringUtils.isNumeric(petId)) {
-			final PetfinderPetRecord pet = this.petFinderService.readPet(new BigInteger(petId), null);
+			final PetfinderPetRecord pet = this.petRepository.readPet(new BigInteger(petId));
 			if (pet != null) {
 				logger.info("Retrieved pet : " + pet.getName());
 				model.addAttribute("pet", pet);

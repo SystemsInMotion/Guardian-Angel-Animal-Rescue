@@ -4,7 +4,8 @@
 <div class="module">
 	<div class="innards">
 		<div>
-			<form:form method="post" modelAttribute="application" id="adoptionForm" name="adoptionForm">
+			<form:form method="post" modelAttribute="application" id="adoptionForm" name="adoptionForm"
+                       action="/app/adopt/${pet.id}">
 				<c:import url="/WEB-INF/fragments/adopt/pet-info.jsp" />
 				<div id="formErrors" ></div>
 				<c:import url="/WEB-INF/fragments/adopt/applicant-info.jsp" />

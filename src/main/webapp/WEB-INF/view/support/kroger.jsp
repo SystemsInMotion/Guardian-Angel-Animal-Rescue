@@ -17,7 +17,7 @@
 				directions. &nbsp;Guardian Angel's organization number is <strong>84139</strong>.
 			</p>
 			<p>
-				If your having problems, <a href="<c:url value='/app/contact'/>">call/email</a>
+				If your having problems, <a href="/app/contact">call/email</a>
 				us and we'll happily help you set it up.
 			</p>
 	</div>

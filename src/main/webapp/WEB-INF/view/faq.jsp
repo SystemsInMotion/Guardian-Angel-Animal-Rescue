@@ -2,8 +2,7 @@
 
 <div class="module-left">
 	<div class="innards">
-		<img src="<c:url value='/images/faq_pet_1.jpg'/>"
-			class="shadow inline-left">
+		<img src="/images/faq_pet_1.jpg" class="shadow inline-left">
 		<p class="question first">What is a no-kill organization and is
 			GAAR one of them?</p>
 
@@ -21,8 +20,7 @@
 			all the different options.
 		</p>
 
-		<img src="<c:url value='/images/faq_pet_2.jpg'/>"
-			class="shadow inline-right">
+		<img src="/images/faq_pet_2.jpg" class="shadow inline-right">
 		<p class="question">How long must I foster an animal before it is
 			adopted?</p>
 
@@ -65,8 +63,7 @@
 			&nbsp;We call it the <em>&ldquo;Broken Heart Syndrome</em>.&rdquo;
 		</p>
 
-		<img src="<c:url value='/images/faq_pet_3.jpg'/>"
-			class="shadow inline-left">
+		<img src="/images/faq_pet_3.jpg" class="shadow inline-left">
 		<p>
 			<span><strong>Another Option</strong>:&nbsp;Work with several
 				rescue groups, and foster your baby until he/she can be placed.

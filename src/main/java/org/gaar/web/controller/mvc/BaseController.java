@@ -1,9 +1,6 @@
 package org.gaar.web.controller.mvc;
 
-import javax.mail.MessagingException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.systemsinmotion.petrescue.mail.MailManager;
 import org.gaar.web.View;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +8,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.systemsinmotion.petrescue.mail.MailManager;
+import javax.mail.MessagingException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public abstract class BaseController {
 
@@ -20,13 +19,12 @@ public abstract class BaseController {
 
 	@ExceptionHandler(Exception.class)
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-	public ModelAndView handleExceptions(final Exception exception,
-			HttpServletRequest request, HttpServletResponse response)
-			throws MessagingException {
+	public ModelAndView handleExceptions(final Exception exception, HttpServletRequest request,
+			HttpServletResponse response) throws MessagingException {
 		ModelAndView mav = new ModelAndView();
 		String pathInfo = request.getPathInfo();
 		mailManager.sendErrorEmail(exception, pathInfo);
-		
+
 		if (pathInfo.equals("/dogs")) {
 			mav.setViewName(View.dogs.name());
 			mav.addObject("pets", null);

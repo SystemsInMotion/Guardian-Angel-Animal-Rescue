@@ -34,9 +34,8 @@
 		<p class="pink">If you are interested in a special need pet,
 			please email us!</p>
 		<hr>
-		<a href="<c:url value='/app/pet/13007319'/>"><img
-			src="<c:url value='/images/Bubbles.png'/>" class="shadow inline-left"></a>
-		<a href="<c:url value='/app/pet/13007319'/>">Bubbles</a> is a 10 year
+		<a href="/app/pet/13007319"><img src="/images/Bubbles.png" class="shadow inline-left"></a>
+		<a href="/app/pet/13007319">Bubbles</a> is a 10 year
 		old beautiful female kitty. She is a special needs kitty because she
 		has feline aids. She was rescued from another shelter: at that time,
 		she had a very bad infection in her eye that would not clear up, so

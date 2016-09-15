@@ -8,7 +8,7 @@
 		<p>Thank you for your interest in adopting ${petName}.
 			&nbsp;Someone will be in touch with you shortly.</p>
 		<p>
-			<br> <a href="<c:url value='/app/home'/>">Back to home page</a>
+			<br> <a href="/app/home">Back to home page</a>
 		</p>
 	</div>
 </div>

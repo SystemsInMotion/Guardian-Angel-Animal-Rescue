@@ -82,27 +82,22 @@
 	};
 });
 
-$(window).ready(function() {
-	$.get(contextPath + '/app/ajax/cat-carousel', function(data) {
-			
-		loadCarousel('#cat-carousel', data);
-		var catsHere = $("#cat-checker").text();
-		if(catsHere == "")
-			{
-				$('#pet-preview').hide();
-			}
-	});
-	$.get(contextPath + '/app/ajax/dog-carousel', function(data) {
-		
-		loadCarousel('#dog-carousel', data);
-		var dogsHere = $('#dog-checker').text();
-		if (dogsHere == ""){
-			$('#pet-preview').hide();
-		}
-			
-		});
-
-});
+ $(window).ready(function () {
+     $.get(contextPath + '/app/ajax/cat-carousel?_=' + new Date().getTime(), function (data) {
+         loadCarousel('#cat-carousel', data);
+         var catsHere = $("#cat-checker").text();
+         if (catsHere == "") {
+             $('#pet-preview').hide();
+         }
+     });
+     $.get(contextPath + '/app/ajax/dog-carousel?_=' + new Date().getTime(), function (data) {
+         loadCarousel('#dog-carousel', data);
+         var dogsHere = $('#dog-checker').text();
+         if (dogsHere == "") {
+             $('#pet-preview').hide();
+         }
+     });
+ });
 
 function loadCarousel(carouselId, data) {
 	$(carouselId).html(data).carousel({});

@@ -1,9 +1,8 @@
 package org.gaar.web.controller.mvc;
 
-import java.math.BigInteger;
-
-import javax.mail.MessagingException;
-
+import com.systemsinmotion.petrescue.data.PetRepository;
+import com.systemsinmotion.petrescue.mail.MailManager;
+import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gaar.web.View;
@@ -12,14 +11,12 @@ import org.petfinder.entity.PetfinderPetRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.systemsinmotion.petrescue.mail.MailManager;
-import com.systemsinmotion.petrescue.web.PetFinderConsumer;
-import com.systemsinmotion.petrescue.web.bean.AdoptionApplication;
+import javax.mail.MessagingException;
+import java.math.BigInteger;
 
 @Controller
 @RequestMapping("adopt")
@@ -29,11 +26,11 @@ public class AdoptionController extends BaseController {
 
 	private final MailManager mailManager;
 
-	private final PetFinderConsumer petFinderService;
+	private final PetRepository petRepository;
 
 	@Autowired
-	public AdoptionController(PetFinderConsumer petFinderService, MailManager mailManager) {
-		this.petFinderService = petFinderService;
+	public AdoptionController(PetRepository petRepository, MailManager mailManager) {
+		this.petRepository = petRepository;
 		this.mailManager = mailManager;
 	}
 
@@ -41,7 +38,7 @@ public class AdoptionController extends BaseController {
 	public String adopt_GET(@PathVariable("petId") String petId, Model model) {
 		View view = View.pet_unavailable;
 		if (StringUtils.isNotBlank(petId) && StringUtils.isNumeric(petId)) {
-			final PetfinderPetRecord pet = this.petFinderService.readPet(new BigInteger(petId), null);
+			final PetfinderPetRecord pet = this.petRepository.readPet(new BigInteger(petId));
 			if (pet != null) {
 				logger.info("Retrieved pet : " + pet.getName());
 				AdoptionApplication application = buildAdoptionApplication(pet);
@@ -57,9 +54,8 @@ public class AdoptionController extends BaseController {
 	}
 
 	@RequestMapping(value = "{petId}", method = RequestMethod.POST)
-	public String adopt_POST(@PathVariable("petId") Integer petId, @Validated AdoptionApplication application,
-			Model model) {
-		final PetfinderPetRecord pet = this.petFinderService.readPet(BigInteger.valueOf(petId), null);
+	public String adopt_POST(@PathVariable("petId") Integer petId, AdoptionApplication application, Model model) {
+		final PetfinderPetRecord pet = this.petRepository.readPet(BigInteger.valueOf(petId));
 		try {
 			this.mailManager.sendAdoptionApplication(application, pet);
 		} catch (MessagingException e) {

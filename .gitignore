@@ -15,3 +15,6 @@ build/
 rebel.xml
 RemoteSystemsTempFiles/
 target/
+*.ipr
+*.iws
+*.jar
